@@ -1,0 +1,103 @@
+INFO: [HLS 200-10] Running 'G:/dev_tools/xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Hari' on host 'desktop-j45fl4k' (Windows NT_amd64 version 6.2) on Wed Dec 08 14:01:09 -0500 2021
+INFO: [HLS 200-10] In directory 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects'
+Sourcing Tcl script 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project extend_matrix 
+INFO: [HLS 200-10] Opening project 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix'.
+INFO: [HLS 200-1510] Running: set_top extend_matrix 
+INFO: [HLS 200-1510] Running: add_files extend_matrix/extend_matrix.cl 
+INFO: [HLS 200-10] Adding design file 'extend_matrix/extend_matrix.cl' to the project
+INFO: [HLS 200-1510] Running: open_solution extend_matrix_soln -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-10] Analyzing design file 'extend_matrix/extend_matrix.cl' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.734 seconds; current allocated memory: 233.488 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'extend_matrix' (extend_matrix/extend_matrix.cl:11:10)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'extend_matrix' (extend_matrix/extend_matrix.cl:13:10)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'extend_matrix' (extend_matrix/extend_matrix.cl:12:10)
+INFO: [HLS 214-129] Unrolled all 6 iterations of the loop 'XCL_WG_DIM_X' (extend_matrix/extend_matrix.cl:3:29)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst reads of length 6 and bit width 32 has been inferred on port 'gmem'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (extend_matrix/extend_matrix.cl:3:29)
+INFO: [HLS 214-115] Multiple burst writes of length 6 and bit width 32 has been inferred on port 'gmem'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (extend_matrix/extend_matrix.cl:3:29)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.187 seconds; current allocated memory: 235.731 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 235.732 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.306 seconds; current allocated memory: 236.987 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 236.296 MB.
+INFO: [XFORM 203-510] Pipelining loop 'XCL_WG_DIM_Y' in function 'extend_matrix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 256.872 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Z' in function 'extend_matrix'.
+INTERNAL-INFO: never seen llvm instruction 'specparallelloop'(2144)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 249.651 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'extend_matrix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extend_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'.
+WARNING: [HLS 200-880] The II Violation in module 'extend_matrix' (loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_5', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3) and bus read operation ('gmem_addr_read', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'extend_matrix' (loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_5', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3) and bus read operation ('gmem_addr_read', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'extend_matrix' (loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_5', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3) and bus read operation ('gmem_addr_read', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'extend_matrix' (loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_5', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3) and bus read operation ('gmem_addr_read', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'extend_matrix' (loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_5', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3) and bus read operation ('gmem_addr_read', extend_matrix/extend_matrix.cl:3) on port 'gmem' (extend_matrix/extend_matrix.cl:3).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 21, loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.382 seconds; current allocated memory: 250.298 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 250.845 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extend_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/group_id_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/group_id_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/group_id_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/global_offset_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/global_offset_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/global_offset_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/wa' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/ha' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/p' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/B' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/wb' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'extend_matrix/hb' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'extend_matrix' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'group_id_x', 'group_id_y', 'group_id_z', 'global_offset_x', 'global_offset_y', 'global_offset_z', 'A', 'wa', 'ha', 'p', 'B', 'wb', 'hb' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_32s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_32s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extend_matrix'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.336 seconds; current allocated memory: 252.276 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.004 seconds; current allocated memory: 257.928 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.814 seconds; current allocated memory: 263.391 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for extend_matrix.
+INFO: [VLOG 209-307] Generating Verilog RTL for extend_matrix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 8.675 seconds; current allocated memory: 263.377 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.526 seconds; peak allocated memory: 1.098 GB.

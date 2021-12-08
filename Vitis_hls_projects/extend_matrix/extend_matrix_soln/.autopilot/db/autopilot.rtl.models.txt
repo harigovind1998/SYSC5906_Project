@@ -1,0 +1,6 @@
+extend_matrix_mul_32s_32s_32_1_1
+extend_matrix_mul_2ns_32s_32_1_1
+extend_matrix_mul_3ns_32s_32_1_1
+extend_matrix_control_s_axi
+extend_matrix_gmem_m_axi
+extend_matrix

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="extend_matrix.cl" path="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\extend_matrix\extend_matrix.cl"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

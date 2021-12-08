@@ -1,0 +1,101 @@
+
+
+================================================================
+== Synthesis Summary Report of 'extend_matrix'
+================================================================
++ General Information: 
+    * Date:           Wed Dec  8 14:01:18 2021
+    * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
+    * Project:        extend_matrix
+    * Solution:       extend_matrix_soln (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu11p-flga2577-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------+--------+-------+---------+---------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |            Modules           |  Issue |       | Latency | Latency | Iteration|         | Trip |          |         |          |            |            |     |
+    |            & Loops           |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +------------------------------+--------+-------+---------+---------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |+ extend_matrix               |  Timing|  -0.00|       77|  770.000|         -|       78|     -|        no|  4 (~0%)|  21 (~0%)|  1587 (~0%)|  2663 (~0%)|    -|
+    | o XCL_WG_DIM_Z_XCL_WG_DIM_Y  |      II|   7.30|       74|  740.000|        21|        6|    10|       yes|        -|         -|           -|           -|    -|
+    +------------------------------+--------+-------+---------+---------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+----------+
+| Interface  | Data Width | Address Width | Register |
+|            | (SW->HW)   |               |          |
++------------+------------+---------------+----------+
+| m_axi_gmem | 32 -> 32   | 64            | 0        |
++------------+------------+---------------+----------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 64     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| A        | inout     | int*                |
+| wa       | in        | unsigned int const  |
+| ha       | in        | unsigned int const  |
+| p        | in        | unsigned int const  |
+| B        | inout     | int*                |
+| wb       | in        | unsigned int const  |
+| hb       | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+-------------------+-----------+----------+-----------------------+
+| Argument | HW Name           | HW Type   | HW Usage | HW Info               |
++----------+-------------------+-----------+----------+-----------------------+
+| A        | m_axi_gmem        | interface |          |                       |
+| A        | s_axi_control A_1 | register  | offset   | offset=0x40, range=32 |
+| A        | s_axi_control A_2 | register  | offset   | offset=0x44, range=32 |
+| wa       | s_axi_control wa  | register  |          | offset=0x4c, range=32 |
+| ha       | s_axi_control ha  | register  |          | offset=0x54, range=32 |
+| p        | s_axi_control p   | register  |          | offset=0x5c, range=32 |
+| B        | m_axi_gmem        | interface |          |                       |
+| B        | s_axi_control B_1 | register  | offset   | offset=0x64, range=32 |
+| B        | s_axi_control B_2 | register  | offset   | offset=0x68, range=32 |
+| wb       | s_axi_control wb  | register  |          | offset=0x70, range=32 |
+| hb       | s_axi_control hb  | register  |          | offset=0x78, range=32 |
++----------+-------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Burst Summary
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
+| HW Interface | Message                                                                                                                                                                                                                 | Location                            |
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
+| m_axi_gmem   | Multiple burst reads of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.  | extend_matrix/extend_matrix.cl:3:29 |
+| m_axi_gmem   | Multiple burst writes of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | extend_matrix/extend_matrix.cl:3:29 |
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
+
+
