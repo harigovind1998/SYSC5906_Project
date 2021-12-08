@@ -8,10 +8,10 @@
   "FunctionProtocol": "ap_ctrl_hs",
   "ResetStyle": "control",
   "Target": {
-    "Family": "virtexuplus",
-    "Device": "xcvu11p",
-    "Package": "-flga2577",
-    "Speed": "-1-e",
+    "Family": "zynquplus",
+    "Device": "xczu7ev",
+    "Package": "-ffvc1156",
+    "Speed": "-2-e",
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
@@ -141,6 +141,12 @@
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -format=sysgen",
+      "config_export -output=C:\/University\/Masters\/Year_1\/SYSC5906\/SYSC5906_Project\/Vitis_hls_projects\/extend_matrix\/extend_matrix_soln\/extend_matrix.zip",
+      "config_export -vivado_clock=10",
+      "config_export -rtl=verilog"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "extend_matrix"
@@ -150,8 +156,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "78",
-    "Latency": "77"
+    "II": "130",
+    "Latency": "129"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -182,6 +188,7 @@
       "impl\/verilog\/extend_matrix_mul_2ns_32s_32_1_1.v",
       "impl\/verilog\/extend_matrix_mul_3ns_32s_32_1_1.v",
       "impl\/verilog\/extend_matrix_mul_32s_32s_32_1_1.v",
+      "impl\/verilog\/impl.bat",
       "impl\/verilog\/extend_matrix.v"
     ],
     "SwDriver": [
@@ -216,6 +223,7 @@
       "addrWidth": "7",
       "portPrefix": "s_axi_control_",
       "paramPrefix": "C_S_AXI_CONTROL_",
+      "offsetMasterName": "m_axi_gmem",
       "ports": [
         "s_axi_control_ARADDR",
         "s_axi_control_ARREADY",
@@ -697,6 +705,7 @@
       "addrWidth": "64",
       "portPrefix": "m_axi_gmem_",
       "paramPrefix": "C_M_AXI_GMEM_",
+      "offsetSlaveName": "s_axi_control",
       "preferredUsageValue": "MEMORY",
       "busParams": {
         "NUM_READ_OUTSTANDING": "16",
@@ -1067,10 +1076,10 @@
       }},
     "Metrics": {"extend_matrix": {
         "Latency": {
-          "LatencyBest": "77",
-          "LatencyAvg": "77",
-          "LatencyWorst": "77",
-          "PipelineII": "78",
+          "LatencyBest": "129",
+          "LatencyAvg": "129",
+          "LatencyWorst": "129",
+          "PipelineII": "130",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -1081,26 +1090,26 @@
         },
         "Loops": [{
             "Name": "XCL_WG_DIM_Z_XCL_WG_DIM_Y",
-            "TripCount": "10",
-            "Latency": "74",
-            "PipelineII": "6",
-            "PipelineDepth": "21"
+            "TripCount": "14",
+            "Latency": "126",
+            "PipelineII": "8",
+            "PipelineDepth": "23"
           }],
         "Area": {
           "BRAM_18K": "4",
-          "AVAIL_BRAM": "4032",
+          "AVAIL_BRAM": "624",
           "UTIL_BRAM": "~0",
           "DSP": "21",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "~0",
-          "FF": "1587",
-          "AVAIL_FF": "2592000",
+          "AVAIL_DSP": "1728",
+          "UTIL_DSP": "1",
+          "FF": "1586",
+          "AVAIL_FF": "460800",
           "UTIL_FF": "~0",
-          "LUT": "2663",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
+          "LUT": "2651",
+          "AVAIL_LUT": "230400",
+          "UTIL_LUT": "1",
           "URAM": "0",
-          "AVAIL_URAM": "960",
+          "AVAIL_URAM": "96",
           "UTIL_URAM": "0"
         }
       }}
@@ -1108,7 +1117,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-12-08 14:01:19 -0500",
+    "Time": "2021-12-08 16:02:44 -0500",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1.1"
   }

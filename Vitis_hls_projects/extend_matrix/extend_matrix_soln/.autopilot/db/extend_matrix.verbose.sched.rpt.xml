@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'extend_matrix'" level="0">
-<item name = "Date">Wed Dec  8 14:01:17 2021
+<item name = "Date">Wed Dec  8 16:02:28 2021
 </item>
 <item name = "Version">2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)</item>
 <item name = "Project">extend_matrix</item>
 <item name = "Solution">extend_matrix_soln (Vivado IP Flow Target)</item>
-<item name = "Product family">virtexuplus</item>
-<item name = "Target device">xcvu11p-flga2577-1-e</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">77, 77, 0.770 us, 0.770 us, 78, 78, no</column>
+<column name="">129, 129, 1.290 us, 1.290 us, 130, 130, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- XCL_WG_DIM_Z_XCL_WG_DIM_Y">74, 74, 21, 6, 1, 10, yes</column>
+<column name="- XCL_WG_DIM_Z_XCL_WG_DIM_Y">126, 126, 23, 8, 1, 14, yes</column>
 </table>
 </item>
 </section>

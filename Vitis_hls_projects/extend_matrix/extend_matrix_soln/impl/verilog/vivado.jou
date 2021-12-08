@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Wed Dec  8 15:57:13 2021
+# Process ID: 5176
+# Current directory: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/verilog
+# Command line: vivado.exe -mode batch -source run_vivado.tcl
+# Log file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/verilog/vivado.log
+# Journal file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/verilog\vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl

@@ -2,7 +2,7 @@
 set TopModule "extend_matrix"
 set ClockPeriod 10
 set ClockList ap_clk
-set HasVivadoClockPeriod 0
+set HasVivadoClockPeriod 1
 set CombLogicFlag 0
 set PipelineFlag 0
 set DataflowTaskPipelineFlag 1
@@ -41,7 +41,7 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xcvu11p:-flga2577:-1-e
+set TargetInfo xczu7ev:-ffvc1156:-2-e
 set SourceFiles {sc {} c ../extend_matrix.cl}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
@@ -61,5 +61,5 @@ set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}
 set intNbAccess 0
-set PlatformFiles {{DefaultPlatform {xilinx/virtexuplus/virtexuplus}}}
+set PlatformFiles {{DefaultPlatform {xilinx/zynquplus/zynquplus}}}
 set HPFPO 0

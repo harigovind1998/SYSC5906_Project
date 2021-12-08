@@ -4,8 +4,8 @@
     </ReportVersion>
     <UserAssignments>
         <unit>ns</unit>
-        <ProductFamily>virtexuplus</ProductFamily>
-        <Part>xcvu11p-flga2577-1-e</Part>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu7ev-ffvc1156-2-e</Part>
         <TopModelName>extend_matrix</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
@@ -19,22 +19,22 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>77</Best-caseLatency>
-            <Average-caseLatency>77</Average-caseLatency>
-            <Worst-caseLatency>77</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.770 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.770 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.770 us</Worst-caseRealTimeLatency>
-            <Interval-min>78</Interval-min>
-            <Interval-max>78</Interval-max>
+            <Best-caseLatency>129</Best-caseLatency>
+            <Average-caseLatency>129</Average-caseLatency>
+            <Worst-caseLatency>129</Worst-caseLatency>
+            <Best-caseRealTimeLatency>1.290 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>1.290 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>1.290 us</Worst-caseRealTimeLatency>
+            <Interval-min>130</Interval-min>
+            <Interval-max>130</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <XCL_WG_DIM_Z_XCL_WG_DIM_Y>
-                <TripCount>10</TripCount>
-                <Latency>74</Latency>
-                <AbsoluteTimeLatency>740</AbsoluteTimeLatency>
-                <PipelineII>6</PipelineII>
-                <PipelineDepth>21</PipelineDepth>
+                <TripCount>14</TripCount>
+                <Latency>126</Latency>
+                <AbsoluteTimeLatency>1260</AbsoluteTimeLatency>
+                <PipelineII>8</PipelineII>
+                <PipelineDepth>23</PipelineDepth>
             </XCL_WG_DIM_Z_XCL_WG_DIM_Y>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
@@ -42,16 +42,16 @@
         <Resources>
             <BRAM_18K>4</BRAM_18K>
             <DSP>21</DSP>
-            <FF>1587</FF>
-            <LUT>2663</LUT>
+            <FF>1586</FF>
+            <LUT>2651</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
-            <BRAM_18K>4032</BRAM_18K>
-            <DSP>9216</DSP>
-            <FF>2592000</FF>
-            <LUT>1296000</LUT>
-            <URAM>960</URAM>
+            <BRAM_18K>624</BRAM_18K>
+            <DSP>1728</DSP>
+            <FF>460800</FF>
+            <LUT>230400</LUT>
+            <URAM>96</URAM>
         </AvailableResources>
     </AreaEstimates>
     <InterfaceSummary>
@@ -819,7 +819,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>extend_matrix</ModuleName>
-            <BindInstances>global_id_base_z_fu_322_p2 tmp_fu_334_p2 global_id_base_y_fu_340_p2 empty_28_fu_358_p2 global_id_base_x_fu_364_p2 mul_32s_32s_32_1_1_U1 add_ln3_fu_376_p2 mul_32s_32s_32_1_1_U3 add_ln3_1_fu_414_p2 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U2 add_ln3_2_fu_388_p2 mul_32s_32s_32_1_1_U5 mul_ln3_5_fu_435_p0 mul_32s_32s_32_1_1_U6 add_ln3_4_fu_441_p2 add_ln3_5_fu_446_p2 mul_32s_32s_32_1_1_U7 add_ln15_fu_466_p2 add_ln15_2_fu_492_p2 mul_2ns_32s_32_1_1_U8 mul_2ns_32s_32_1_1_U11 mul_3ns_32s_32_1_1_U9 tmp2_fu_544_p2 empty_30_fu_549_p2 empty_31_fu_566_p2 mul_3ns_32s_32_1_1_U10 tmp3_fu_599_p2 empty_32_fu_603_p2 empty_33_fu_621_p2 add_ln15_1_fu_515_p2</BindInstances>
+            <BindInstances>global_id_base_z_fu_340_p2 empty_26_fu_352_p2 global_id_base_y_fu_358_p2 global_id_base_x_fu_370_p2 mul_32s_32s_32_1_1_U1 add_ln3_fu_382_p2 mul_32s_32s_32_1_1_U3 add_ln3_1_fu_420_p2 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U2 add_ln3_2_fu_394_p2 mul_32s_32s_32_1_1_U5 mul_ln3_5_fu_441_p0 mul_32s_32s_32_1_1_U6 add_ln3_4_fu_447_p2 add_ln3_5_fu_452_p2 mul_32s_32s_32_1_1_U7 add_ln15_fu_472_p2 add_ln15_2_fu_498_p2 mul_2ns_32s_32_1_1_U8 mul_2ns_32s_32_1_1_U10 mul_3ns_32s_32_1_1_U9 tmp1_fu_550_p2 empty_29_fu_555_p2 empty_30_fu_572_p2 mul_3ns_32s_32_1_1_U11 tmp2_fu_605_p2 empty_31_fu_610_p2 empty_32_fu_627_p2 add_ln15_1_fu_521_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -835,23 +835,23 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>77</Best-caseLatency>
-                    <Average-caseLatency>77</Average-caseLatency>
-                    <Worst-caseLatency>77</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.770 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.770 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.770 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>78</PipelineInitiationInterval>
+                    <Best-caseLatency>129</Best-caseLatency>
+                    <Average-caseLatency>129</Average-caseLatency>
+                    <Worst-caseLatency>129</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.290 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.290 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.290 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>130</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <XCL_WG_DIM_Z_XCL_WG_DIM_Y>
                         <Name>XCL_WG_DIM_Z_XCL_WG_DIM_Y</Name>
-                        <TripCount>10</TripCount>
-                        <Latency>74</Latency>
-                        <AbsoluteTimeLatency>0.740 us</AbsoluteTimeLatency>
-                        <PipelineII>6</PipelineII>
-                        <PipelineDepth>21</PipelineDepth>
+                        <TripCount>14</TripCount>
+                        <Latency>126</Latency>
+                        <AbsoluteTimeLatency>1.260 us</AbsoluteTimeLatency>
+                        <PipelineII>8</PipelineII>
+                        <PipelineDepth>23</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                     </XCL_WG_DIM_Z_XCL_WG_DIM_Y>
                 </SummaryOfLoopLatency>
@@ -859,59 +859,60 @@
             <AreaEstimates>
                 <Resources>
                     <BRAM_18K>4</BRAM_18K>
-                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
                     <DSP>21</DSP>
-                    <AVAIL_DSP>9216</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>1587</FF>
-                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>1586</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>2663</LUT>
-                    <AVAIL_LUT>1296000</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
+                    <LUT>2651</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_z_fu_322_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_z"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp_fu_334_p2" SOURCE="" URAM="0" VARIABLE="tmp"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_y_fu_340_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_y"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_358_p2" SOURCE="" URAM="0" VARIABLE="empty_28"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_x_fu_364_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_x"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_z_fu_340_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_z"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="empty_26_fu_352_p2" SOURCE="" URAM="0" VARIABLE="empty_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_y_fu_358_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_y"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_x_fu_370_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_x"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U1" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_fu_376_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_fu_382_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_1_fu_414_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_1_fu_420_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U4" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_2"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_2_fu_388_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_2_fu_394_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_2"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U5" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_5_fu_435_p0" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_5_fu_441_p0" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_3"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U6" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_4_fu_441_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_5_fu_446_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_4_fu_447_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_5_fu_452_p2" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="add_ln3_5"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U7" SOURCE="extend_matrix/extend_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_fu_466_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_2_fu_492_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U8" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="p_cast4_mid2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U11" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="mul_ln3_7_mid2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_fu_472_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_2_fu_498_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U8" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="p_cast3_mid2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U10" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="mul_ln3_7_mid2"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_32s_32_1_1_U9" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="p_cast"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp2_fu_544_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="tmp2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_30_fu_549_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_30"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_31_fu_566_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_31"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_32s_32_1_1_U10" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="p_cast6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp3_fu_599_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="tmp3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_32_fu_603_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_32"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_33_fu_621_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_33"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_1_fu_515_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp1_fu_550_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="tmp1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_29_fu_555_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_30_fu_572_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_32s_32_1_1_U11" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="p_cast5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp2_fu_605_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="tmp2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_31_fu_610_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_32_fu_627_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="empty_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_1_fu_521_p2" SOURCE="extend_matrix/extend_matrix.cl:15" URAM="0" VARIABLE="add_ln15_1"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export format="sysgen" output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/extend_matrix.zip" vivado_clock="10"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="A" index="0" direction="inout" srcType="int*" srcSize="32">
             <hwRefs>
@@ -1258,8 +1259,8 @@
             <item name="Burst Summary">
                 <table>
                     <keys size="3">HW Interface, Message, Location</keys>
-                    <column name="m_axi_gmem">Multiple burst reads of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings., extend_matrix/extend_matrix.cl:3:29</column>
-                    <column name="m_axi_gmem">Multiple burst writes of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings., extend_matrix/extend_matrix.cl:3:29</column>
+                    <column name="m_axi_gmem">Multiple burst reads of length 8 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings., extend_matrix/extend_matrix.cl:3:29</column>
+                    <column name="m_axi_gmem">Multiple burst writes of length 8 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings., extend_matrix/extend_matrix.cl:3:29</column>
                 </table>
             </item>
         </section>

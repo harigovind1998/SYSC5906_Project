@@ -1,0 +1,102 @@
+
+
+================================================================
+== Synthesis Summary Report of 'creat_mec_matrix'
+================================================================
++ General Information: 
+    * Date:           Wed Dec  8 16:05:01 2021
+    * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
+    * Project:        creat_mec_matrix
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+--------------+-------------+-----+
+    |            Modules           |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |         |              |             |     |
+    |            & Loops           |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |      FF      |     LUT     | URAM|
+    +------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+--------------+-------------+-----+
+    |+ creat_mec_matrix            |  Timing|  -0.00|     2224|  2.224e+04|         -|     2225|     -|        no|  4 (~0%)|  79 (4%)|  101490 (22%)|  81510 (35%)|    -|
+    | o XCL_WG_DIM_Z_XCL_WG_DIM_Y  |      II|   7.30|     2221|  2.221e+04|       231|      181|    12|       yes|        -|        -|             -|            -|    -|
+    +------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+--------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+----------+
+| Interface  | Data Width | Address Width | Register |
+|            | (SW->HW)   |               |          |
++------------+------------+---------------+----------+
+| m_axi_gmem | 32 -> 32   | 64            | 0        |
++------------+------------+---------------+----------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 64     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| A        | inout     | int*                |
+| wa       | in        | unsigned int const  |
+| ha       | in        | unsigned int const  |
+| B        | inout     | int*                |
+| wb       | in        | unsigned int const  |
+| hb       | in        | unsigned int const  |
+| s        | in        | unsigned int const  |
+| k        | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+-------------------+-----------+----------+-----------------------+
+| Argument | HW Name           | HW Type   | HW Usage | HW Info               |
++----------+-------------------+-----------+----------+-----------------------+
+| A        | m_axi_gmem        | interface |          |                       |
+| A        | s_axi_control A_1 | register  | offset   | offset=0x40, range=32 |
+| A        | s_axi_control A_2 | register  | offset   | offset=0x44, range=32 |
+| wa       | s_axi_control wa  | register  |          | offset=0x4c, range=32 |
+| ha       | s_axi_control ha  | register  |          | offset=0x54, range=32 |
+| B        | m_axi_gmem        | interface |          |                       |
+| B        | s_axi_control B_1 | register  | offset   | offset=0x5c, range=32 |
+| B        | s_axi_control B_2 | register  | offset   | offset=0x60, range=32 |
+| wb       | s_axi_control wb  | register  |          | offset=0x68, range=32 |
+| hb       | s_axi_control hb  | register  |          | offset=0x70, range=32 |
+| s        | s_axi_control s   | register  |          | offset=0x78, range=32 |
+| k        | s_axi_control k   | register  |          | offset=0x80, range=32 |
++----------+-------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Burst Summary
++--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------+
+| HW Interface | Loop         | Message                                                                                                                                                                                                                  | Location                                  |
++--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------+
+| m_axi_gmem   | XCL_WG_DIM_X | Multiple burst writes of length 21 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | creat_mec_matrix/creat_mec_matrix.cl:3:32 |
++--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------+
+
+

@@ -1,0 +1,452 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.12 seconds; current allocated memory: 233.466 MB.
+INFO: [HLS 200-10] Analyzing design file 'mul_mec_matrix/mul_mec_matrix.cl' ... 
+WARNING: [HLS 207-5301] unused parameter 'nk': mul_mec_matrix/mul_mec_matrix.cl:9:26
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.624 seconds; current allocated memory: 233.965 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:16:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:18:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:17:11)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst writes of length 6 and bit width 32 has been inferred on port 'gmem'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (mul_mec_matrix/mul_mec_matrix.cl:3:30)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.085 seconds; current allocated memory: 235.862 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 235.862 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 237.281 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 236.584 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (mul_mec_matrix/mul_mec_matrix.cl:20) in function 'mul_mec_matrix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.219 seconds; current allocated memory: 257.474 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_X' (mul_mec_matrix/mul_mec_matrix.cl:3:30) in function 'mul_mec_matrix'.
+WARNING: [HLS 200-960] Cannot flatten loop 'XCL_WG_DIM_Y' in function 'mul_mec_matrix' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Z' in function 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 260.541 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mul_mec_matrix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XCL_WG_DIM_X_L'.
+WARNING: [HLS 200-885] The II Violation in module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' (loop 'XCL_WG_DIM_X_L'): Unable to schedule bus request operation ('empty_33', mul_mec_matrix/mul_mec_matrix.cl:23) on port 'gmem' (mul_mec_matrix/mul_mec_matrix.cl:23) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 47, loop 'XCL_WG_DIM_X_L'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.228 seconds; current allocated memory: 261.190 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 261.650 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.346 seconds; current allocated memory: 262.183 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.399 seconds; current allocated memory: 263.001 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' pipeline 'XCL_WG_DIM_X_L' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 264.544 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/I' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/hi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ci' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/K' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/nk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/O' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wo' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ho' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/co' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/s' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mul_mec_matrix' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'group_id_x', 'group_id_y', 'group_id_z', 'global_offset_x', 'global_offset_y', 'global_offset_z', 'I', 'wi', 'hi', 'ci', 'K', 'wk', 'nk', 'O', 'wo', 'ho', 'co', 's' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32s_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.576 seconds; current allocated memory: 268.255 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.061 seconds; current allocated memory: 274.376 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.941 seconds; current allocated memory: 280.320 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for mul_mec_matrix.
+INFO: [VLOG 209-307] Generating Verilog RTL for mul_mec_matrix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 9.735 seconds; current allocated memory: 280.306 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 12.121 seconds; peak allocated memory: 280.320 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/mul_mec_matrix.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 9.43 seconds; current allocated memory: 241.010 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=sysgen
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/mul_mec_matrix.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 10.428 seconds; current allocated memory: 241.055 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 8.782 seconds; current allocated memory: 241.039 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=sysgen
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl verilog -format ip_catalog -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+ERROR: [HLS 200-478] vivado returned an error 
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 35.447 seconds; current allocated memory: 241.608 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.099 GB.
+INFO: [HLS 200-10] Analyzing design file 'mul_mec_matrix/mul_mec_matrix.cl' ... 
+WARNING: [HLS 207-5301] unused parameter 'nk': mul_mec_matrix/mul_mec_matrix.cl:9:26
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.645 seconds; current allocated memory: 234.117 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:16:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:18:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:17:11)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst writes of length 6 and bit width 32 has been inferred on port 'gmem'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (mul_mec_matrix/mul_mec_matrix.cl:3:30)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.706 seconds; current allocated memory: 236.038 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 236.039 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 237.456 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 236.757 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (mul_mec_matrix/mul_mec_matrix.cl:20) in function 'mul_mec_matrix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 257.652 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_X' (mul_mec_matrix/mul_mec_matrix.cl:3:30) in function 'mul_mec_matrix'.
+WARNING: [HLS 200-960] Cannot flatten loop 'XCL_WG_DIM_Y' in function 'mul_mec_matrix' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Z' in function 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 260.684 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mul_mec_matrix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XCL_WG_DIM_X_L'.
+WARNING: [HLS 200-885] The II Violation in module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' (loop 'XCL_WG_DIM_X_L'): Unable to schedule bus request operation ('empty_33', mul_mec_matrix/mul_mec_matrix.cl:23) on port 'gmem' (mul_mec_matrix/mul_mec_matrix.cl:23) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 47, loop 'XCL_WG_DIM_X_L'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 261.317 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 261.807 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.366 seconds; current allocated memory: 262.338 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.407 seconds; current allocated memory: 263.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' pipeline 'XCL_WG_DIM_X_L' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.405 seconds; current allocated memory: 264.700 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/I' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/hi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ci' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/K' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/nk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/O' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wo' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ho' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/co' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/s' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mul_mec_matrix' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'group_id_x', 'group_id_y', 'group_id_z', 'global_offset_x', 'global_offset_y', 'global_offset_z', 'I', 'wi', 'hi', 'ci', 'K', 'wk', 'nk', 'O', 'wo', 'ho', 'co', 's' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32s_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.621 seconds; current allocated memory: 268.406 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.027 seconds; current allocated memory: 274.479 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.918 seconds; current allocated memory: 280.653 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for mul_mec_matrix.
+INFO: [VLOG 209-307] Generating Verilog RTL for mul_mec_matrix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 9.587 seconds; current allocated memory: 280.639 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 11.306 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1.099 GB.
+INFO: [HLS 200-10] Analyzing design file 'mul_mec_matrix/mul_mec_matrix.cl' ... 
+WARNING: [HLS 207-5301] unused parameter 'nk': mul_mec_matrix/mul_mec_matrix.cl:9:26
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.587 seconds; current allocated memory: 234.101 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:16:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:18:11)
+INFO: [HLS 214-131] Inlining function 'get_global_id(unsigned int)' into 'mul_mec_matrix' (mul_mec_matrix/mul_mec_matrix.cl:17:11)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst writes of length 6 and bit width 32 has been inferred on port 'gmem'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (mul_mec_matrix/mul_mec_matrix.cl:3:30)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.584 seconds; current allocated memory: 236.023 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 236.024 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 237.441 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 236.742 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (mul_mec_matrix/mul_mec_matrix.cl:20) in function 'mul_mec_matrix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 257.622 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_X' (mul_mec_matrix/mul_mec_matrix.cl:3:30) in function 'mul_mec_matrix'.
+WARNING: [HLS 200-960] Cannot flatten loop 'XCL_WG_DIM_Y' in function 'mul_mec_matrix' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Z' in function 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 260.653 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mul_mec_matrix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XCL_WG_DIM_X_L'.
+WARNING: [HLS 200-885] The II Violation in module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' (loop 'XCL_WG_DIM_X_L'): Unable to schedule bus request operation ('empty_33', mul_mec_matrix/mul_mec_matrix.cl:23) on port 'gmem' (mul_mec_matrix/mul_mec_matrix.cl:23) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 47, loop 'XCL_WG_DIM_X_L'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 261.286 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 261.717 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.343 seconds; current allocated memory: 262.247 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.403 seconds; current allocated memory: 263.119 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L' pipeline 'XCL_WG_DIM_X_L' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 264.665 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mul_mec_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/group_id_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/global_offset_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/I' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/hi' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ci' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/K' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/nk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/O' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/wo' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/ho' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/co' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mul_mec_matrix/s' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mul_mec_matrix' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'group_id_x', 'group_id_y', 'group_id_z', 'global_offset_x', 'global_offset_y', 'global_offset_z', 'I', 'wi', 'hi', 'ci', 'K', 'wk', 'nk', 'O', 'wo', 'ho', 'co', 's' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32s_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mul_mec_matrix'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.566 seconds; current allocated memory: 268.330 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.031 seconds; current allocated memory: 274.414 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.903 seconds; current allocated memory: 280.506 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for mul_mec_matrix.
+INFO: [VLOG 209-307] Generating Verilog RTL for mul_mec_matrix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 9.041 seconds; current allocated memory: 280.492 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.837 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -vivado_clock 10 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format sysgen 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.905 seconds; current allocated memory: 241.030 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=sysgen
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format sysgen 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file mul_mec_matrix/mul_mec_matrix.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.823 seconds; current allocated memory: 241.042 MB.

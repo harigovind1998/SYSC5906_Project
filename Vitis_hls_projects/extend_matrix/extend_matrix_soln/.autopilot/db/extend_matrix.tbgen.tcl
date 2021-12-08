@@ -185,7 +185,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "77", "EstimateLatencyMax" : "77",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "129", "EstimateLatencyMax" : "129",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -215,7 +215,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "hb", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "XCL_WG_DIM_Z_XCL_WG_DIM_Y", "PipelineType" : "pipeline",
-				"LoopDec" : {"FSMBitwidth" : "9", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "PreState" : ["ap_ST_fsm_state2"], "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "PostState" : ["ap_ST_fsm_state24"]}}]},
+				"LoopDec" : {"FSMBitwidth" : "11", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage6", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage6_subdone", "PreState" : ["ap_ST_fsm_state2"], "QuitState" : "ap_ST_fsm_pp0_stage6", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage6_subdone", "PostState" : ["ap_ST_fsm_state26"]}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U1", "Parent" : "0"},
@@ -227,13 +227,13 @@ set RtlHierarchyInfo {[
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U7", "Parent" : "0"},
 	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_2ns_32s_32_1_1_U8", "Parent" : "0"},
 	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_3ns_32s_32_1_1_U9", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_3ns_32s_32_1_1_U10", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_2ns_32s_32_1_1_U11", "Parent" : "0"}]}
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_2ns_32s_32_1_1_U10", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_3ns_32s_32_1_1_U11", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	extend_matrix {
-		gmem {Type IO LastRead 18 FirstWrite 12}
+		gmem {Type IO LastRead 20 FirstWrite 12}
 		group_id_x {Type I LastRead 0 FirstWrite -1}
 		group_id_y {Type I LastRead 0 FirstWrite -1}
 		group_id_z {Type I LastRead 0 FirstWrite -1}
@@ -251,8 +251,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "77", "Max" : "77"}
-	, {"Name" : "Interval", "Min" : "78", "Max" : "78"}
+	{"Name" : "Latency", "Min" : "129", "Max" : "129"}
+	, {"Name" : "Interval", "Min" : "130", "Max" : "130"}
 ]}
 
 set PipelineEnableSignalInfo {[
