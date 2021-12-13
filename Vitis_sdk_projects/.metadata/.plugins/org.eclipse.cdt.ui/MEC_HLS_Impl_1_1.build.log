@@ -1,0 +1,48 @@
+20:43:49 **** Build of configuration Debug for project MEC_HLS_Impl_1_1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:133:23: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
+  133 |  Xil_SetTlbAttributes(control, NORM_NONCACHE);
+      |                       ^~~~~~~
+      |                       |
+      |                       volatile char *
+In file included from ../src/helloworld.c:53:
+C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
+   85 | void Xil_SetTlbAttributes(UINTPTR Addr, u64 attrib);
+      |                           ~~~~~~~~^~~~
+../src/helloworld.c:136:8: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  136 |     *B = (int*)malloc(sizeof(int)*ow*oh*oc);
+      |        ^
+../src/helloworld.c:137:21: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  137 |     int *bSet_ptr = *B;
+      |                     ^
+../src/helloworld.c:149:10: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  149 |     *A = (unsigned int)c;
+      |          ^
+../src/helloworld.c:188:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  188 |     ptr = *B;
+      |         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: MEC_HLS_Impl_1_1.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bsplib/lib -o "MEC_HLS_Impl_1_1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MEC_HLS_Impl_1_1.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size MEC_HLS_Impl_1_1.elf  |tee "MEC_HLS_Impl_1_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 111575	   5048	  20797	 137420	  218cc	MEC_HLS_Impl_1_1.elf
+'Finished building: MEC_HLS_Impl_1_1.elf.size'
+' '
+
+20:43:49 Build Finished (took 682ms)
+

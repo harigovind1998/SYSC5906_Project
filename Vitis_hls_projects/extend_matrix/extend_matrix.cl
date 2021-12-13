@@ -1,5 +1,5 @@
 #include <clc.h>
-__kernel void __attribute__ ((reqd_work_group_size(8, 7, 2)))
+__kernel void __attribute__ ((reqd_work_group_size(6, 5, 2)))
 extend_matrix(__global int* A,
 		const unsigned int wa,
 		const unsigned int ha,

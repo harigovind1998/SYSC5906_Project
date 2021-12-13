@@ -1831,11 +1831,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:14:58 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:08:46 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc7ef45d</spirit:value>
+            <spirit:value>9:be26e756</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1846,7 +1846,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc7ef45d</spirit:value>
+            <spirit:value>9:be26e756</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1862,11 +1862,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:14:58 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:08:46 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc7ef45d</spirit:value>
+            <spirit:value>9:be26e756</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1882,11 +1882,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:14:58 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:08:46 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:866bff21</spirit:value>
+            <spirit:value>9:3deec312</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1902,11 +1902,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:14:58 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:08:46 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:866bff21</spirit:value>
+            <spirit:value>9:3deec312</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1920,11 +1920,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:14:58 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:08:46 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc7ef45d</spirit:value>
+            <spirit:value>9:be26e756</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1938,11 +1938,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 08 21:18:12 UTC 2021</spirit:value>
+            <spirit:value>Mon Dec 13 01:09:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc7ef45d</spirit:value>
+            <spirit:value>9:be26e756</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3154,27 +3154,27 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_control_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_control_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_gmem_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -3189,32 +3189,32 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_control_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_control_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_gmem_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d9ff/hdl/verilog/extend_matrix.v</spirit:name>
+        <spirit:name>../../ipshared/39d3/hdl/verilog/extend_matrix.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3449,7 +3449,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">129</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">77</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -3474,7 +3474,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Extend_matrix</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112081602</xilinx:coreRevision>
+      <xilinx:coreRevision>2112122007</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3560,10 +3560,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="35d5713e"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2c1df7e3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="9db9242d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="db527307"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c2c50654"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="07a9111f"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e845cac"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5dfc9210"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1301c532"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

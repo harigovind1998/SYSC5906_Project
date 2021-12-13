@@ -19,23 +19,23 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>129</Best-caseLatency>
-<Average-caseLatency>129</Average-caseLatency>
-<Worst-caseLatency>129</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.290 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.290 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.290 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>130</PipelineInitiationInterval>
+<Best-caseLatency>77</Best-caseLatency>
+<Average-caseLatency>77</Average-caseLatency>
+<Worst-caseLatency>77</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.770 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.770 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.770 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>78</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <XCL_WG_DIM_Z_XCL_WG_DIM_Y>
 <Name>XCL_WG_DIM_Z_XCL_WG_DIM_Y</Name>
-<TripCount>14</TripCount>
-<Latency>126</Latency>
-<AbsoluteTimeLatency>1.260 us</AbsoluteTimeLatency>
-<PipelineII>8</PipelineII>
-<PipelineDepth>23</PipelineDepth>
+<TripCount>10</TripCount>
+<Latency>74</Latency>
+<AbsoluteTimeLatency>0.740 us</AbsoluteTimeLatency>
+<PipelineII>6</PipelineII>
+<PipelineDepth>21</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </XCL_WG_DIM_Z_XCL_WG_DIM_Y>
 </SummaryOfLoopLatency>
@@ -48,10 +48,10 @@
 <DSP>21</DSP>
 <AVAIL_DSP>1728</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>1586</FF>
+<FF>1587</FF>
 <AVAIL_FF>460800</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>2651</LUT>
+<LUT>2663</LUT>
 <AVAIL_LUT>230400</AVAIL_LUT>
 <UTIL_LUT>1</UTIL_LUT>
 <URAM>0</URAM>

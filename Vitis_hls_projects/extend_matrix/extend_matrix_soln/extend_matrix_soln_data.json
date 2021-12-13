@@ -144,8 +144,8 @@
     "ConfigTcl": [
       "config_export -format=sysgen",
       "config_export -output=C:\/University\/Masters\/Year_1\/SYSC5906\/SYSC5906_Project\/Vitis_hls_projects\/extend_matrix\/extend_matrix_soln\/extend_matrix.zip",
-      "config_export -vivado_clock=10",
-      "config_export -rtl=verilog"
+      "config_export -rtl=verilog",
+      "config_export -vivado_clock=10"
     ],
     "ProfileOption": "0",
     "ProfileType": "none",
@@ -156,8 +156,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "130",
-    "Latency": "129"
+    "II": "78",
+    "Latency": "77"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -1076,10 +1076,10 @@
       }},
     "Metrics": {"extend_matrix": {
         "Latency": {
-          "LatencyBest": "129",
-          "LatencyAvg": "129",
-          "LatencyWorst": "129",
-          "PipelineII": "130",
+          "LatencyBest": "77",
+          "LatencyAvg": "77",
+          "LatencyWorst": "77",
+          "PipelineII": "78",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -1090,10 +1090,10 @@
         },
         "Loops": [{
             "Name": "XCL_WG_DIM_Z_XCL_WG_DIM_Y",
-            "TripCount": "14",
-            "Latency": "126",
-            "PipelineII": "8",
-            "PipelineDepth": "23"
+            "TripCount": "10",
+            "Latency": "74",
+            "PipelineII": "6",
+            "PipelineDepth": "21"
           }],
         "Area": {
           "BRAM_18K": "4",
@@ -1102,10 +1102,10 @@
           "DSP": "21",
           "AVAIL_DSP": "1728",
           "UTIL_DSP": "1",
-          "FF": "1586",
+          "FF": "1587",
           "AVAIL_FF": "460800",
           "UTIL_FF": "~0",
-          "LUT": "2651",
+          "LUT": "2663",
           "AVAIL_LUT": "230400",
           "UTIL_LUT": "1",
           "URAM": "0",
@@ -1117,7 +1117,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-12-08 16:02:44 -0500",
+    "Time": "2021-12-12 20:07:04 -0500",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1.1"
   }

@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="extend_matrix" name="extend_matrix">
+<project xmlns="com.autoesl.autopilot.project" name="extend_matrix" top="extend_matrix">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

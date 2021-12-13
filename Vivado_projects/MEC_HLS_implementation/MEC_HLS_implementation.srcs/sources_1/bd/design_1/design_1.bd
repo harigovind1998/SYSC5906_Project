@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
-      "extend_matrix_0": "",
       "creat_mec_matrix_0": "",
       "mul_mec_matrix_0": "",
       "ps8_0_axi_periph": {
@@ -30,7 +29,8 @@
         "m02_couplers": {}
       },
       "rst_ps8_0_99M": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "extend_matrix_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -1077,37 +1077,6 @@
           }
         }
       },
-      "extend_matrix_0": {
-        "vlnv": "xilinx.com:hls:extend_matrix:1.0",
-        "xci_name": "design_1_extend_matrix_0_0",
-        "xci_path": "ip\\design_1_extend_matrix_0_0\\design_1_extend_matrix_0_0.xci",
-        "inst_hier_path": "extend_matrix_0",
-        "interface_ports": {
-          "m_axi_gmem": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_gmem",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            },
-            "parameters": {
-              "master_id": {
-                "value": "1"
-              }
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Data_m_axi_gmem": {
-              "range": "16E",
-              "width": "64"
-            }
-          }
-        }
-      },
       "creat_mec_matrix_0": {
         "vlnv": "xilinx.com:hls:creat_mec_matrix:1.0",
         "xci_name": "design_1_creat_mec_matrix_0_0",
@@ -1964,6 +1933,37 @@
             }
           }
         }
+      },
+      "extend_matrix_0": {
+        "vlnv": "xilinx.com:hls:extend_matrix:1.0",
+        "xci_name": "design_1_extend_matrix_0_0",
+        "xci_path": "ip\\design_1_extend_matrix_0_0\\design_1_extend_matrix_0_0.xci",
+        "inst_hier_path": "extend_matrix_0",
+        "interface_ports": {
+          "m_axi_gmem": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "1"
+              }
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data_m_axi_gmem": {
+              "range": "16E",
+              "width": "64"
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2030,12 +2030,12 @@
           "creat_mec_matrix_0/ap_rst_n",
           "ps8_0_axi_periph/M00_ARESETN",
           "ps8_0_axi_periph/ARESETN",
-          "extend_matrix_0/ap_rst_n",
           "ps8_0_axi_periph/M01_ARESETN",
           "mul_mec_matrix_0/ap_rst_n",
           "ps8_0_axi_periph/M02_ARESETN",
           "axi_smc/aresetn",
-          "ps8_0_axi_periph/S01_ARESETN"
+          "ps8_0_axi_periph/S01_ARESETN",
+          "extend_matrix_0/ap_rst_n"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {
@@ -2047,14 +2047,14 @@
           "creat_mec_matrix_0/ap_clk",
           "ps8_0_axi_periph/M00_ACLK",
           "ps8_0_axi_periph/ACLK",
-          "extend_matrix_0/ap_clk",
           "ps8_0_axi_periph/M01_ACLK",
           "mul_mec_matrix_0/ap_clk",
           "ps8_0_axi_periph/M02_ACLK",
           "axi_smc/aclk",
           "zynq_ultra_ps_e_0/saxihp0_fpd_aclk",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
-          "ps8_0_axi_periph/S01_ACLK"
+          "ps8_0_axi_periph/S01_ACLK",
+          "extend_matrix_0/ap_clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -2083,34 +2083,6 @@
                 "address_block": "/mul_mec_matrix_0/s_axi_control/Reg",
                 "offset": "0x00A0020000",
                 "range": "64K"
-              }
-            }
-          }
-        }
-      },
-      "/extend_matrix_0": {
-        "address_spaces": {
-          "Data_m_axi_gmem": {
-            "segments": {
-              "SEG_zynq_ultra_ps_e_0_HP0_DDR_HIGH": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH",
-                "offset": "0x0000000800000000",
-                "range": "32G"
-              },
-              "SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW",
-                "offset": "0x0000000000000000",
-                "range": "2G"
-              },
-              "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM",
-                "offset": "0x00000000FF000000",
-                "range": "16M"
-              },
-              "SEG_zynq_ultra_ps_e_0_HP0_QSPI": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI",
-                "offset": "0x00000000C0000000",
-                "range": "512M"
               }
             }
           }
@@ -2145,6 +2117,34 @@
         }
       },
       "/mul_mec_matrix_0": {
+        "address_spaces": {
+          "Data_m_axi_gmem": {
+            "segments": {
+              "SEG_zynq_ultra_ps_e_0_HP0_DDR_HIGH": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH",
+                "offset": "0x0000000800000000",
+                "range": "32G"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW",
+                "offset": "0x0000000000000000",
+                "range": "2G"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM",
+                "offset": "0x00000000FF000000",
+                "range": "16M"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP0_QSPI": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI",
+                "offset": "0x00000000C0000000",
+                "range": "512M"
+              }
+            }
+          }
+        }
+      },
+      "/extend_matrix_0": {
         "address_spaces": {
           "Data_m_axi_gmem": {
             "segments": {

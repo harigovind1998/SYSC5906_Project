@@ -14,4 +14,4 @@ config_export -format sysgen -output C:/University/Masters/Year_1/SYSC5906/SYSC5
 #csim_design
 csynth_design
 #cosim_design
-export_design -rtl verilog -format sysgen
+export_design -rtl verilog -format ip_catalog

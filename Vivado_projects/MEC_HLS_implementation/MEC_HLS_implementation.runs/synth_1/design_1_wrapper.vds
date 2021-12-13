@@ -2,8 +2,8 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Wed Dec  8 16:21:52 2021
-# Process ID: 68104
+# Start of session at: Sun Dec 12 20:13:36 2021
+# Process ID: 30120
 # Current directory: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/design_1_wrapper.vds
@@ -24,28 +24,28 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev
 INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 40880
+INFO: [Synth 8-7075] Helper process launched with PID 15836
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1815.184 ; gain = 132.520
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1815.023 ; gain = 132.199
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (1#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_creat_mec_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_creat_mec_matrix_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_creat_mec_matrix_0_0' (2#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_creat_mec_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (1#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_creat_mec_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_creat_mec_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_creat_mec_matrix_0_0' (2#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_creat_mec_matrix_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_creat_mec_matrix_0_0' is unconnected for instance 'creat_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:412]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'design_1_creat_mec_matrix_0_0' is unconnected for instance 'creat_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:412]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'design_1_creat_mec_matrix_0_0' is unconnected for instance 'creat_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:412]
 WARNING: [Synth 8-7023] instance 'creat_mec_matrix_0' of module 'design_1_creat_mec_matrix_0_0' has 55 connections declared, but only 52 given [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:412]
-INFO: [Synth 8-6157] synthesizing module 'design_1_extend_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_extend_matrix_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_extend_matrix_0_0' (3#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_extend_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_extend_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_extend_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_extend_matrix_0_0' (3#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_extend_matrix_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_extend_matrix_0_0' is unconnected for instance 'extend_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:465]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'design_1_extend_matrix_0_0' is unconnected for instance 'extend_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:465]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'design_1_extend_matrix_0_0' is unconnected for instance 'extend_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:465]
 WARNING: [Synth 8-7023] instance 'extend_matrix_0' of module 'design_1_extend_matrix_0_0' has 55 connections declared, but only 52 given [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:465]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mul_mec_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_mul_mec_matrix_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mul_mec_matrix_0_0' (4#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_mul_mec_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mul_mec_matrix_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_mul_mec_matrix_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mul_mec_matrix_0_0' (4#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_mul_mec_matrix_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_mul_mec_matrix_0_0' is unconnected for instance 'mul_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:518]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'design_1_mul_mec_matrix_0_0' is unconnected for instance 'mul_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:518]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'design_1_mul_mec_matrix_0_0' is unconnected for instance 'mul_mec_matrix_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:518]
@@ -58,32 +58,32 @@ INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (6#1) [
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2000]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (7#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2000]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2132]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (8#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (9#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (8#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (9#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (10#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2132]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2542]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (11#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (12#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (11#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (12#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (13#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:2542]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (14#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (14#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_xbar_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:1695]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:1695]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:1695]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (15#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:836]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_99M_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_99M_0' (16#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_99M_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_99M_0' (16#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:709]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:709]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:709]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:709]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'design_1_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:709]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (17#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-68104-DESKTOP-J45FL4K/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (17#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/.Xil/Vivado-30120-DESKTOP-J45FL4K/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:716]
 WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:716]
 WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:716]
@@ -92,28 +92,26 @@ WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0
 WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:716]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 123 connections declared, but only 117 given [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:716]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (18#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (19#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (19#1) [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1871.473 ; gain = 188.809
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1870.984 ; gain = 188.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1889.398 ; gain = 206.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1888.895 ; gain = 206.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1889.398 ; gain = 206.734
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1888.895 ; gain = 206.070
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1889.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1888.895 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
 Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
-Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0_in_context.xdc] for cell 'design_1_i/extend_matrix_0'
-Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0_in_context.xdc] for cell 'design_1_i/extend_matrix_0'
 Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_creat_mec_matrix_0_0/design_1_creat_mec_matrix_0_0/design_1_creat_mec_matrix_0_0_in_context.xdc] for cell 'design_1_i/creat_mec_matrix_0'
 Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_creat_mec_matrix_0_0/design_1_creat_mec_matrix_0_0/design_1_creat_mec_matrix_0_0_in_context.xdc] for cell 'design_1_i/creat_mec_matrix_0'
 Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_mul_mec_matrix_0_0/design_1_mul_mec_matrix_0_0/design_1_mul_mec_matrix_0_0_in_context.xdc] for cell 'design_1_i/mul_mec_matrix_0'
@@ -132,17 +130,19 @@ Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_
 Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_99M'
 Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
 Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0_in_context.xdc] for cell 'design_1_i/extend_matrix_0'
+Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0_in_context.xdc] for cell 'design_1_i/extend_matrix_0'
 Parsing XDC File [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1931.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1921.582 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1931.992 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1921.582 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1931.992 ; gain = 249.328
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1921.582 ; gain = 238.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -150,14 +150,13 @@ Start Loading Part and Timing Information
 Loading part: xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1931.992 ; gain = 249.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1921.582 ; gain = 238.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/extend_matrix_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/creat_mec_matrix_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/mul_mec_matrix_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
@@ -168,11 +167,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_c
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_99M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/extend_matrix_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1931.992 ; gain = 249.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1921.582 ; gain = 238.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1931.992 ; gain = 249.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1921.582 ; gain = 238.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -194,25 +194,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1931.992 ; gain = 249.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1921.582 ; gain = 238.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.707 ; gain = 850.043
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2527.410 ; gain = 844.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.707 ; gain = 850.043
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2527.410 ; gain = 844.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2553.012 ; gain = 870.348
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2547.762 ; gain = 864.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -230,37 +230,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -298,24 +298,24 @@ Report Cell Usage:
 |11    |design_1_zynq_ultra_ps_e_0  |     1|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2557.844 ; gain = 832.586
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2557.844 ; gain = 875.180
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2552.512 ; gain = 837.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.512 ; gain = 869.688
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2557.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2552.512 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2611.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: d774ce6e
+Synth Design complete, checksum: b1fd8653
 INFO: [Common 17-83] Releasing license: Synthesis
 56 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2617.355 ; gain = 1333.645
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2612.340 ; gain = 1329.184
 INFO: [Common 17-1381] The checkpoint 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  8 16:22:30 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 12 20:14:16 2021...
