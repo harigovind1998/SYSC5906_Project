@@ -146,6 +146,14 @@ s {
 	offset 164
 	offset_end 171
 }
+lim { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 172
+	offset_end 179
+}
 ap_start {
 	mailbox_input_ctrl 0
 	mailbox_output_ctrl 0

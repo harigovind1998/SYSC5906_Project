@@ -1,10 +1,10 @@
-20:42:53 **** Incremental Build of configuration Debug for project MEC_HLS_Impl_1_0_system ****
+19:27:25 **** Incremental Build of configuration Debug for project MEC_HLS_Impl_1_0_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 53150 C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_0/export/MEC_HSL_impl_V1_0/MEC_HSL_impl_V1_0.xpfm standalone_psu_cortexa53_0 C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0_system/Debug/system.bif
+generate_system_bif.bat 53064 C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_0/export/MEC_HSL_impl_V1_0/MEC_HSL_impl_V1_0.xpfm standalone_psu_cortexa53_0 C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0_system/Debug/system.bif
 sdcard_gen --xpfm C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_0/export/MEC_HSL_impl_V1_0/MEC_HSL_impl_V1_0.xpfm --sys_config MEC_HSL_impl_V1_0 --bif C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0_system/Debug/system.bif --bitstream C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0/_ide/bitstream/MEC_HSL_impl_V1.0.bit --elf C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0/Debug/MEC_HLS_Impl_1_0.elf,psu_cortexa53_0
 creating BOOT.BIN using C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0/_ide/bitstream/MEC_HSL_impl_V1.0.bit
 Running G:/dev_tools/xilinx/Vitis/2021.1/bin/bootgen -arch zynqmp -image C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_0_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-20:42:58 Build Finished (took 5s.540ms)
+19:27:30 Build Finished (took 4s.988ms)
 

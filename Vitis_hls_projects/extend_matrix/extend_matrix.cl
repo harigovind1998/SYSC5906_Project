@@ -8,8 +8,8 @@ extend_matrix(__global int* A,
 		const unsigned int wb,
 		const unsigned int hb)
 {
-int tx = get_global_id(0);
-int ty = get_global_id(1);
-int tz = get_global_id(2);
-B[( tz*wb*hb+ty*wb )+tx+p*wb+p] = A[( tz*wa*ha+ty*wa )+tx];
+	int tx = get_global_id(0);
+	int ty = get_global_id(1);
+	int tz = get_global_id(2);
+	B[( tz*wb*hb+ty*wb )+tx+p*wb+p] = A[( tz*wa*ha+ty*wa )+tx];
 }

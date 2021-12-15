@@ -31,6 +31,7 @@ set C_modelArgList {
 	{ ho int 32 regular {axi_slave 0}  }
 	{ co int 32 regular {axi_slave 0}  }
 	{ s int 32 regular {axi_slave 0}  }
+	{ lim int 32 regular {axi_slave 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[ {"cElement": [{"cName": "I","offset": { "type": "dynamic","port_name": "I","bundle": "control"},"direction": "READONLY"},{"cName": "K","offset": { "type": "dynamic","port_name": "K","bundle": "control"},"direction": "READONLY"},{"cName": "O","offset": { "type": "dynamic","port_name": "O","bundle": "control"},"direction": "WRITEONLY"}]}]} , 
@@ -51,7 +52,8 @@ set C_modelArgMapList {[
  	{ "Name" : "wo", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":140}, "offset_end" : {"in":147}} , 
  	{ "Name" : "ho", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":148}, "offset_end" : {"in":155}} , 
  	{ "Name" : "co", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":156}, "offset_end" : {"in":163}} , 
- 	{ "Name" : "s", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":164}, "offset_end" : {"in":171}} ]}
+ 	{ "Name" : "s", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":164}, "offset_end" : {"in":171}} , 
+ 	{ "Name" : "lim", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":172}, "offset_end" : {"in":179}} ]}
 # RTL Port declarations: 
 set portNum 65
 set portList { 
@@ -122,7 +124,7 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"mul_mec_matrix","role":"start","value":"0","valid_bit":"0"},{"name":"mul_mec_matrix","role":"continue","value":"0","valid_bit":"4"},{"name":"mul_mec_matrix","role":"auto_start","value":"0","valid_bit":"7"},{"name":"group_id_x","role":"data","value":"16"},{"name":"group_id_y","role":"data","value":"24"},{"name":"group_id_z","role":"data","value":"32"},{"name":"global_offset_x","role":"data","value":"40"},{"name":"global_offset_y","role":"data","value":"48"},{"name":"global_offset_z","role":"data","value":"56"},{"name":"I","role":"data","value":"64"},{"name":"wi","role":"data","value":"76"},{"name":"hi","role":"data","value":"84"},{"name":"ci","role":"data","value":"92"},{"name":"K","role":"data","value":"100"},{"name":"wk","role":"data","value":"112"},{"name":"nk","role":"data","value":"120"},{"name":"O","role":"data","value":"128"},{"name":"wo","role":"data","value":"140"},{"name":"ho","role":"data","value":"148"},{"name":"co","role":"data","value":"156"},{"name":"s","role":"data","value":"164"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"mul_mec_matrix","role":"start","value":"0","valid_bit":"0"},{"name":"mul_mec_matrix","role":"continue","value":"0","valid_bit":"4"},{"name":"mul_mec_matrix","role":"auto_start","value":"0","valid_bit":"7"},{"name":"group_id_x","role":"data","value":"16"},{"name":"group_id_y","role":"data","value":"24"},{"name":"group_id_z","role":"data","value":"32"},{"name":"global_offset_x","role":"data","value":"40"},{"name":"global_offset_y","role":"data","value":"48"},{"name":"global_offset_z","role":"data","value":"56"},{"name":"I","role":"data","value":"64"},{"name":"wi","role":"data","value":"76"},{"name":"hi","role":"data","value":"84"},{"name":"ci","role":"data","value":"92"},{"name":"K","role":"data","value":"100"},{"name":"wk","role":"data","value":"112"},{"name":"nk","role":"data","value":"120"},{"name":"O","role":"data","value":"128"},{"name":"wo","role":"data","value":"140"},{"name":"ho","role":"data","value":"148"},{"name":"co","role":"data","value":"156"},{"name":"s","role":"data","value":"164"},{"name":"lim","role":"data","value":"172"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
@@ -189,7 +191,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"],
 		"CDFG" : "mul_mec_matrix",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -209,7 +211,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364", "Port" : "gmem", "Inst_start_state" : "75", "Inst_end_state" : "76"}]},
+					{"ID" : "1", "SubInstance" : "grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374", "Port" : "gmem", "Inst_start_state" : "75", "Inst_end_state" : "76"}]},
 			{"Name" : "group_id_x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "group_id_y", "Type" : "None", "Direction" : "I"},
 			{"Name" : "group_id_z", "Type" : "None", "Direction" : "I"},
@@ -227,11 +229,12 @@ set RtlHierarchyInfo {[
 			{"Name" : "wo", "Type" : "None", "Direction" : "I"},
 			{"Name" : "ho", "Type" : "None", "Direction" : "I"},
 			{"Name" : "co", "Type" : "None", "Direction" : "I"},
-			{"Name" : "s", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "s", "Type" : "None", "Direction" : "I"},
+			{"Name" : "lim", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "XCL_WG_DIM_Z_XCL_WG_DIM_Y", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "88", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state88"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
 		"CDFG" : "mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -246,13 +249,13 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "bound", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul_ln3_4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul8_mid2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "lim", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul6_mid2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "hi", "Type" : "None", "Direction" : "I"},
 			{"Name" : "global_id_base_x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "wi", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul16", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul14", "Type" : "None", "Direction" : "I"},
 			{"Name" : "I", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
@@ -264,31 +267,29 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "XCL_WG_DIM_X_L", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter23", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter22", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.udiv_32ns_32ns_32_36_1_U1", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.urem_32ns_32ns_32_36_1_U2", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.mul_32s_32s_32_1_1_U3", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.mul_32s_32s_32_1_1_U4", "Parent" : "1"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.mul_32s_32s_32_1_1_U5", "Parent" : "1"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.udiv_32ns_32ns_32_36_1_U1", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.urem_32ns_32ns_32_36_1_U2", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.mul_32s_32s_32_1_1_U3", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.mul_32s_32s_32_1_1_U4", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.mul_32s_32s_32_1_1_U5", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U22", "Parent" : "0"},
 	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U23", "Parent" : "0"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U24", "Parent" : "0"},
 	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U25", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U26", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32s_32_36_seq_1_U26", "Parent" : "0"},
 	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U27", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32s_32_36_seq_1_U28", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U29", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_2ns_32s_32_1_1_U30", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32s_32_36_seq_1_U31", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_3ns_32s_32_1_1_U32", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_2ns_32s_32_1_1_U28", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32s_32_36_seq_1_U29", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_3ns_32s_32_1_1_U30", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U31", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U32", "Parent" : "0"},
 	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U33", "Parent" : "0"},
 	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U34", "Parent" : "0"},
 	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U35", "Parent" : "0"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U36", "Parent" : "0"},
-	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U37", "Parent" : "0"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U38", "Parent" : "0"}]}
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U36", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -303,24 +304,25 @@ set ArgLastReadFirstWriteLatency {
 		I {Type I LastRead 1 FirstWrite -1}
 		wi {Type I LastRead 1 FirstWrite -1}
 		hi {Type I LastRead 1 FirstWrite -1}
-		ci {Type I LastRead 0 FirstWrite -1}
+		ci {Type I LastRead 1 FirstWrite -1}
 		K {Type I LastRead 1 FirstWrite -1}
-		wk {Type I LastRead 0 FirstWrite -1}
+		wk {Type I LastRead 1 FirstWrite -1}
 		nk {Type I LastRead -1 FirstWrite -1}
 		O {Type I LastRead 1 FirstWrite -1}
 		wo {Type I LastRead 1 FirstWrite -1}
 		ho {Type I LastRead 0 FirstWrite -1}
 		co {Type I LastRead 1 FirstWrite -1}
-		s {Type I LastRead 1 FirstWrite -1}}
+		s {Type I LastRead 1 FirstWrite -1}
+		lim {Type I LastRead 1 FirstWrite -1}}
 	mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L {
 		bound {Type I LastRead 0 FirstWrite -1}
-		mul_ln3_4 {Type I LastRead 0 FirstWrite -1}
-		mul {Type I LastRead 0 FirstWrite -1}
-		mul8_mid2 {Type I LastRead 0 FirstWrite -1}
+		lim {Type I LastRead 0 FirstWrite -1}
+		mul7 {Type I LastRead 0 FirstWrite -1}
+		mul6_mid2 {Type I LastRead 0 FirstWrite -1}
 		hi {Type I LastRead 0 FirstWrite -1}
 		global_id_base_x {Type I LastRead 0 FirstWrite -1}
 		wi {Type I LastRead 0 FirstWrite -1}
-		mul16 {Type I LastRead 0 FirstWrite -1}
+		mul14 {Type I LastRead 0 FirstWrite -1}
 		I {Type I LastRead 0 FirstWrite -1}
 		gmem {Type I LastRead 45 FirstWrite -1}
 		sext_ln3_1_mid2 {Type I LastRead 0 FirstWrite -1}

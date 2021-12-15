@@ -123,6 +123,8 @@ void XMul_mec_matrix_Set_co(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_co(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_Set_s(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_s(XMul_mec_matrix *InstancePtr);
+void XMul_mec_matrix_Set_lim(XMul_mec_matrix *InstancePtr, u32 Data);
+u32 XMul_mec_matrix_Get_lim(XMul_mec_matrix *InstancePtr);
 
 void XMul_mec_matrix_InterruptGlobalEnable(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_InterruptGlobalDisable(XMul_mec_matrix *InstancePtr);

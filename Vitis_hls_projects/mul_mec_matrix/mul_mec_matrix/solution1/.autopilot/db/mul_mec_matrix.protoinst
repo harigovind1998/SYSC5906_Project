@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364/grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_activity": {
+				"grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374/grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

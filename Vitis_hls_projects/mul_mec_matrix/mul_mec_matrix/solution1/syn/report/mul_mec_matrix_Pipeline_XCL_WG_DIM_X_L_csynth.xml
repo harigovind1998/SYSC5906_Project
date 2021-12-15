@@ -633,8 +633,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul_ln3_4</name>
-<Object>mul_ln3_4</Object>
+<name>lim</name>
+<Object>lim</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -644,8 +644,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul</name>
-<Object>mul</Object>
+<name>mul7</name>
+<Object>mul7</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -655,8 +655,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul8_mid2</name>
-<Object>mul8_mid2</Object>
+<name>mul6_mid2</name>
+<Object>mul6_mid2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -699,8 +699,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul16</name>
-<Object>mul16</Object>
+<name>mul14</name>
+<Object>mul14</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

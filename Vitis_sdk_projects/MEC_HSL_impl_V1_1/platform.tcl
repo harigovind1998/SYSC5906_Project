@@ -21,3 +21,8 @@ domain active {zynqmp_pmufw}
 domain active {standalone_psu_cortexa53_0}
 platform generate -quick
 platform generate
+platform active {MEC_HSL_impl_V1_1}
+bsp reload
+bsp reload
+platform generate -domains 
+platform generate -domains 

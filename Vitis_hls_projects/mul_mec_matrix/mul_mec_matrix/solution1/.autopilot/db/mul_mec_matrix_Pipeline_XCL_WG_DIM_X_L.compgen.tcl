@@ -44,14 +44,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 10 \
-    name mul_ln3_4 \
+    name lim \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul_ln3_4 \
+    corename dc_lim \
     op interface \
-    ports { mul_ln3_4 { I 32 vector } } \
+    ports { lim { I 32 vector } } \
 } "
 }
 
@@ -59,14 +59,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 11 \
-    name mul \
+    name mul7 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul \
+    corename dc_mul7 \
     op interface \
-    ports { mul { I 32 vector } } \
+    ports { mul7 { I 32 vector } } \
 } "
 }
 
@@ -74,14 +74,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 12 \
-    name mul8_mid2 \
+    name mul6_mid2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul8_mid2 \
+    corename dc_mul6_mid2 \
     op interface \
-    ports { mul8_mid2 { I 32 vector } } \
+    ports { mul6_mid2 { I 32 vector } } \
 } "
 }
 
@@ -134,14 +134,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 16 \
-    name mul16 \
+    name mul14 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul16 \
+    corename dc_mul14 \
     op interface \
-    ports { mul16 { I 32 vector } } \
+    ports { mul14 { I 32 vector } } \
 } "
 }
 

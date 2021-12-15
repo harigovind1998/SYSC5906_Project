@@ -385,6 +385,23 @@ u32 XMul_mec_matrix_Get_s(XMul_mec_matrix *InstancePtr) {
     return Data;
 }
 
+void XMul_mec_matrix_Set_lim(XMul_mec_matrix *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XMul_mec_matrix_WriteReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_LIM_DATA, Data);
+}
+
+u32 XMul_mec_matrix_Get_lim(XMul_mec_matrix *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XMul_mec_matrix_ReadReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_LIM_DATA);
+    return Data;
+}
+
 void XMul_mec_matrix_InterruptGlobalEnable(XMul_mec_matrix *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

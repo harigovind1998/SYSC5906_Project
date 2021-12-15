@@ -50,6 +50,7 @@ port (
     ho                    :out  STD_LOGIC_VECTOR(31 downto 0);
     co                    :out  STD_LOGIC_VECTOR(31 downto 0);
     s                     :out  STD_LOGIC_VECTOR(31 downto 0);
+    lim                   :out  STD_LOGIC_VECTOR(31 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -136,6 +137,9 @@ end entity mul_mec_matrix_control_s_axi;
 -- 0xa4 : Data signal of s
 --        bit 31~0 - s[31:0] (Read/Write)
 -- 0xa8 : reserved
+-- 0xac : Data signal of lim
+--        bit 31~0 - lim[31:0] (Read/Write)
+-- 0xb0 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of mul_mec_matrix_control_s_axi is
@@ -186,6 +190,8 @@ architecture behave of mul_mec_matrix_control_s_axi is
     constant ADDR_CO_CTRL                : INTEGER := 16#a0#;
     constant ADDR_S_DATA_0               : INTEGER := 16#a4#;
     constant ADDR_S_CTRL                 : INTEGER := 16#a8#;
+    constant ADDR_LIM_DATA_0             : INTEGER := 16#ac#;
+    constant ADDR_LIM_CTRL               : INTEGER := 16#b0#;
     constant ADDR_BITS         : INTEGER := 8;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -231,6 +237,7 @@ architecture behave of mul_mec_matrix_control_s_axi is
     signal int_ho              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_co              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_s               : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_lim             : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -400,6 +407,8 @@ begin
                         rdata_data <= RESIZE(int_co(31 downto 0), 32);
                     when ADDR_S_DATA_0 =>
                         rdata_data <= RESIZE(int_s(31 downto 0), 32);
+                    when ADDR_LIM_DATA_0 =>
+                        rdata_data <= RESIZE(int_lim(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -432,6 +441,7 @@ begin
     ho                   <= STD_LOGIC_VECTOR(int_ho);
     co                   <= STD_LOGIC_VECTOR(int_co);
     s                    <= STD_LOGIC_VECTOR(int_s);
+    lim                  <= STD_LOGIC_VECTOR(int_lim);
 
     process (ACLK)
     begin
@@ -814,6 +824,17 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_S_DATA_0) then
                     int_s(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_s(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_LIM_DATA_0) then
+                    int_lim(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_lim(31 downto 0));
                 end if;
             end if;
         end if;

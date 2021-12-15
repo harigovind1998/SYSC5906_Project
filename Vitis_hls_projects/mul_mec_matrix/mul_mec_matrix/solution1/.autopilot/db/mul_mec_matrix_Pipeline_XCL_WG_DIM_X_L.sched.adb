@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>mul_ln3_4</name>
+						<name>lim</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -62,7 +62,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName></originalName>
+						<originalName>lim</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936343632</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -88,7 +88,7 @@
 					<Obj>
 						<type>1</type>
 						<id>3</id>
-						<name>mul</name>
+						<name>mul7</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -124,7 +124,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>mul8_mid2</name>
+						<name>mul6_mid2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>429</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>91</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -268,7 +268,7 @@
 					<Obj>
 						<type>1</type>
 						<id>8</id>
-						<name>mul16</name>
+						<name>mul14</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>244</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>120</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -506,7 +506,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806026960</coreId>
+						<coreId>2796332680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -548,7 +548,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806083152</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -590,7 +590,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806070768</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>192</bitwidth>
@@ -632,7 +632,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806054344</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -674,7 +674,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806851328</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>35</bitwidth>
@@ -716,7 +716,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807058648</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -759,7 +759,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806018576</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -784,7 +784,7 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>mul16_read</name>
+						<name>mul14_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -802,7 +802,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1872118296</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -845,7 +845,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1806823040</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -888,7 +888,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1872122776</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -931,7 +931,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1937101264</coreId>
+						<coreId>2853410224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -956,7 +956,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>mul8_mid2_read</name>
+						<name>mul6_mid2_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -974,7 +974,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807047304</coreId>
+						<coreId>2796336600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -999,7 +999,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>mul_read</name>
+						<name>mul7_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1017,7 +1017,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807014128</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1042,7 +1042,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>mul_ln3_4_read</name>
+						<name>lim_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1052,7 +1052,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName></originalName>
+						<originalName>lim</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -1060,7 +1060,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>107</coreId>
+						<coreId>544435055</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1146,7 +1146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>24</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>63</bitwidth>
@@ -1188,7 +1188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1231,7 +1231,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>131</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1274,7 +1274,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1718511904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1317,7 +1317,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>164</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1360,7 +1360,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>304</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1403,7 +1403,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>8</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1473,7 +1473,7 @@
 						<name>indvar_flatten_load</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1489,7 +1489,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -1527,10 +1527,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>lshr_ln26_dup</name>
+						<name>lshr_ln27_dup</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1546,7 +1546,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>26</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -1586,10 +1586,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>icmp_ln27</name>
+						<name>icmp_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1605,7 +1605,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -1643,7 +1643,122 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>add_ln27</name>
+						<name>add_ln28</name>
+						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
+						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
+						<lineNumber>28</lineNumber>
+						<contextFuncName>mul_mec_matrix</contextFuncName>
+						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
+											<second>mul_mec_matrix</second>
+										</first>
+										<second>28</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>543517801</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>35</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>163</item>
+					<item>165</item>
+				</oprand_edges>
+				<opcode>add</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.02</m_delay>
+				<m_topoIndex>25</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_41">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>44</id>
+						<name>br_ln28</name>
+						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
+						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
+						<lineNumber>28</lineNumber>
+						<contextFuncName>mul_mec_matrix</contextFuncName>
+						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
+											<second>mul_mec_matrix</second>
+										</first>
+										<second>28</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>166</item>
+					<item>167</item>
+					<item>168</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>26</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_42">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>46</id>
+						<name>value_load_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
 						<lineNumber>27</lineNumber>
@@ -1678,121 +1793,6 @@
 						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>35</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>163</item>
-					<item>165</item>
-				</oprand_edges>
-				<opcode>add</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.02</m_delay>
-				<m_topoIndex>25</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_41">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>44</id>
-						<name>br_ln27</name>
-						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
-						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
-						<contextFuncName>mul_mec_matrix</contextFuncName>
-						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
-											<second>mul_mec_matrix</second>
-										</first>
-										<second>27</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>166</item>
-					<item>167</item>
-					<item>168</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>26</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_42">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>46</id>
-						<name>value_load_1</name>
-						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
-						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>26</lineNumber>
-						<contextFuncName>mul_mec_matrix</contextFuncName>
-						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
-											<second>mul_mec_matrix</second>
-										</first>
-										<second>26</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>422</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
@@ -1818,7 +1818,7 @@
 						<name>j_load</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>21</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1834,7 +1834,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>20</second>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -1847,7 +1847,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>33</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1875,7 +1875,7 @@
 						<name>phi_ln3_load</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1891,7 +1891,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -1904,7 +1904,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701601903</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1929,10 +1929,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>icmp_ln20</name>
+						<name>icmp_ln21</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>21</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -1948,7 +1948,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>20</second>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -1986,10 +1986,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>select_ln27</name>
+						<name>select_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2005,7 +2005,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2018,7 +2018,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2044,10 +2044,10 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>select_ln27_1</name>
+						<name>select_ln28_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2063,7 +2063,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2076,7 +2076,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>73</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2102,10 +2102,10 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>add_ln27_1</name>
+						<name>add_ln28_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2121,7 +2121,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2159,10 +2159,10 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>select_ln27_2</name>
+						<name>select_ln28_2</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2178,7 +2178,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2191,7 +2191,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2299810832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -2217,10 +2217,10 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>zext_ln27</name>
+						<name>zext_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2236,7 +2236,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2273,10 +2273,10 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>or_ln26_dup</name>
+						<name>or_ln27_dup</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2292,7 +2292,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>26</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -2331,10 +2331,10 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>select_ln27_3</name>
+						<name>select_ln28_3</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2350,7 +2350,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2392,7 +2392,7 @@
 						<name>indvar_cast</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2408,7 +2408,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -2445,10 +2445,10 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>udiv_ln22</name>
+						<name>udiv_ln23</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2464,7 +2464,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2502,10 +2502,10 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>urem_ln22</name>
+						<name>urem_ln23</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2521,7 +2521,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2562,7 +2562,7 @@
 						<name>tmp3</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2578,7 +2578,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2619,7 +2619,7 @@
 						<name>tmp4</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2635,7 +2635,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2673,10 +2673,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>tmp9</name>
+						<name>tmp8</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2692,7 +2692,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2733,7 +2733,7 @@
 						<name>tmp2</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2749,7 +2749,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2790,7 +2790,7 @@
 						<name>tmp5</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2806,7 +2806,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2844,10 +2844,10 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>add_ln22</name>
+						<name>add_ln23</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2863,7 +2863,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2901,10 +2901,10 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>add_ln22_1</name>
+						<name>add_ln23_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2920,7 +2920,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -2961,7 +2961,7 @@
 						<name>shl_ln</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -2977,7 +2977,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3016,10 +3016,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>zext_ln22</name>
+						<name>zext_ln23</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3035,7 +3035,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3072,10 +3072,10 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>add_ln22_2</name>
+						<name>add_ln23_2</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3091,7 +3091,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3132,7 +3132,7 @@
 						<name>trunc_ln1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3148,7 +3148,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3188,10 +3188,10 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>sext_ln22</name>
+						<name>sext_ln23</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3207,7 +3207,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3247,7 +3247,7 @@
 						<name>gmem_addr</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3263,7 +3263,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3304,7 +3304,7 @@
 						<name>empty</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3320,7 +3320,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3362,7 +3362,7 @@
 						<name>i</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3378,7 +3378,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -3417,10 +3417,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>add_ln23</name>
+						<name>add_ln24</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3436,7 +3436,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -3474,10 +3474,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>sext_ln23</name>
+						<name>sext_ln24</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3493,7 +3493,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -3533,7 +3533,7 @@
 						<name>gmem_addr_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3549,7 +3549,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -3587,10 +3587,10 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>empty_33</name>
+						<name>empty_34</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3606,7 +3606,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -3649,7 +3649,7 @@
 						<name>k</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3665,7 +3665,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -3705,10 +3705,10 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>mul_ln24</name>
+						<name>mul_ln25</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3724,7 +3724,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>24</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -3765,7 +3765,7 @@
 						<name>value_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3781,7 +3781,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>24</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -3822,7 +3822,7 @@
 						<name>j_1</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>21</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3838,7 +3838,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>20</second>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -3876,10 +3876,10 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>indvar_flatten_write_ln27</name>
+						<name>indvar_flatten_write_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3895,7 +3895,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -3935,10 +3935,10 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>phi_ln3_write_ln27</name>
+						<name>phi_ln3_write_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -3954,7 +3954,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -3994,10 +3994,10 @@
 					<Obj>
 						<type>0</type>
 						<id>87</id>
-						<name>shiftreg_write_ln27</name>
+						<name>shiftreg_write_ln28</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -4013,7 +4013,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -4053,10 +4053,10 @@
 					<Obj>
 						<type>0</type>
 						<id>88</id>
-						<name>j_write_ln20</name>
+						<name>j_write_ln21</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>21</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -4072,7 +4072,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>20</second>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -4112,10 +4112,10 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>value_write_ln24</name>
+						<name>value_write_ln25</name>
 						<fileName>mul_mec_matrix/mul_mec_matrix.cl</fileName>
 						<fileDirectory>C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>mul_mec_matrix</contextFuncName>
 						<contextNormFuncName>mul_mec_matrix</contextNormFuncName>
 						<inlineStackInfo>
@@ -4131,7 +4131,7 @@
 											<first>mul_mec_matrix/mul_mec_matrix.cl</first>
 											<second>mul_mec_matrix</second>
 										</first>
-										<second>24</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -4407,7 +4407,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4438,7 +4438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>699</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>35</bitwidth>
@@ -4469,7 +4469,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>148</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -4531,7 +4531,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>451</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4593,7 +4593,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1944318496</coreId>
+						<coreId>141</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4624,7 +4624,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>17</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>35</bitwidth>
@@ -4655,7 +4655,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -4686,7 +4686,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4228300630</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -4717,7 +4717,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4748,7 +4748,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2855018528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4782,7 +4782,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2260494432</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -4834,7 +4834,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1193835685</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -4870,7 +4870,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>812316792</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -4943,7 +4943,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1726258935</coreId>
+					<coreId>6553600</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

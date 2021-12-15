@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mul_mec_matrix'" level="0">
-<item name = "Date">Wed Dec  8 16:05:31 2021
+<item name = "Date">Tue Dec 14 19:07:37 2021
 </item>
 <item name = "Version">2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)</item>
 <item name = "Project">mul_mec_matrix</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364">mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374">mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

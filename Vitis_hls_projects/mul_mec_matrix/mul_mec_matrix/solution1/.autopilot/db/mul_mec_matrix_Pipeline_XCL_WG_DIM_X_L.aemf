@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1638997531923">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1639526858456">
   <ports id="1" name="bound" type="PortType" coreId="1953391988" bitwidth="35">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="mul_ln3_4" type="PortType" coreId="1936343632" bitwidth="32">
+  <ports id="2" name="lim" type="PortType" originalName="lim" coreId="1953391988" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="mul" type="PortType" coreId="1953391988" bitwidth="32">
+  <ports id="3" name="mul7" type="PortType" coreId="1953391988" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="mul8_mid2" type="PortType" coreId="1953391988" bitwidth="32">
+  <ports id="4" name="mul6_mid2" type="PortType" coreId="429" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="5" name="hi" type="PortType" originalName="hi" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="global_id_base_x" type="PortType" coreId="0" bitwidth="32">
+  <ports id="6" name="global_id_base_x" type="PortType" coreId="4294967295" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="wi" type="PortType" originalName="wi" coreId="0" bitwidth="32">
+  <ports id="7" name="wi" type="PortType" originalName="wi" coreId="91" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="mul16" type="PortType" coreId="244" bitwidth="32">
+  <ports id="8" name="mul14" type="PortType" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="9" name="I" type="PortType" originalName="I" coreId="0" bitwidth="64">
@@ -37,7 +37,7 @@
   <ports id="12" name="shiftreg_out" type="PortType" coreId="0" bitwidth="192" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="13" name="value_out" type="PortType" coreId="120" bitwidth="32" direction="DirOut">
+  <ports id="13" name="value_out" type="PortType" coreId="0" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="105" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.5"/>
@@ -168,103 +168,103 @@
   <edges id="329" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
   <blocks id="37" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>block_45</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="value" originalName="value" coreId="1806026960" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="value" originalName="value" coreId="2796332680" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="j" originalName="j" coreId="1806083152" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="j" originalName="j" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="shiftreg" coreId="1806070768" bitwidth="192" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="shiftreg" coreId="0" bitwidth="192" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="phi_ln3" coreId="1806054344" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="phi_ln3" coreId="0" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="indvar_flatten" coreId="1806851328" bitwidth="35" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="indvar_flatten" coreId="0" bitwidth="35" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="sext_ln3_1_mid2_read" coreId="1807058648" bitwidth="62" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="sext_ln3_1_mid2_read" coreId="0" bitwidth="62" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>sext_ln3_1_mid2</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="I_read" originalName="I" coreId="1806018576" bitwidth="64" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="I_read" originalName="I" coreId="0" bitwidth="64" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>I</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="mul16_read" coreId="1872118296" bitwidth="32" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <dataInputObjs>mul16</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="mul14_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>mul14</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="wi_read" originalName="wi" coreId="1806823040" bitwidth="32" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="wi_read" originalName="wi" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>wi</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="global_id_base_x_read" coreId="1872122776" bitwidth="32" opcode="read" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="global_id_base_x_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>global_id_base_x</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="hi_read" originalName="hi" coreId="1937101264" bitwidth="32" opcode="read" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="hi_read" originalName="hi" coreId="2853410224" bitwidth="32" opcode="read" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>hi</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mul8_mid2_read" coreId="1807047304" bitwidth="32" opcode="read" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <dataInputObjs>mul8_mid2</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mul6_mid2_read" coreId="2796336600" bitwidth="32" opcode="read" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>mul6_mid2</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="mul_read" coreId="1807014128" bitwidth="32" opcode="read" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <dataInputObjs>mul</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="mul7_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>mul7</dataInputObjs>
       <dataOutputObjs>udiv</dataOutputObjs>
       <dataOutputObjs>urem</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="mul_ln3_4_read" coreId="107" bitwidth="32" opcode="read" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <dataInputObjs>mul_ln3_4</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="lim_read" originalName="lim" coreId="544435055" bitwidth="32" opcode="read" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataInputObjs>lim</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bound_read" coreId="0" bitwidth="35" opcode="read" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>bound</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sext_ln3_1_mid2_cast" rtlName="sext_ln3_1_mid2_cast_fu_212_p1" coreId="24" bitwidth="63" opcode="sext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sext_ln3_1_mid2_cast" rtlName="sext_ln3_1_mid2_cast_fu_212_p1" coreId="0" bitwidth="63" opcode="sext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="indvar_flatten_write_ln0" coreId="2" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="indvar_flatten_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="phi_ln3_write_ln0" coreId="131" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="phi_ln3_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="shiftreg_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="shiftreg_write_ln0" coreId="1718511904" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="j_write_ln0" coreId="164" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="j_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="value_write_ln0" coreId="304" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="value_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="21" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln0" coreId="8" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <controlInputObjs>block_45</controlInputObjs>
     </node_objs>
   </blocks>
@@ -299,65 +299,65 @@
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="indvar_flatten_load" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="35" opcode="load" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="indvar_flatten_load" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="35" opcode="load" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="lshr_ln26_dup" lineNumber="26" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="lshr_ln26_dup_fu_419_p4" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="160" opcode="partselect" nodeLabel="45.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="26" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="lshr_ln27_dup" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="lshr_ln27_dup_fu_419_p4" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="160" opcode="partselect" nodeLabel="45.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="icmp_ln27_fu_244_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.03" m_topoIndex="24" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="icmp_ln28_fu_244_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.03" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln27_fu_250_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="35" opcode="add" m_display="0" m_delay="1.02" m_topoIndex="25" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln28_fu_250_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="35" opcode="add" m_display="0" m_delay="1.02" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="4294967295" contextFuncName="mul_mec_matrix" opcode="br" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="br" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>kernel.loop.inc0.loopexit</controlInputObjs>
         <controlInputObjs>kernel.loop.inc1.exitStub</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mul_mec_matrix/mul_mec_matrix.cl">
+        <validLinenumbers>28</validLinenumbers>
         <validLinenumbers>27</validLinenumbers>
-        <validLinenumbers>26</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="91" name="kernel.loop.inc0.loopexit" type="BlockType">
       <controlInputObjs>block_45</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_45</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="value_load_1" lineNumber="26" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="422" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="load" nodeLabel="45.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="26" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="value_load_1" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="load" nodeLabel="45.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="j_load" lineNumber="20" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="33" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="load" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="20" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="j_load" lineNumber="21" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="load" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="21" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="phi_ln3_load" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="1701601903" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="load" nodeLabel="35.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="phi_ln3_load" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="load" nodeLabel="35.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="icmp_ln20" lineNumber="20" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="icmp_ln20_fu_259_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="28" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="20" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="icmp_ln21" lineNumber="21" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="icmp_ln21_fu_259_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="21" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
@@ -365,8 +365,8 @@
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="select_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln27_fu_265_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="29" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="select_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln28_fu_265_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
@@ -375,217 +375,217 @@
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln27_1" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln27_1_fu_452_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="select" nodeLabel="46.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln28_1" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln28_1_fu_452_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="select" nodeLabel="46.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln27_1" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln27_1_fu_320_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="add" nodeLabel="35.0" m_display="0" m_delay="0.67" m_topoIndex="40" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln28_1" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln28_1_fu_320_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="add" nodeLabel="35.0" m_display="0" m_delay="0.67" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln27_2" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln27_2_fu_326_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="select" nodeLabel="35.0" m_display="0" m_delay="0.2" m_topoIndex="41" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln28_2" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln28_2_fu_326_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="3" opcode="select" nodeLabel="35.0" m_display="0" m_delay="0.2" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="zext_ln27_fu_333_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="zext" nodeLabel="35.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="zext_ln28_fu_333_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="zext" nodeLabel="35.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="or_ln26_dup" lineNumber="26" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="or_ln26_dup_fu_432_p3" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="192" opcode="bitconcatenate" nodeLabel="45.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="26" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="or_ln27_dup" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="or_ln27_dup_fu_432_p3" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="192" opcode="bitconcatenate" nodeLabel="45.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="select_ln27_3" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln27_3_fu_440_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="192" opcode="select" nodeLabel="45.0" m_display="0" m_delay="0.53" m_topoIndex="64" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="select_ln28_3" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="select_ln28_3_fu_440_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="mul_mec_matrix" bitwidth="192" opcode="select" nodeLabel="45.0" m_display="0" m_delay="0.53" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="indvar_cast" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="indvar_cast_fu_295_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="63" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="indvar_cast" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="indvar_cast_fu_295_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="63" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="udiv_ln22" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="udiv_32ns_32ns_32_36_1_U1" coreName="Divider" implIndex="auto" control="no" opType="udiv" coreId="6" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="udiv" nodeLatency="35" m_display="0" m_delay="1.45" m_topoIndex="30" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
-        <dataInputObjs>select</dataInputObjs>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>add</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="urem_ln22" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="urem_32ns_32ns_32_36_1_U2" coreName="Divider" implIndex="auto" control="no" opType="urem" coreId="6" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="urem" nodeLabel="1.0" nodeLatency="35" m_display="0" m_delay="1.45" m_topoIndex="35" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="udiv_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="udiv_32ns_32ns_32_36_1_U1" coreName="Divider" implIndex="auto" control="no" opType="udiv" coreId="6" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="udiv" nodeLatency="35" m_display="0" m_delay="1.45" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp3" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp4_fu_342_p0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_delay="1.01" m_topoIndex="43" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="urem_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="urem_32ns_32ns_32_36_1_U2" coreName="Divider" implIndex="auto" control="no" opType="urem" coreId="6" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="urem" nodeLabel="1.0" nodeLatency="35" m_display="0" m_delay="1.45" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp3" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp4_fu_342_p0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_delay="1.01" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>udiv</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>mul</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="tmp4" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U3" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="35.0" m_display="0" m_delay="3.42" m_topoIndex="44" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="tmp4" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U3" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="35.0" m_display="0" m_delay="3.42" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp9" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp9_fu_347_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp8" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp8_fu_347_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>mul</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="tmp2" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp2_fu_352_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_delay="0.73" m_topoIndex="46" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="tmp2" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="tmp2_fu_352_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="35.0" m_display="0" m_delay="0.73" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>mul</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp5" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U4" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="36.0" m_display="0" m_delay="3.42" m_topoIndex="48" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp5" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U4" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="36.0" m_display="0" m_delay="3.42" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln22" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln22_fu_367_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="36.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln23_fu_367_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="36.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>mul</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="add_ln22_1" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln22_1_fu_372_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="36.0" m_display="0" m_delay="0.73" m_topoIndex="50" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="add_ln23_1" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln23_1_fu_372_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="36.0" m_display="0" m_delay="0.73" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>urem</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="shl_ln" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="shl_ln_fu_378_p3" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="34" opcode="bitconcatenate" nodeLabel="36.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="shl_ln" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="shl_ln_fu_378_p3" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="34" opcode="bitconcatenate" nodeLabel="36.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="zext_ln22" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="zext_ln22_fu_386_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="zext" nodeLabel="36.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="zext_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="zext_ln23_fu_386_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="zext" nodeLabel="36.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="add_ln22_2" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln22_2_fu_390_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="add" nodeLabel="36.0" m_display="0" m_delay="1.08" m_topoIndex="53" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="add_ln23_2" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln23_2_fu_390_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="add" nodeLabel="36.0" m_display="0" m_delay="1.08" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="trunc_ln1" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="trunc_ln1_fu_395_p4" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="62" opcode="partselect" nodeLabel="36.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="trunc_ln1" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="trunc_ln1_fu_395_p4" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="62" opcode="partselect" nodeLabel="36.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln22" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="sext_ln22_fu_405_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="sext" nodeLabel="36.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="sext_ln23_fu_405_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="sext" nodeLabel="36.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="gmem_addr" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="getelementptr" nodeLabel="36.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="gmem_addr" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="getelementptr" nodeLabel="36.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>gmem</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
         <dataOutputObjs>read</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="empty" lineNumber="22" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="readreq" nodeLabel="37.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="57" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="empty" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="readreq" nodeLabel="37.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="i" lineNumber="22" originalName="i" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="read" nodeLabel="44.0" m_display="0" m_delay="7.3" m_topoIndex="59" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="22" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="i" lineNumber="23" originalName="i" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="read" nodeLabel="44.0" m_display="0" m_delay="7.3" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>mul</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln23_fu_302_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="63" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="36" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln24" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="add_ln24_fu_302_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="63" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln23" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="sext_ln23_fu_307_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln24" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="sext_ln24_fu_307_p1" coreId="0" contextFuncName="mul_mec_matrix" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="gmem_addr_1" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="gmem_addr_1" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>gmem</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
         <dataOutputObjs>read</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="empty_33" lineNumber="23" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="readreq" nodeLabel="38.0" nodeLatency="6" m_display="1" m_delay="7.3" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="58" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="empty_34" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="1" opcode="readreq" nodeLabel="38.0" nodeLatency="6" m_display="1" m_delay="7.3" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="k" lineNumber="23" originalName="k" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="read" nodeLabel="45.0" m_display="0" m_delay="7.3" m_topoIndex="65" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="23" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="k" lineNumber="24" originalName="k" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="read" nodeLabel="45.0" m_display="0" m_delay="7.3" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>mul</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="mul_ln24" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U5" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="46.0" m_display="0" m_delay="3.42" m_topoIndex="72" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="mul_ln25" lineNumber="25" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U5" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="mul" nodeLabel="46.0" m_display="0" m_delay="3.42" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="25" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="value_1" lineNumber="24" originalName="value" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="value_1_fu_462_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="46.0" m_display="0" m_delay="1.01" m_topoIndex="73" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="value_1" lineNumber="25" originalName="value" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="value_1_fu_462_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" nodeLabel="46.0" m_display="0" m_delay="1.01" m_topoIndex="73" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="25" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>mul</dataInputObjs>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="j_1" lineNumber="20" originalName="j" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="j_1_fu_279_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" m_display="0" m_delay="1.01" m_topoIndex="31" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="20" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="j_1" lineNumber="21" originalName="j" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." rtlName="j_1_fu_279_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mul_mec_matrix" bitwidth="32" opcode="add" m_display="0" m_delay="1.01" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="21" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="indvar_flatten_write_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="32" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="indvar_flatten_write_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="phi_ln3_write_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="35.0" m_display="0" m_delay="0.42" m_topoIndex="47" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="phi_ln3_write_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="35.0" m_display="0" m_delay="0.42" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="shiftreg_write_ln27" lineNumber="27" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="45.0" m_display="0" m_delay="0.42" m_topoIndex="66" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="27" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="shiftreg_write_ln28" lineNumber="28" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="45.0" m_display="0" m_delay="0.42" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="28" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="j_write_ln20" lineNumber="20" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="33" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="20" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="j_write_ln21" lineNumber="21" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="21" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="value_write_ln24" lineNumber="24" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="46.0" m_display="0" m_delay="0.42" m_topoIndex="74" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="24" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="value_write_ln25" lineNumber="25" fileName="mul_mec_matrix/mul_mec_matrix.cl" fileDirectory=".." coreId="0" contextFuncName="mul_mec_matrix" opcode="store" nodeLabel="46.0" m_display="0" m_delay="0.42" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mul_mec_matrix/mul_mec_matrix.cl" linenumber="25" fileDirectory="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_mec_matrix" functionName="mul_mec_matrix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
@@ -593,12 +593,12 @@
         <controlInputObjs>block_45</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mul_mec_matrix/mul_mec_matrix.cl">
-        <validLinenumbers>26</validLinenumbers>
-        <validLinenumbers>20</validLinenumbers>
         <validLinenumbers>27</validLinenumbers>
-        <validLinenumbers>22</validLinenumbers>
+        <validLinenumbers>21</validLinenumbers>
+        <validLinenumbers>28</validLinenumbers>
         <validLinenumbers>23</validLinenumbers>
         <validLinenumbers>24</validLinenumbers>
+        <validLinenumbers>25</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -649,32 +649,35 @@
   <ScheduleInfo time="44"/>
   <ScheduleInfo time="45"/>
   <ScheduleInfo time="46"/>
+  <regnodes realName="select_ln28_reg_565">
+    <nodeIds>51</nodeIds>
+  </regnodes>
   <regnodes realName="shiftreg_reg_492">
     <nodeIds>16</nodeIds>
   </regnodes>
   <regnodes realName="gmem_addr_reg_583">
     <nodeIds>74</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln27_reg_554">
+  <regnodes realName="mul14_read_reg_518">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln28_reg_554">
     <nodeIds>42</nodeIds>
   </regnodes>
-  <regnodes realName="mul16_read_reg_518">
-    <nodeIds>21</nodeIds>
+  <regnodes realName="mul6_mid2_read_reg_538">
+    <nodeIds>25</nodeIds>
   </regnodes>
   <regnodes realName="tmp2_reg_578">
     <nodeIds>65</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln20_reg_558">
+  <regnodes realName="icmp_ln21_reg_558">
     <nodeIds>50</nodeIds>
-  </regnodes>
-  <regnodes realName="mul_read_reg_543">
-    <nodeIds>26</nodeIds>
-  </regnodes>
-  <regnodes realName="select_ln27_reg_565">
-    <nodeIds>51</nodeIds>
   </regnodes>
   <regnodes realName="sext_ln3_1_mid2_cast_reg_549">
     <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="mul7_read_reg_543">
+    <nodeIds>26</nodeIds>
   </regnodes>
   <regnodes realName="i_reg_589">
     <nodeIds>76</nodeIds>
@@ -687,9 +690,6 @@
   </regnodes>
   <regnodes realName="global_id_base_x_read_reg_528">
     <nodeIds>23</nodeIds>
-  </regnodes>
-  <regnodes realName="mul8_mid2_read_reg_538">
-    <nodeIds>25</nodeIds>
   </regnodes>
   <regnodes realName="I_read_reg_513">
     <nodeIds>20</nodeIds>
@@ -718,8 +718,8 @@
   <expressionNodes realName="trunc_ln1_fu_395">
     <nodeIds>72</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln27_fu_244">
-    <nodeIds>42</nodeIds>
+  <expressionNodes realName="add_ln28_1_fu_320">
+    <nodeIds>53</nodeIds>
   </expressionNodes>
   <expressionNodes realName="shl_ln_fu_378">
     <nodeIds>69</nodeIds>
@@ -727,61 +727,58 @@
   <expressionNodes realName="tmp3_fu_337">
     <nodeIds>62</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln26_dup_fu_432">
-    <nodeIds>57</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="tmp2_fu_352">
     <nodeIds>65</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln27_3_fu_440">
-    <nodeIds>58</nodeIds>
+  <expressionNodes realName="select_ln28_1_fu_452">
+    <nodeIds>52</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln27_2_fu_326">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln20_fu_259">
-    <nodeIds>50</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln22_fu_386">
+  <expressionNodes realName="zext_ln23_fu_386">
     <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_1_fu_372">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln21_fu_259">
+    <nodeIds>50</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln3_1_mid2_cast_fu_212">
     <nodeIds>29</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln23_fu_302">
-    <nodeIds>77</nodeIds>
+  <expressionNodes realName="add_ln23_2_fu_390">
+    <nodeIds>71</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln22_fu_367">
+  <expressionNodes realName="lshr_ln27_dup_fu_419">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_fu_367">
     <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln24_fu_302">
+    <nodeIds>77</nodeIds>
   </expressionNodes>
   <expressionNodes realName="indvar_cast_fu_295">
     <nodeIds>59</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln27_1_fu_452">
-    <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sext_ln22_fu_405">
-    <nodeIds>73</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="j_1_fu_279">
     <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln27_dup_fu_432">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln28_fu_265">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="shiftreg_fu_102">
     <nodeIds>16</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln27_1_fu_320">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="lshr_ln26_dup_fu_419">
-    <nodeIds>41</nodeIds>
+  <expressionNodes realName="sext_ln23_fu_405">
+    <nodeIds>73</nodeIds>
   </expressionNodes>
   <expressionNodes realName="gmem_addr_fu_409">
     <nodeIds>74</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln27_fu_265">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sext_ln23_fu_307">
+  <expressionNodes realName="sext_ln24_fu_307">
     <nodeIds>78</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp4_fu_342">
@@ -793,31 +790,34 @@
   <expressionNodes realName="value_fu_94">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln22_2_fu_390">
-    <nodeIds>71</nodeIds>
+  <expressionNodes realName="select_ln28_3_fu_440">
+    <nodeIds>58</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln27_fu_250">
+  <expressionNodes realName="add_ln28_fu_250">
     <nodeIds>43</nodeIds>
   </expressionNodes>
   <expressionNodes realName="gmem_addr_1_fu_311">
     <nodeIds>79</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp9_fu_347">
+  <expressionNodes realName="icmp_ln28_fu_244">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp8_fu_347">
     <nodeIds>64</nodeIds>
   </expressionNodes>
   <expressionNodes realName="value_1_fu_462">
     <nodeIds>83</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln22_1_fu_372">
-    <nodeIds>68</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="indvar_flatten_fu_110">
     <nodeIds>18</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln27_fu_333">
+  <expressionNodes realName="zext_ln28_fu_333">
     <nodeIds>55</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="mul_ln24_fu_458">
+  <expressionNodes realName="select_ln28_2_fu_326">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln25_fu_458">
     <nodeIds>82</nodeIds>
   </expressionNodes>
   <expressionNodes realName="phi_ln3_fu_106">
@@ -832,7 +832,7 @@
   <moduleNodes realName="grp_fu_298">
     <nodeIds>61</nodeIds>
   </moduleNodes>
-  <ioNodes realName="store_ln20_store_fu_290">
+  <ioNodes realName="store_ln21_store_fu_290">
     <nodeIds>88</nodeIds>
   </ioNodes>
   <ioNodes realName="wi_read_read_fu_132">
@@ -844,23 +844,23 @@
   <ioNodes realName="grp_readreq_fu_181">
     <nodeIds>80</nodeIds>
   </ioNodes>
-  <ioNodes realName="mul_read_read_fu_156">
-    <nodeIds>26</nodeIds>
-  </ioNodes>
   <ioNodes realName="I_read_read_fu_120">
     <nodeIds>20</nodeIds>
   </ioNodes>
   <ioNodes realName="i_read_fu_188">
     <nodeIds>76</nodeIds>
   </ioNodes>
+  <ioNodes realName="store_ln25_store_fu_468">
+    <nodeIds>89</nodeIds>
+  </ioNodes>
   <ioNodes realName="store_ln0_store_fu_226">
     <nodeIds>33</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln24_store_fu_468">
-    <nodeIds>89</nodeIds>
-  </ioNodes>
   <ioNodes realName="hi_read_read_fu_144">
     <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="mul6_mid2_read_read_fu_150">
+    <nodeIds>25</nodeIds>
   </ioNodes>
   <ioNodes realName="phi_ln3_load_load_fu_317">
     <nodeIds>48</nodeIds>
@@ -868,14 +868,17 @@
   <ioNodes realName="store_ln0_store_fu_221">
     <nodeIds>32</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln27_store_fu_358">
+  <ioNodes realName="store_ln28_store_fu_358">
     <nodeIds>86</nodeIds>
-  </ioNodes>
-  <ioNodes realName="mul_ln3_4_read_read_fu_162">
-    <nodeIds>27</nodeIds>
   </ioNodes>
   <ioNodes realName="value_load_1_load_fu_429">
     <nodeIds>46</nodeIds>
+  </ioNodes>
+  <ioNodes realName="mul14_read_read_fu_126">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="mul7_read_read_fu_156">
+    <nodeIds>26</nodeIds>
   </ioNodes>
   <ioNodes realName="sext_ln3_1_mid2_read_read_fu_114">
     <nodeIds>19</nodeIds>
@@ -883,8 +886,8 @@
   <ioNodes realName="indvar_flatten_load_load_fu_241">
     <nodeIds>39</nodeIds>
   </ioNodes>
-  <ioNodes realName="mul8_mid2_read_read_fu_150">
-    <nodeIds>25</nodeIds>
+  <ioNodes realName="lim_read_read_fu_162">
+    <nodeIds>27</nodeIds>
   </ioNodes>
   <ioNodes realName="write_ln0_write_fu_198">
     <nodeIds>93</nodeIds>
@@ -907,6 +910,9 @@
   <ioNodes realName="store_ln0_store_fu_231">
     <nodeIds>34</nodeIds>
   </ioNodes>
+  <ioNodes realName="store_ln28_store_fu_285">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
   <ioNodes realName="bound_read_read_fu_168">
     <nodeIds>28</nodeIds>
   </ioNodes>
@@ -916,17 +922,11 @@
   <ioNodes realName="value_load_load_fu_473">
     <nodeIds>92</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln27_store_fu_447">
+  <ioNodes realName="store_ln28_store_fu_447">
     <nodeIds>87</nodeIds>
   </ioNodes>
   <ioNodes realName="shiftreg_load_load_fu_415">
     <nodeIds>38</nodeIds>
-  </ioNodes>
-  <ioNodes realName="mul16_read_read_fu_126">
-    <nodeIds>21</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln27_store_fu_285">
-    <nodeIds>85</nodeIds>
   </ioNodes>
   <ioPorts name="I">
     <contents name="read">
@@ -958,24 +958,24 @@
       <nodeIds>24</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="mul">
+  <ioPorts name="lim">
     <contents name="read">
-      <nodeIds>26</nodeIds>
+      <nodeIds>27</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="mul16">
+  <ioPorts name="mul14">
     <contents name="read">
       <nodeIds>21</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="mul8_mid2">
+  <ioPorts name="mul6_mid2">
     <contents name="read">
       <nodeIds>25</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="mul_ln3_4">
+  <ioPorts name="mul7">
     <contents name="read">
-      <nodeIds>27</nodeIds>
+      <nodeIds>26</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="sext_ln3_1_mid2">

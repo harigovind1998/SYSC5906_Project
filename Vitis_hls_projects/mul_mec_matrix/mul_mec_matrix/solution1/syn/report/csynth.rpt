@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'mul_mec_matrix'
 ================================================================
 + General Information: 
-    * Date:           Wed Dec  8 16:05:32 2021
+    * Date:           Tue Dec 14 19:07:39 2021
     * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
     * Project:        mul_mec_matrix
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,8 +19,8 @@
     |                        Modules                       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |         |           |           |     |
     |                        & Loops                       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
     +------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
-    |+ mul_mec_matrix                                      |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  4 (~0%)|  48 (2%)|  8565 (1%)|  8618 (3%)|    -|
-    | + grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|  9 (~0%)|  5454 (1%)|  4501 (1%)|    -|
+    |+ mul_mec_matrix                                      |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  4 (~0%)|  42 (2%)|  8539 (1%)|  8642 (3%)|    -|
+    | + grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|  9 (~0%)|  5454 (1%)|  4501 (1%)|    -|
     |  o XCL_WG_DIM_X_L                                    |      II|   7.30|        -|       -|        47|        2|     -|       yes|        -|        -|          -|          -|    -|
     | o XCL_WG_DIM_Z_XCL_WG_DIM_Y                          |       -|   7.30|        -|       -|         -|        -|     -|        no|        -|        -|          -|          -|    -|
     +------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
@@ -74,6 +74,7 @@
 | ho       | in        | unsigned int const  |
 | co       | in        | unsigned int const  |
 | s        | in        | unsigned int const  |
+| lim      | in        | unsigned int const  |
 +----------+-----------+---------------------+
 
 * SW-to-HW Mapping
@@ -98,6 +99,7 @@
 | ho       | s_axi_control ho  | register  |          | offset=0x94, range=32 |
 | co       | s_axi_control co  | register  |          | offset=0x9c, range=32 |
 | s        | s_axi_control s   | register  |          | offset=0xa4, range=32 |
+| lim      | s_axi_control lim | register  |          | offset=0xac, range=32 |
 +----------+-------------------+-----------+----------+-----------------------+
 
 
@@ -115,7 +117,7 @@
 +--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
 | HW Interface | Problem                                                                                | Resolution | Location                              |
 +--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
-| m_axi_gmem   | Could not burst due to multiple potential reads to the same bundle in the same region. | 214-224    | mul_mec_matrix/mul_mec_matrix.cl:20:2 |
+| m_axi_gmem   | Could not burst due to multiple potential reads to the same bundle in the same region. | 214-224    | mul_mec_matrix/mul_mec_matrix.cl:21:2 |
 +--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)

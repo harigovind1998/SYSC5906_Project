@@ -14,3 +14,67 @@ timestamp=[2021-12-12 20:42:58], mode=BUILD, duration=0:00:05.546, duration_ms=5
 timestamp=[2021-12-12 20:43:49], mode=PLATFORM_GENERATION, duration=0:00:50.277, duration_ms=50277, data={name=MEC_HSL_impl_V1_1}
 timestamp=[2021-12-12 20:43:49], mode=BUILD, duration=0:00:00.689, duration_ms=689, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
 timestamp=[2021-12-12 20:43:56], mode=BUILD, duration=0:00:06.066, duration_ms=6066, data={name=MEC_HLS_Impl_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:09:25], mode=BUILD, duration=0:00:00.957, duration_ms=957, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:11:43], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:11:56], mode=BUILD, duration=0:00:00.740, duration_ms=740, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:28:45], mode=BUILD, duration=0:00:00.621, duration_ms=621, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:29:05], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:32:55], mode=BUILD, duration=0:00:00.501, duration_ms=501, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:37:25], mode=BUILD, duration=0:00:00.572, duration_ms=572, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:37:27], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 11:37:29], mode=BUILD, duration=0:00:00.805, duration_ms=805, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:39:16], mode=WORKBENCH_START, duration=0:00:06.650, duration_ms=6650, data={}
+timestamp=[2021-12-14 11:39:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.751, duration_ms=751, data={editors_count=5, platform_editors_count=1, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=MEC_HLS_Impl_1_0,MEC_HLS_Impl_1_0_system,MEC_HLS_Impl_1_1,MEC_HLS_Impl_1_1_system,MEC_HSL_impl_V1_0,MEC_HSL_impl_V1_1,RemoteSystemsTempFiles}
+timestamp=[2021-12-14 11:39:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.141, duration_ms=141, data={}
+timestamp=[2021-12-14 11:40:34], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 11:40:36], mode=BUILD, duration=0:00:00.885, duration_ms=885, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:44:50], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 11:44:52], mode=BUILD, duration=0:00:00.808, duration_ms=808, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:59:00], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 11:59:01], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 11:59:44], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 11:59:46], mode=BUILD, duration=0:00:00.750, duration_ms=750, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:01:51], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 12:01:53], mode=BUILD, duration=0:00:00.742, duration_ms=742, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:29:39], mode=PLATFORM_GENERATION, duration=0:00:02.823, duration_ms=2823, data={name=MEC_HSL_impl_V1_1}
+timestamp=[2021-12-14 12:29:40], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 12:29:41], mode=BUILD, duration=0:00:00.870, duration_ms=870, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:45:05], mode=PLATFORM_CREATION, duration=0:00:16.505, duration_ms=16505, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2021-12-14 12:47:23], mode=PLATFORM_GENERATION, duration=0:00:48.126, duration_ms=48126, data={name=MEC_HSL_Extend_v1_0}
+timestamp=[2021-12-14 12:47:24], mode=BUILD, duration=0:00:00.921, duration_ms=921, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:47:25], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:47:30], mode=BUILD, duration=0:00:05.577, duration_ms=5577, data={name=MEC_HLS_Impl_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:47:32], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:47:37], mode=BUILD, duration=0:00:04.862, duration_ms=4862, data={name=MEC_HLS_Impl_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:54:45], mode=PLATFORM_GENERATION, duration=0:00:02.493, duration_ms=2493, data={name=MEC_HSL_Extend_v1_0}
+timestamp=[2021-12-14 12:54:46], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:55:31], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 12:59:53], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 12:59:54], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:00:11], mode=BUILD, duration=0:00:00.751, duration_ms=751, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:09:43], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 13:09:46], mode=BUILD, duration=0:00:00.752, duration_ms=752, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:12:33], mode=BUILD, duration=0:00:00.422, duration_ms=422, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:12:42], mode=BUILD, duration=0:00:00.537, duration_ms=537, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:13:05], mode=BUILD, duration=0:00:00.483, duration_ms=483, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:29:42], mode=BUILD, duration=0:00:00.550, duration_ms=550, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:33:41], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 13:33:48], mode=BUILD, duration=0:00:00.801, duration_ms=801, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:35:02], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 13:35:04], mode=BUILD, duration=0:00:00.728, duration_ms=728, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 13:49:01], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 13:49:03], mode=BUILD, duration=0:00:00.863, duration_ms=863, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 18:58:47], mode=WORKBENCH_START, duration=0:00:07.381, duration_ms=7381, data={}
+timestamp=[2021-12-14 18:58:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.880, duration_ms=880, data={editors_count=5, platform_editors_count=1, projects_count=8, platform_projects_count=3, active_platform_editor=false, projects=MEC_HLS_Impl_1_0,MEC_HLS_Impl_1_0_system,MEC_HLS_Impl_1_1,MEC_HLS_Impl_1_1_system,MEC_HSL_Extend_v1_0,MEC_HSL_impl_V1_0,MEC_HSL_impl_V1_1,RemoteSystemsTempFiles}
+timestamp=[2021-12-14 18:58:48], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.301, duration_ms=301, data={}
+timestamp=[2021-12-14 18:58:59], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 18:59:09], mode=PLATFORM_GENERATION, duration=0:00:07.407, duration_ms=7407, data={name=MEC_HSL_impl_V1_1}
+timestamp=[2021-12-14 18:59:15], mode=BUILD, duration=0:00:01.059, duration_ms=1059, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:15:02], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=true}
+timestamp=[2021-12-14 19:15:09], mode=BUILD, duration=0:00:00.807, duration_ms=807, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:15:31], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:27:20], mode=PLATFORM_GENERATION, duration=0:00:33.735, duration_ms=33735, data={name=MEC_HSL_Extend_v1_0}
+timestamp=[2021-12-14 19:27:25], mode=BUILD, duration=0:00:00.116, duration_ms=116, data={name=MEC_HLS_Impl_1_0, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:27:30], mode=BUILD, duration=0:00:04.996, duration_ms=4996, data={name=MEC_HLS_Impl_1_0_system, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:27:31], mode=BUILD, duration=0:00:00.497, duration_ms=497, data={name=MEC_HLS_Impl_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-12-14 19:27:36], mode=BUILD, duration=0:00:04.933, duration_ms=4933, data={name=MEC_HLS_Impl_1_1_system, configuration=Debug, clean_build=false}

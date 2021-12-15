@@ -76,6 +76,9 @@
 // 0xa4 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
 // 0xa8 : reserved
+// 0xac : Data signal of lim
+//        bit 31~0 - lim[31:0] (Read/Write)
+// 0xb0 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL              0x00
@@ -118,3 +121,5 @@
 #define CONTROL_BITS_CO_DATA              32
 #define CONTROL_ADDR_S_DATA               0xa4
 #define CONTROL_BITS_S_DATA               32
+#define CONTROL_ADDR_LIM_DATA             0xac
+#define CONTROL_BITS_LIM_DATA             32

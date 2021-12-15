@@ -171,6 +171,14 @@ s {
 	offset 164
 	offset_end 171
 }
+lim { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 172
+	offset_end 179
+}
 ap_start {
 	mailbox_input_ctrl 0
 	mailbox_output_ctrl 0
@@ -190,7 +198,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 42 \
+			id 40 \
 			corename mul_mec_matrix_control_axilite \
 			name mul_mec_matrix_control_s_axi \
 			ports {$port_control} \
@@ -212,7 +220,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 43 \
+    id 41 \
     corename {m_axi} \
     op interface \
     delay_budget 7.3 \ 

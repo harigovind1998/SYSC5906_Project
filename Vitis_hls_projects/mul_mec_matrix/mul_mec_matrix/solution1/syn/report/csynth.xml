@@ -40,9 +40,9 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>4</BRAM_18K>
-            <DSP>48</DSP>
-            <FF>8565</FF>
-            <LUT>8618</LUT>
+            <DSP>42</DSP>
+            <FF>8539</FF>
+            <LUT>8642</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -820,14 +820,14 @@
             <ModuleName>mul_mec_matrix</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364</InstName>
+                    <InstName>grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374</InstName>
                     <ModuleName>mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>364</ID>
-                    <BindInstances>add_ln27_fu_250_p2 add_ln27_1_fu_320_p2 tmp4_fu_342_p0 mul_32s_32s_32_1_1_U3 tmp9_fu_347_p2 tmp2_fu_352_p2 mul_32s_32s_32_1_1_U4 add_ln22_fu_367_p2 add_ln22_1_fu_372_p2 add_ln22_2_fu_390_p2 add_ln23_fu_302_p2 mul_32s_32s_32_1_1_U5 value_1_fu_462_p2 j_1_fu_279_p2</BindInstances>
+                    <ID>374</ID>
+                    <BindInstances>add_ln28_fu_250_p2 add_ln28_1_fu_320_p2 tmp4_fu_342_p0 mul_32s_32s_32_1_1_U3 tmp8_fu_347_p2 tmp2_fu_352_p2 mul_32s_32s_32_1_1_U4 add_ln23_fu_367_p2 add_ln23_1_fu_372_p2 add_ln23_2_fu_390_p2 add_ln24_fu_302_p2 mul_32s_32s_32_1_1_U5 value_1_fu_462_p2 j_1_fu_279_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_ln3_fu_436_p0 tmp1_fu_400_p2 global_id_base_y_fu_406_p2 empty_37_fu_424_p2 global_id_base_x_fu_430_p2 mul_32s_32s_32_1_1_U24 mul_32s_32s_32_1_1_U22 mul_ln3_1_fu_471_p0 mul_32s_32s_32_1_1_U25 add_ln3_1_fu_477_p2 mul_32s_32s_32_1_1_U26 mul_32s_32s_32_1_1_U23 mul_32s_32s_32_1_1_U27 bound_fu_511_p2 tz_fu_528_p2 mul_32s_32s_32_1_1_U29 sub_ln3_fu_546_p2 add_ln27_fu_557_p2 add_ln27_2_fu_580_p2 mul_2ns_32s_32_1_1_U30 tz_mid1_fu_609_p2 mul_32s_32s_32_1_1_U35 sub_ln3_1_fu_716_p2 mul_32s_32s_32_1_1_U36 mul_32s_32s_32_1_1_U37 mul_32s_32s_32_1_1_U38 sext_ln3_1_mid2_v_v_v_fu_757_p2 mul_3ns_32s_32_1_1_U32 tmp8_fu_633_p0 mul_32s_32s_32_1_1_U33 mul_32s_32s_32_1_1_U34 tmp11_fu_638_p2 empty_42_fu_643_p2 empty_43_fu_661_p2 add_ln27_1_fu_686_p2</BindInstances>
+            <BindInstances>mul_ln3_fu_446_p0 tmp1_fu_410_p2 global_id_base_y_fu_416_p2 empty_38_fu_434_p2 global_id_base_x_fu_440_p2 mul_32s_32s_32_1_1_U23 mul_32s_32s_32_1_1_U22 mul_ln3_1_fu_477_p0 mul_32s_32s_32_1_1_U24 add_ln3_1_fu_483_p2 mul_32s_32s_32_1_1_U25 bound_fu_513_p2 tz_fu_530_p2 mul_32s_32s_32_1_1_U27 sub_ln3_fu_548_p2 add_ln28_fu_559_p2 add_ln28_2_fu_582_p2 mul_2ns_32s_32_1_1_U28 tz_mid1_fu_611_p2 mul_32s_32s_32_1_1_U33 sub_ln3_1_fu_718_p2 mul_32s_32s_32_1_1_U34 mul_32s_32s_32_1_1_U35 mul_32s_32s_32_1_1_U36 sext_ln3_1_mid2_v_v_v_fu_759_p2 mul_3ns_32s_32_1_1_U30 tmp7_fu_635_p0 mul_32s_32s_32_1_1_U31 mul_32s_32s_32_1_1_U32 tmp10_fu_640_p2 empty_43_fu_645_p2 empty_44_fu_663_p2 add_ln28_1_fu_688_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -884,20 +884,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_250_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="add_ln27"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_1_fu_320_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="add_ln27_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_342_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="tmp3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="tmp4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp9_fu_347_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="tmp9"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp2_fu_352_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="tmp2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U4" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="tmp5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_367_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="add_ln22"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_1_fu_372_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="add_ln22_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_2_fu_390_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:22" URAM="0" VARIABLE="add_ln22_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_302_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="add_ln23"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U5" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:24" URAM="0" VARIABLE="mul_ln24"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="value_1_fu_462_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:24" URAM="0" VARIABLE="value_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="j_1_fu_279_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:20" URAM="0" VARIABLE="j_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_250_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_320_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="add_ln28_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_342_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="tmp3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="tmp4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp8_fu_347_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="tmp8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="tmp2_fu_352_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="tmp2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U4" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="tmp5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_367_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="add_ln23"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_1_fu_372_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="add_ln23_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_2_fu_390_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:23" URAM="0" VARIABLE="add_ln23_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_302_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:24" URAM="0" VARIABLE="add_ln24"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U5" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:25" URAM="0" VARIABLE="mul_ln25"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="value_1_fu_462_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:25" URAM="0" VARIABLE="value_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_X_L" OPTYPE="add" PRAGMA="" RTLNAME="j_1_fu_279_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:21" URAM="0" VARIABLE="j_1"/>
             </BindNodes>
         </Module>
         <Module>
@@ -938,13 +938,13 @@
                     <BRAM_18K>4</BRAM_18K>
                     <AVAIL_BRAM>624</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <DSP>48</DSP>
+                    <DSP>42</DSP>
                     <AVAIL_DSP>1728</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>8565</FF>
+                    <FF>8539</FF>
                     <AVAIL_FF>460800</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>8618</LUT>
+                    <LUT>8642</LUT>
                     <AVAIL_LUT>230400</AVAIL_LUT>
                     <UTIL_LUT>3</UTIL_LUT>
                     <URAM>0</URAM>
@@ -953,47 +953,45 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_fu_436_p0" SOURCE="" URAM="0" VARIABLE="global_id_base_z"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp1_fu_400_p2" SOURCE="" URAM="0" VARIABLE="tmp1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_y_fu_406_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_y"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="empty_37_fu_424_p2" SOURCE="" URAM="0" VARIABLE="empty_37"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_x_fu_430_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_x"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U24" SOURCE="" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_fu_446_p0" SOURCE="" URAM="0" VARIABLE="global_id_base_z"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp1_fu_410_p2" SOURCE="" URAM="0" VARIABLE="tmp1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_y_fu_416_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_y"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="empty_38_fu_434_p2" SOURCE="" URAM="0" VARIABLE="empty_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="global_id_base_x_fu_440_p2" SOURCE="" URAM="0" VARIABLE="global_id_base_x"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U23" SOURCE="" URAM="0" VARIABLE="mul7"/>
                 <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U22" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_1_fu_471_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="add_ln3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U25" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_1_fu_477_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="add_ln3_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U26" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U23" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U27" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="bound_fu_511_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="bound"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tz_fu_528_p2" SOURCE="" URAM="0" VARIABLE="tz"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U29" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln3_fu_546_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="sub_ln3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_557_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="add_ln27"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_2_fu_580_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="add_ln27_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U30" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="p_mid217"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tz_mid1_fu_609_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="tz_mid1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U35" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln3_1_fu_716_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="sub_ln3_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U36" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="mul8_mid2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U37" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v_v_v_v_v_v"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U38" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v_v_v_v_v"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="sext_ln3_1_mid2_v_v_v_fu_757_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_32s_32_1_1_U32" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="empty_41"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp8_fu_633_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="ty"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U33" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="tmp8"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U34" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="mul16"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp11_fu_638_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="tmp11"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_42_fu_643_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="empty_42"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_43_fu_661_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="empty_43"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_1_fu_686_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:27" URAM="0" VARIABLE="add_ln27_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_ln3_1_fu_477_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="add_ln3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U24" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln3_1_fu_483_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="add_ln3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U25" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="bound_fu_513_p2" SOURCE="" URAM="0" VARIABLE="bound"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tz_fu_530_p2" SOURCE="" URAM="0" VARIABLE="tz"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U27" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln3_fu_548_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="sub_ln3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_559_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_2_fu_582_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="add_ln28_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_32s_32_1_1_U28" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="p_mid217"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tz_mid1_fu_611_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="tz_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U33" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="mul_ln3_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln3_1_fu_718_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:3" URAM="0" VARIABLE="sub_ln3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U34" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="mul6_mid2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U35" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v_v_v_v_v_v"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U36" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v_v_v_v_v"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="sext_ln3_1_mid2_v_v_v_fu_759_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="sext_ln3_1_mid2_v_v_v"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_32s_32_1_1_U30" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="empty_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp7_fu_635_p0" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="ty"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U31" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="tmp7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U32" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="mul14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="tmp10_fu_640_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="tmp10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_43_fu_645_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="empty_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="empty_44_fu_663_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="empty_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XCL_WG_DIM_Z_XCL_WG_DIM_Y" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_688_p2" SOURCE="mul_mec_matrix/mul_mec_matrix.cl:28" URAM="0" VARIABLE="add_ln28_1"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip" vivado_clock="10"/>
+        <config_export format="sysgen" output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip" vivado_clock="10"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="I" index="0" direction="inout" srcType="int*" srcSize="32">
@@ -1060,6 +1058,11 @@
         <Arg ArgName="s" index="11" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="s" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="lim" index="12" direction="in" srcType="unsigned int const " srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="lim" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
     </Args>
@@ -1224,6 +1227,11 @@
                         <field offset="0" width="32" name="s" access="W" description="Bit 31 to 0 of s"/>
                     </fields>
                 </register>
+                <register offset="0xac" name="lim" access="W" description="Data signal of lim" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="lim" access="W" description="Bit 31 to 0 of lim"/>
+                    </fields>
+                </register>
             </registers>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="I"/>
@@ -1238,6 +1246,7 @@
                 <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="148" argName="ho"/>
                 <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="156" argName="co"/>
                 <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="164" argName="s"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="172" argName="lim"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
@@ -1385,6 +1394,7 @@
                     <column name="ho">in, unsigned int const </column>
                     <column name="co">in, unsigned int const </column>
                     <column name="s">in, unsigned int const </column>
+                    <column name="lim">in, unsigned int const </column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
@@ -1408,6 +1418,7 @@
                     <column name="ho">s_axi_control ho, register, , offset=0x94 range=32</column>
                     <column name="co">s_axi_control co, register, , offset=0x9c range=32</column>
                     <column name="s">s_axi_control s, register, , offset=0xa4 range=32</column>
+                    <column name="lim">s_axi_control lim, register, , offset=0xac range=32</column>
                 </table>
             </item>
         </section>
@@ -1423,7 +1434,7 @@
             <item name="Bursts and Widening Missed">
                 <table>
                     <keys size="4">HW Interface, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem">Could not burst due to multiple potential reads to the same bundle in the same region., 214-224, mul_mec_matrix/mul_mec_matrix.cl:20:2</column>
+                    <column name="m_axi_gmem">Could not burst due to multiple potential reads to the same bundle in the same region., 214-224, mul_mec_matrix/mul_mec_matrix.cl:21:2</column>
                 </table>
             </item>
         </section>

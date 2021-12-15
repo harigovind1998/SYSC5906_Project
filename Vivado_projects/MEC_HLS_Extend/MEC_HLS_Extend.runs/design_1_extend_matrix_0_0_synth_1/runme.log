@@ -1,0 +1,552 @@
+
+*** Running vivado
+    with args -log design_1_extend_matrix_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_extend_matrix_0_0.tcl
+
+
+
+****** Vivado v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_extend_matrix_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/dev_tools/xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.cache/ip 
+Command: synth_design -top design_1_extend_matrix_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41860
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1762.859 ; gain = 132.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_extend_matrix_0_0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/synth/design_1_extend_matrix_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix.v:12]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_control_s_axi' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_control_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_control_s_axi.v:287]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_control_s_axi' (1#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_write' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:1653]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_fifo' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_fifo' (2#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_reg_slice' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:314]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_reg_slice' (3#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:314]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized0' (3#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_buffer' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:529]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:581]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_buffer' (4#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:529]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized1' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized1' (4#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized2' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_fifo__parameterized2' (4#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_write' (5#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:1653]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_read' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:931]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_buffer__parameterized0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:529]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:581]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_buffer__parameterized0' (5#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:529]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_reg_slice__parameterized0' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:314]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_reg_slice__parameterized0' (5#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:314]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_read' (6#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:931]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_gmem_m_axi_throttle' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:709]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi_throttle' (7#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:709]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_gmem_m_axi' (8#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_mul_32s_32s_32_1_1' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_mul_32s_32s_32_1_1' (9#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_32s_32s_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_mul_2ns_32s_32_1_1' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_mul_2ns_32s_32_1_1' (10#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_2ns_32s_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'extend_matrix_mul_3ns_32s_32_1_1' [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix_mul_3ns_32s_32_1_1' (11#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix_mul_3ns_32s_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'extend_matrix' (12#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ipshared/39d3/hdl/verilog/extend_matrix.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_extend_matrix_0_0' (13#1) [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/synth/design_1_extend_matrix_0_0.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1834.711 ; gain = 203.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1852.617 ; gain = 221.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1852.617 ; gain = 221.770
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 1852.617 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/constraints/extend_matrix_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1992.504 ; gain = 3.000
+Finished Parsing XDC File [c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/constraints/extend_matrix_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.runs/design_1_extend_matrix_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.runs/design_1_extend_matrix_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1992.504 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.189 . Memory (MB): peak = 1992.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1992.504 ; gain = 361.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1992.504 ; gain = 361.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.runs/design_1_extend_matrix_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1992.504 ; gain = 361.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'extend_matrix_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'extend_matrix_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'extend_matrix_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'extend_matrix_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'extend_matrix_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'extend_matrix_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'extend_matrix_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'extend_matrix_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1992.504 ; gain = 361.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 6     
+	   2 Input   52 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 7     
+	   4 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 4     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 7     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 9     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               96 Bit    Registers := 6     
+	               64 Bit    Registers := 10    
+	               63 Bit    Registers := 2     
+	               52 Bit    Registers := 2     
+	               36 Bit    Registers := 3     
+	               35 Bit    Registers := 3     
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 30    
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 62    
++---Multipliers : 
+	              32x32  Multipliers := 7     
+	               3x32  Multipliers := 2     
+	               4x32  Multipliers := 2     
++---RAMs : 
+	               9K Bit	(256 X 36 bit)          RAMs := 1     
+	               8K Bit	(256 X 35 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 8     
+	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 1     
+	   2 Input   35 Bit        Muxes := 1     
+	   2 Input   34 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 12    
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 40    
+	   3 Input    2 Bit        Muxes := 9     
+	   5 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 61    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: A*B2.
+DSP Report: register add_ln3_2_reg_688_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register add_ln3_2_reg_688_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U7/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: Generating DSP mul_ln3_6_reg_728_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln3_6_reg_728_reg is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U7/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: Generating DSP mul_ln3_6_reg_728_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln3_6_reg_728_reg is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln3_6_reg_728_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: A*B2.
+DSP Report: register add_ln3_reg_683_reg is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register add_ln3_reg_683_reg is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U4/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: Generating DSP mul_ln3_2_reg_718_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln3_2_reg_718_reg is absorbed into DSP mul_ln3_2_reg_718_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln3_2_reg_718_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln3_2_reg_718_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U4/dout, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: Generating DSP mul_ln3_2_reg_718_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln3_2_reg_718_reg is absorbed into DSP mul_ln3_2_reg_718_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln3_2_reg_718_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln3_2_reg_718_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1992.504 ; gain = 361.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name       | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst/gmem_m_axi_U | bus_write/buff_wdata/mem_reg | 256 x 36(READ_FIRST)   | W |   | 256 x 36(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/gmem_m_axi_U | bus_read/buff_rdata/mem_reg  | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below)
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|extend_matrix | A*B             | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B2            | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A2*B | 15     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A2*B            | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|extend_matrix | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|extend_matrix | A*B             | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B2            | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A2*B | 15     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A2*B            | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | A*B             | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|extend_matrix | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extend_matrix | (PCIN>>17)+A*B  | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 2527.695 ; gain = 896.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 2560.609 ; gain = 929.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name       | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst/gmem_m_axi_U | bus_write/buff_wdata/mem_reg | 256 x 36(READ_FIRST)   | W |   | 256 x 36(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/gmem_m_axi_U | bus_read/buff_rdata/mem_reg  | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
++------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 2580.535 ; gain = 949.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[4]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[14] | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[4]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |   163|
+|2     |DSP_ALU         |    21|
+|3     |DSP_A_B_DATA    |    21|
+|7     |DSP_C_DATA      |    21|
+|8     |DSP_MULTIPLIER  |    21|
+|9     |DSP_M_DATA      |    21|
+|10    |DSP_OUTPUT      |    21|
+|12    |DSP_PREADD      |    21|
+|13    |DSP_PREADD_DATA |    21|
+|14    |LUT1            |    38|
+|15    |LUT2            |   570|
+|16    |LUT3            |  1074|
+|17    |LUT4            |   427|
+|18    |LUT5            |   187|
+|19    |LUT6            |   474|
+|20    |RAMB18E2        |     2|
+|21    |SRL16E          |   134|
+|22    |FDRE            |  2488|
+|23    |FDSE            |     4|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 2600.352 ; gain = 829.617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2600.352 ; gain = 969.504
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 2612.387 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2641.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 21 instances
+
+Synth Design complete, checksum: fec0ea39
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:28 . Memory (MB): peak = 2641.629 ; gain = 1356.180
+INFO: [Common 17-1381] The checkpoint 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.runs/design_1_extend_matrix_0_0_synth_1/design_1_extend_matrix_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_extend_matrix_0_0, cache-ID = 2f983d703abfa5c1
+INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_Extend/MEC_HLS_Extend.runs/design_1_extend_matrix_0_0_synth_1/design_1_extend_matrix_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_extend_matrix_0_0_utilization_synth.rpt -pb design_1_extend_matrix_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 14 12:37:07 2021...

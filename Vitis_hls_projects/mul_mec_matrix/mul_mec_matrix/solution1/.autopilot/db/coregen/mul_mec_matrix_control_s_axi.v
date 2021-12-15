@@ -47,6 +47,7 @@ module mul_mec_matrix_control_s_axi
     output wire [31:0]                   ho,
     output wire [31:0]                   co,
     output wire [31:0]                   s,
+    output wire [31:0]                   lim,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -131,6 +132,9 @@ module mul_mec_matrix_control_s_axi
 // 0xa4 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
 // 0xa8 : reserved
+// 0xac : Data signal of lim
+//        bit 31~0 - lim[31:0] (Read/Write)
+// 0xb0 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -178,6 +182,8 @@ localparam
     ADDR_CO_CTRL                = 8'ha0,
     ADDR_S_DATA_0               = 8'ha4,
     ADDR_S_CTRL                 = 8'ha8,
+    ADDR_LIM_DATA_0             = 8'hac,
+    ADDR_LIM_CTRL               = 8'hb0,
     WRIDLE                      = 2'd0,
     WRDATA                      = 2'd1,
     WRRESP                      = 2'd2,
@@ -231,6 +237,7 @@ localparam
     reg  [31:0]                   int_ho = 'b0;
     reg  [31:0]                   int_co = 'b0;
     reg  [31:0]                   int_s = 'b0;
+    reg  [31:0]                   int_lim = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -402,6 +409,9 @@ always @(posedge ACLK) begin
                 ADDR_S_DATA_0: begin
                     rdata <= int_s[31:0];
                 end
+                ADDR_LIM_DATA_0: begin
+                    rdata <= int_lim[31:0];
+                end
             endcase
         end
     end
@@ -432,6 +442,7 @@ assign wo                = int_wo;
 assign ho                = int_ho;
 assign co                = int_co;
 assign s                 = int_s;
+assign lim               = int_lim;
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -759,6 +770,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_S_DATA_0)
             int_s[31:0] <= (WDATA[31:0] & wmask) | (int_s[31:0] & ~wmask);
+    end
+end
+
+// int_lim[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_lim[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_LIM_DATA_0)
+            int_lim[31:0] <= (WDATA[31:0] & wmask) | (int_lim[31:0] & ~wmask);
     end
 end
 

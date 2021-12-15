@@ -11,13 +11,14 @@ mul_mec_matrix(__global int* I,
 				  const unsigned int wo,
 				  const unsigned int ho,
 				  const unsigned int co,
-				  const unsigned int s)
+				  const unsigned int s,
+				  const unsigned int lim)
 {
 	int tx = get_global_id(0);
 	int ty = get_global_id(1);
 	int tz = get_global_id(2);
 	int value = 0;
-	for(int j = 0; j<wk*wk*ci; j++)
+	for(int j = 0; j<lim; j++)
 	{
 		int i = I[( ( tz/co )*( wi*hi*ci ) )+( ( j/( wk*wk ) )*wi*hi )+( tx*wi )+( ty*s*wk )+( j%( wk*wk ) )];
 		int k = K[( ( tz%co )*wk*wk*ci )+( ( j/( wk*wk ) )*wk*wk )+( j%( wk*wk ) )];

@@ -24,9 +24,9 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/boot/fsbl.elf
-set bp_44_23_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_29_0_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_44_23_fsbl_bp
+bpremove $bp_29_0_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HLS_Impl_1_1/Debug/MEC_HLS_Impl_1_1.elf

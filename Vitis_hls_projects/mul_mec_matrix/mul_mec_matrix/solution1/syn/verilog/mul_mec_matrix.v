@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="mul_mec_matrix_mul_mec_matrix,hls_ip_2021_1_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=8565,HLS_SYN_LUT=8618,HLS_VERSION=2021_1_1}" *)
+(* CORE_GENERATION_INFO="mul_mec_matrix_mul_mec_matrix,hls_ip_2021_1_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=8539,HLS_SYN_LUT=8642,HLS_VERSION=2021_1_1}" *)
 
 module mul_mec_matrix (
         ap_clk,
@@ -277,6 +277,7 @@ wire  signed [31:0] wo;
 wire  signed [31:0] ho;
 wire  signed [31:0] co;
 wire  signed [31:0] s;
+wire   [31:0] lim;
 reg    gmem_blk_n_AW;
 wire    ap_CS_fsm_state77;
 reg    gmem_blk_n_W;
@@ -288,102 +289,98 @@ wire    ap_CS_fsm_state82;
 wire    ap_CS_fsm_state83;
 reg    gmem_blk_n_B;
 wire    ap_CS_fsm_state88;
-wire  signed [31:0] global_id_base_z_fu_388_p2;
-reg  signed [31:0] global_id_base_z_reg_883;
-wire   [31:0] global_id_base_y_fu_406_p2;
-reg   [31:0] global_id_base_y_reg_889;
-wire   [31:0] global_id_base_x_fu_430_p2;
-reg   [31:0] global_id_base_x_reg_895;
-wire   [31:0] mul_ln3_fu_436_p2;
-reg   [31:0] mul_ln3_reg_901;
-wire  signed [31:0] mul_ln3_3_fu_442_p2;
-reg  signed [31:0] mul_ln3_3_reg_906;
+wire  signed [31:0] global_id_base_z_fu_398_p2;
+reg  signed [31:0] global_id_base_z_reg_871;
+wire   [31:0] global_id_base_y_fu_416_p2;
+reg   [31:0] global_id_base_y_reg_877;
+wire   [31:0] global_id_base_x_fu_440_p2;
+reg   [31:0] global_id_base_x_reg_883;
+wire   [31:0] mul_ln3_fu_446_p2;
+reg   [31:0] mul_ln3_reg_889;
 wire    ap_CS_fsm_state2;
-wire  signed [31:0] mul_fu_463_p2;
-reg   [31:0] mul_reg_954;
-wire   [31:0] add_ln3_1_fu_477_p2;
-reg   [31:0] add_ln3_1_reg_960;
-wire  signed [31:0] mul_ln3_2_fu_482_p2;
-reg  signed [31:0] mul_ln3_2_reg_965;
-wire   [31:0] mul_ln3_4_fu_487_p2;
-reg   [31:0] mul_ln3_4_reg_970;
-wire   [34:0] bound_fu_511_p2;
-reg   [34:0] bound_reg_975;
-wire   [31:0] tz_fu_528_p2;
-reg   [31:0] tz_reg_983;
+wire  signed [31:0] mul7_fu_467_p2;
+reg   [31:0] mul7_reg_953;
+wire   [31:0] add_ln3_1_fu_483_p2;
+reg   [31:0] add_ln3_1_reg_959;
+wire  signed [31:0] mul_ln3_2_fu_488_p2;
+reg  signed [31:0] mul_ln3_2_reg_964;
+wire   [34:0] bound_fu_513_p2;
+reg   [34:0] bound_reg_969;
+wire   [31:0] tz_fu_530_p2;
+reg   [31:0] tz_reg_977;
 wire    ap_CS_fsm_state3;
-wire  signed [31:0] grp_fu_533_p2;
-reg  signed [31:0] udiv_ln3_reg_989;
+wire  signed [31:0] grp_fu_535_p2;
+reg  signed [31:0] udiv_ln3_reg_983;
 wire    ap_CS_fsm_state38;
-wire   [31:0] sub_ln3_fu_546_p2;
-reg   [31:0] sub_ln3_reg_994;
-wire   [0:0] icmp_ln27_1_fu_566_p2;
-reg   [0:0] icmp_ln27_1_reg_1002;
-wire   [0:0] icmp_ln27_fu_551_p2;
-wire   [31:0] tz_mid1_fu_609_p2;
-reg   [31:0] tz_mid1_reg_1008;
-wire  signed [31:0] tmp8_fu_633_p2;
-reg  signed [31:0] tmp8_reg_1014;
-reg   [63:0] gmem_addr_reg_1019;
-wire   [31:0] mul16_fu_707_p2;
-reg   [31:0] mul16_reg_1030;
+wire   [31:0] sub_ln3_fu_548_p2;
+reg   [31:0] sub_ln3_reg_988;
+wire   [0:0] icmp_ln28_1_fu_568_p2;
+reg   [0:0] icmp_ln28_1_reg_996;
+wire   [0:0] icmp_ln28_fu_553_p2;
+wire   [31:0] tz_mid1_fu_611_p2;
+reg   [31:0] tz_mid1_reg_1002;
+wire  signed [31:0] tmp7_fu_635_p2;
+reg  signed [31:0] tmp7_reg_1008;
+reg   [63:0] gmem_addr_reg_1013;
+wire   [31:0] mul14_fu_709_p2;
+reg   [31:0] mul14_reg_1024;
 wire    ap_CS_fsm_state39;
-wire  signed [31:0] mul8_mid2_v_fu_721_p3;
-reg  signed [31:0] mul8_mid2_v_reg_1035;
+wire  signed [31:0] mul6_mid2_v_fu_723_p3;
+reg  signed [31:0] mul6_mid2_v_reg_1029;
 wire    ap_CS_fsm_state73;
-wire  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_727_p3;
-reg  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1040;
-wire   [31:0] mul8_mid2_fu_733_p2;
-reg   [31:0] mul8_mid2_reg_1045;
+wire  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_729_p3;
+reg  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1034;
+wire   [31:0] mul6_mid2_fu_735_p2;
+reg   [31:0] mul6_mid2_reg_1039;
 wire    ap_CS_fsm_state74;
-wire   [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_741_p2;
-reg   [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1050;
-reg   [61:0] sext_ln3_1_mid2_v_reg_1055;
+wire   [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_743_p2;
+reg   [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1044;
+reg   [61:0] sext_ln3_1_mid2_v_reg_1049;
 wire    ap_CS_fsm_state75;
-reg   [31:0] tmp_7_reg_1060;
-reg   [31:0] tmp_8_reg_1065;
-reg   [31:0] tmp_9_reg_1070;
-reg   [31:0] tmp_s_reg_1075;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_done;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_idle;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_ready;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWVALID;
-wire   [63:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWADDR;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWID;
-wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWLEN;
-wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWBURST;
-wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWPROT;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWQOS;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWREGION;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWUSER;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WVALID;
-wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WDATA;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WSTRB;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WLAST;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WID;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WUSER;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARVALID;
-wire   [63:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARADDR;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARID;
-wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLEN;
-wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARBURST;
-wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARPROT;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARQOS;
-wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARREGION;
-wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARUSER;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_RREADY;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_BREADY;
-wire   [191:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out_ap_vld;
-wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_value_out;
-wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_value_out_ap_vld;
+reg   [31:0] tmp_7_reg_1054;
+reg   [31:0] tmp_8_reg_1059;
+reg   [31:0] tmp_9_reg_1064;
+reg   [31:0] tmp_s_reg_1069;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_done;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_idle;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_ready;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWVALID;
+wire   [63:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWADDR;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWID;
+wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWLEN;
+wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWBURST;
+wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWPROT;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWQOS;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWREGION;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWUSER;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WVALID;
+wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WDATA;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WSTRB;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WLAST;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WID;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WUSER;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARVALID;
+wire   [63:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARADDR;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARID;
+wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLEN;
+wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARBURST;
+wire   [1:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARPROT;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARQOS;
+wire   [3:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARREGION;
+wire   [0:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARUSER;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_RREADY;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_BREADY;
+wire   [191:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out_ap_vld;
+wire   [31:0] grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_value_out;
+wire    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_value_out_ap_vld;
 reg    gmem_AWVALID;
 wire    gmem_AWREADY;
 reg    gmem_WVALID;
@@ -403,59 +400,59 @@ reg    gmem_BREADY;
 wire   [1:0] gmem_BRESP;
 wire   [0:0] gmem_BID;
 wire   [0:0] gmem_BUSER;
-reg    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg;
+reg    grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg;
 wire    ap_CS_fsm_state76;
-wire  signed [63:0] sext_ln3_fu_676_p1;
-reg   [2:0] lid_1_fu_186;
-wire   [2:0] add_ln27_1_fu_686_p2;
-reg   [1:0] lid_2_fu_190;
-wire   [1:0] p_mid217_v_v_fu_585_p3;
-reg   [3:0] indvar_flatten18_fu_194;
-wire   [3:0] add_ln27_fu_557_p2;
-wire   [31:0] empty_fu_382_p2;
-wire   [31:0] tmp1_fu_400_p2;
-wire   [31:0] empty_34_fu_394_p2;
-wire   [31:0] empty_35_fu_412_p2;
-wire   [31:0] empty_36_fu_418_p2;
-wire   [31:0] empty_37_fu_424_p2;
-wire  signed [31:0] mul_ln3_fu_436_p0;
-wire  signed [31:0] mul_ln3_1_fu_471_p0;
-wire   [31:0] mul_ln3_1_fu_471_p2;
-wire   [32:0] tmp_5_fu_499_p3;
-wire   [34:0] p_shl3_fu_491_p3;
-wire   [34:0] p_shl26_fu_507_p1;
-wire   [0:0] empty_38_fu_520_p1;
-wire   [31:0] lid_2_cast12_cast_fu_524_p1;
-wire   [31:0] grp_fu_533_p0;
-wire   [31:0] mul_ln3_5_fu_541_p2;
-wire   [1:0] add_ln27_2_fu_580_p2;
-wire   [1:0] p_mid217_fu_596_p0;
-wire   [0:0] empty_40_fu_601_p1;
-wire   [31:0] lid_2_cast12_cast_mid1_fu_605_p1;
-wire   [31:0] grp_fu_614_p0;
-wire   [2:0] lid_1_mid2_fu_572_p3;
-wire   [2:0] empty_41_fu_623_p0;
-wire   [31:0] lid_1_cast_fu_619_p1;
-wire  signed [31:0] tmp8_fu_633_p0;
-wire   [31:0] empty_41_fu_623_p2;
-wire   [31:0] tmp11_fu_638_p2;
-wire   [31:0] p_mid217_fu_596_p2;
-wire   [31:0] empty_42_fu_643_p2;
-wire   [33:0] tmp_6_fu_649_p3;
-wire   [63:0] p_cast19_fu_657_p1;
-wire   [63:0] empty_43_fu_661_p2;
-wire   [61:0] trunc_ln3_fu_666_p4;
-wire  signed [31:0] grp_fu_614_p2;
-wire   [31:0] mul_ln3_6_fu_711_p2;
-wire   [31:0] sub_ln3_1_fu_716_p2;
-wire  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_737_p2;
-wire   [33:0] sext_ln3_1_mid2_v_v_v_v_v_fu_746_p3;
-wire   [63:0] sext_ln3_1_mid2_v_v_v_v_fu_753_p1;
-wire   [63:0] sext_ln3_1_mid2_v_v_v_fu_757_p2;
-reg    grp_fu_533_ap_start;
-wire    grp_fu_533_ap_done;
-reg    grp_fu_614_ap_start;
-wire    grp_fu_614_ap_done;
+wire  signed [63:0] sext_ln3_fu_678_p1;
+reg   [2:0] lid_1_fu_190;
+wire   [2:0] add_ln28_1_fu_688_p2;
+reg   [1:0] lid_2_fu_194;
+wire   [1:0] p_mid217_v_v_fu_587_p3;
+reg   [3:0] indvar_flatten18_fu_198;
+wire   [3:0] add_ln28_fu_559_p2;
+wire   [31:0] empty_fu_392_p2;
+wire   [31:0] tmp1_fu_410_p2;
+wire   [31:0] empty_35_fu_404_p2;
+wire   [31:0] empty_36_fu_422_p2;
+wire   [31:0] empty_37_fu_428_p2;
+wire   [31:0] empty_38_fu_434_p2;
+wire  signed [31:0] mul_ln3_fu_446_p0;
+wire  signed [31:0] mul_ln3_1_fu_477_p0;
+wire   [31:0] mul_ln3_1_fu_477_p2;
+wire   [32:0] tmp_5_fu_501_p3;
+wire   [34:0] p_shl3_fu_493_p3;
+wire   [34:0] p_shl26_fu_509_p1;
+wire   [0:0] empty_39_fu_522_p1;
+wire   [31:0] lid_2_cast11_cast_fu_526_p1;
+wire   [31:0] grp_fu_535_p0;
+wire   [31:0] mul_ln3_3_fu_543_p2;
+wire   [1:0] add_ln28_2_fu_582_p2;
+wire   [1:0] p_mid217_fu_598_p0;
+wire   [0:0] empty_41_fu_603_p1;
+wire   [31:0] lid_2_cast11_cast_mid1_fu_607_p1;
+wire   [31:0] grp_fu_616_p0;
+wire   [2:0] lid_1_mid2_fu_574_p3;
+wire   [2:0] empty_42_fu_625_p0;
+wire   [31:0] lid_1_cast_fu_621_p1;
+wire  signed [31:0] tmp7_fu_635_p0;
+wire   [31:0] empty_42_fu_625_p2;
+wire   [31:0] tmp10_fu_640_p2;
+wire   [31:0] p_mid217_fu_598_p2;
+wire   [31:0] empty_43_fu_645_p2;
+wire   [33:0] tmp_6_fu_651_p3;
+wire   [63:0] p_cast18_fu_659_p1;
+wire   [63:0] empty_44_fu_663_p2;
+wire   [61:0] trunc_ln3_fu_668_p4;
+wire  signed [31:0] grp_fu_616_p2;
+wire   [31:0] mul_ln3_4_fu_713_p2;
+wire   [31:0] sub_ln3_1_fu_718_p2;
+wire  signed [31:0] sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_739_p2;
+wire   [33:0] sext_ln3_1_mid2_v_v_v_v_v_fu_748_p3;
+wire   [63:0] sext_ln3_1_mid2_v_v_v_v_fu_755_p1;
+wire   [63:0] sext_ln3_1_mid2_v_v_v_fu_759_p2;
+reg    grp_fu_535_ap_start;
+wire    grp_fu_535_ap_done;
+reg    grp_fu_616_ap_start;
+wire    grp_fu_616_ap_done;
 reg   [87:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -545,81 +542,81 @@ wire    ap_ST_fsm_state85_blk;
 wire    ap_ST_fsm_state86_blk;
 wire    ap_ST_fsm_state87_blk;
 reg    ap_ST_fsm_state88_blk;
-wire   [31:0] p_mid217_fu_596_p00;
+wire   [31:0] p_mid217_fu_598_p00;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 88'd1;
-#0 grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg = 1'b0;
+#0 grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg = 1'b0;
 end
 
-mul_mec_matrix_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364(
+mul_mec_matrix_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start),
-    .ap_done(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_done),
-    .ap_idle(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_idle),
-    .ap_ready(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_ready),
-    .m_axi_gmem_AWVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWVALID),
+    .ap_start(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start),
+    .ap_done(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_done),
+    .ap_idle(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_idle),
+    .ap_ready(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_ready),
+    .m_axi_gmem_AWVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(1'b0),
-    .m_axi_gmem_AWADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(1'b0),
-    .m_axi_gmem_WDATA(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(gmem_ARREADY),
-    .m_axi_gmem_ARADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(gmem_RVALID),
-    .m_axi_gmem_RREADY(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_RREADY),
+    .m_axi_gmem_RREADY(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_RREADY),
     .m_axi_gmem_RDATA(gmem_RDATA),
     .m_axi_gmem_RLAST(gmem_RLAST),
     .m_axi_gmem_RID(gmem_RID),
     .m_axi_gmem_RUSER(gmem_RUSER),
     .m_axi_gmem_RRESP(gmem_RRESP),
     .m_axi_gmem_BVALID(1'b0),
-    .m_axi_gmem_BREADY(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(2'd0),
     .m_axi_gmem_BID(1'd0),
     .m_axi_gmem_BUSER(1'd0),
-    .bound(bound_reg_975),
-    .mul_ln3_4(mul_ln3_4_reg_970),
-    .mul(mul_reg_954),
-    .mul8_mid2(mul8_mid2_reg_1045),
+    .bound(bound_reg_969),
+    .lim(lim),
+    .mul7(mul7_reg_953),
+    .mul6_mid2(mul6_mid2_reg_1039),
     .hi(hi),
-    .global_id_base_x(global_id_base_x_reg_895),
+    .global_id_base_x(global_id_base_x_reg_883),
     .wi(wi),
-    .mul16(mul16_reg_1030),
+    .mul14(mul14_reg_1024),
     .I(I),
-    .sext_ln3_1_mid2(sext_ln3_1_mid2_v_reg_1055),
-    .shiftreg_out(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out),
-    .shiftreg_out_ap_vld(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out_ap_vld),
-    .value_out(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_value_out),
-    .value_out_ap_vld(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_value_out_ap_vld)
+    .sext_ln3_1_mid2(sext_ln3_1_mid2_v_reg_1049),
+    .shiftreg_out(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out),
+    .shiftreg_out_ap_vld(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out_ap_vld),
+    .value_out(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_value_out),
+    .value_out_ap_vld(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_value_out_ap_vld)
 );
 
 mul_mec_matrix_control_s_axi #(
@@ -664,6 +661,7 @@ control_s_axi_U(
     .ho(ho),
     .co(co),
     .s(s),
+    .lim(lim),
     .ap_start(ap_start),
     .interrupt(interrupt),
     .ap_ready(ap_ready),
@@ -742,17 +740,17 @@ gmem_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(gmem_ARVALID),
     .I_ARREADY(gmem_ARREADY),
-    .I_ARADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARADDR),
-    .I_ARID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARID),
-    .I_ARLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLEN),
-    .I_ARSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARSIZE),
-    .I_ARLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARLOCK),
-    .I_ARCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARCACHE),
-    .I_ARQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARQOS),
-    .I_ARPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARPROT),
-    .I_ARUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARUSER),
-    .I_ARBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARBURST),
-    .I_ARREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARREGION),
+    .I_ARADDR(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARADDR),
+    .I_ARID(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARID),
+    .I_ARLEN(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLEN),
+    .I_ARSIZE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARSIZE),
+    .I_ARLOCK(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARLOCK),
+    .I_ARCACHE(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARCACHE),
+    .I_ARQOS(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARQOS),
+    .I_ARPROT(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARPROT),
+    .I_ARUSER(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARUSER),
+    .I_ARBURST(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARBURST),
+    .I_ARREGION(grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARREGION),
     .I_RVALID(gmem_RVALID),
     .I_RREADY(gmem_RREADY),
     .I_RDATA(gmem_RDATA),
@@ -762,7 +760,7 @@ gmem_m_axi_U(
     .I_RLAST(gmem_RLAST),
     .I_AWVALID(gmem_AWVALID),
     .I_AWREADY(gmem_AWREADY),
-    .I_AWADDR(gmem_addr_reg_1019),
+    .I_AWADDR(gmem_addr_reg_1013),
     .I_AWID(1'd0),
     .I_AWLEN(32'd6),
     .I_AWSIZE(3'd0),
@@ -794,9 +792,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U22(
-    .din0(mul_ln3_fu_436_p0),
+    .din0(mul_ln3_fu_446_p0),
     .din1(ho),
-    .dout(mul_ln3_fu_436_p2)
+    .dout(mul_ln3_fu_446_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -806,9 +804,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U23(
-    .din0(ci),
+    .din0(wk),
     .din1(wk),
-    .dout(mul_ln3_3_fu_442_p2)
+    .dout(mul7_fu_467_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -818,9 +816,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U24(
-    .din0(wk),
-    .din1(wk),
-    .dout(mul_fu_463_p2)
+    .din0(mul_ln3_1_fu_477_p0),
+    .din1(wo),
+    .dout(mul_ln3_1_fu_477_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -830,21 +828,26 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U25(
-    .din0(mul_ln3_1_fu_471_p0),
+    .din0(ho),
     .din1(wo),
-    .dout(mul_ln3_1_fu_471_p2)
+    .dout(mul_ln3_2_fu_488_p2)
 );
 
-mul_mec_matrix_mul_32s_32s_32_1_1 #(
+mul_mec_matrix_udiv_32ns_32s_32_36_seq_1 #(
     .ID( 1 ),
-    .NUM_STAGE( 1 ),
+    .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_32s_32s_32_1_1_U26(
-    .din0(ho),
-    .din1(wo),
-    .dout(mul_ln3_2_fu_482_p2)
+udiv_32ns_32s_32_36_seq_1_U26(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .start(grp_fu_535_ap_start),
+    .done(grp_fu_535_ap_done),
+    .din0(grp_fu_535_p0),
+    .din1(co),
+    .ce(1'b1),
+    .dout(grp_fu_535_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -854,38 +857,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U27(
-    .din0(mul_ln3_3_reg_906),
-    .din1(wk),
-    .dout(mul_ln3_4_fu_487_p2)
-);
-
-mul_mec_matrix_udiv_32ns_32s_32_36_seq_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 36 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-udiv_32ns_32s_32_36_seq_1_U28(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .start(grp_fu_533_ap_start),
-    .done(grp_fu_533_ap_done),
-    .din0(grp_fu_533_p0),
+    .din0(grp_fu_535_p2),
     .din1(co),
-    .ce(1'b1),
-    .dout(grp_fu_533_p2)
-);
-
-mul_mec_matrix_mul_32s_32s_32_1_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 1 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-mul_32s_32s_32_1_1_U29(
-    .din0(grp_fu_533_p2),
-    .din1(co),
-    .dout(mul_ln3_5_fu_541_p2)
+    .dout(mul_ln3_3_fu_543_p2)
 );
 
 mul_mec_matrix_mul_2ns_32s_32_1_1 #(
@@ -894,10 +868,10 @@ mul_mec_matrix_mul_2ns_32s_32_1_1 #(
     .din0_WIDTH( 2 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_2ns_32s_32_1_1_U30(
-    .din0(p_mid217_fu_596_p0),
-    .din1(mul_ln3_2_reg_965),
-    .dout(p_mid217_fu_596_p2)
+mul_2ns_32s_32_1_1_U28(
+    .din0(p_mid217_fu_598_p0),
+    .din1(mul_ln3_2_reg_964),
+    .dout(p_mid217_fu_598_p2)
 );
 
 mul_mec_matrix_udiv_32ns_32s_32_36_seq_1 #(
@@ -906,15 +880,15 @@ mul_mec_matrix_udiv_32ns_32s_32_36_seq_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-udiv_32ns_32s_32_36_seq_1_U31(
+udiv_32ns_32s_32_36_seq_1_U29(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .start(grp_fu_614_ap_start),
-    .done(grp_fu_614_ap_done),
-    .din0(grp_fu_614_p0),
+    .start(grp_fu_616_ap_start),
+    .done(grp_fu_616_ap_done),
+    .din0(grp_fu_616_p0),
     .din1(co),
     .ce(1'b1),
-    .dout(grp_fu_614_p2)
+    .dout(grp_fu_616_p2)
 );
 
 mul_mec_matrix_mul_3ns_32s_32_1_1 #(
@@ -923,10 +897,34 @@ mul_mec_matrix_mul_3ns_32s_32_1_1 #(
     .din0_WIDTH( 3 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_3ns_32s_32_1_1_U32(
-    .din0(empty_41_fu_623_p0),
+mul_3ns_32s_32_1_1_U30(
+    .din0(empty_42_fu_625_p0),
     .din1(wo),
-    .dout(empty_41_fu_623_p2)
+    .dout(empty_42_fu_625_p2)
+);
+
+mul_mec_matrix_mul_32s_32s_32_1_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+mul_32s_32s_32_1_1_U31(
+    .din0(tmp7_fu_635_p0),
+    .din1(wk),
+    .dout(tmp7_fu_635_p2)
+);
+
+mul_mec_matrix_mul_32s_32s_32_1_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+mul_32s_32s_32_1_1_U32(
+    .din0(tmp7_reg_1008),
+    .din1(s),
+    .dout(mul14_fu_709_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -936,9 +934,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U33(
-    .din0(tmp8_fu_633_p0),
-    .din1(wk),
-    .dout(tmp8_fu_633_p2)
+    .din0(grp_fu_616_p2),
+    .din1(co),
+    .dout(mul_ln3_4_fu_713_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -948,9 +946,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U34(
-    .din0(tmp8_reg_1014),
-    .din1(s),
-    .dout(mul16_fu_707_p2)
+    .din0(mul6_mid2_v_reg_1029),
+    .din1(ci),
+    .dout(mul6_mid2_fu_735_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -960,9 +958,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U35(
-    .din0(grp_fu_614_p2),
-    .din1(co),
-    .dout(mul_ln3_6_fu_711_p2)
+    .din0(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1034),
+    .din1(ci),
+    .dout(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_739_p2)
 );
 
 mul_mec_matrix_mul_32s_32s_32_1_1 #(
@@ -972,33 +970,9 @@ mul_mec_matrix_mul_32s_32s_32_1_1 #(
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
 mul_32s_32s_32_1_1_U36(
-    .din0(mul8_mid2_v_reg_1035),
-    .din1(ci),
-    .dout(mul8_mid2_fu_733_p2)
-);
-
-mul_mec_matrix_mul_32s_32s_32_1_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 1 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-mul_32s_32s_32_1_1_U37(
-    .din0(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1040),
-    .din1(ci),
-    .dout(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_737_p2)
-);
-
-mul_mec_matrix_mul_32s_32s_32_1_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 1 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-mul_32s_32s_32_1_1_U38(
-    .din0(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_737_p2),
-    .din1(mul_reg_954),
-    .dout(sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_741_p2)
+    .din0(sext_ln3_1_mid2_v_v_v_v_v_v_v_v_fu_739_p2),
+    .din1(mul7_reg_953),
+    .dout(sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_743_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -1011,114 +985,112 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg <= 1'b0;
+        grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state75)) begin
-            grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg <= 1'b1;
-        end else if ((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_ready == 1'b1)) begin
-            grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg <= 1'b0;
+            grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg <= 1'b1;
+        end else if ((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_ready == 1'b1)) begin
+            grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        indvar_flatten18_fu_194 <= 4'd0;
-    end else if (((icmp_ln27_fu_551_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
-        indvar_flatten18_fu_194 <= add_ln27_fu_557_p2;
+        indvar_flatten18_fu_198 <= 4'd0;
+    end else if (((icmp_ln28_fu_553_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
+        indvar_flatten18_fu_198 <= add_ln28_fu_559_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        lid_1_fu_186 <= 3'd0;
-    end else if (((icmp_ln27_fu_551_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
-        lid_1_fu_186 <= add_ln27_1_fu_686_p2;
+        lid_1_fu_190 <= 3'd0;
+    end else if (((icmp_ln28_fu_553_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
+        lid_1_fu_190 <= add_ln28_1_fu_688_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        lid_2_fu_190 <= 2'd0;
-    end else if (((icmp_ln27_fu_551_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
-        lid_2_fu_190 <= p_mid217_v_v_fu_585_p3;
+        lid_2_fu_194 <= 2'd0;
+    end else if (((icmp_ln28_fu_553_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
+        lid_2_fu_194 <= p_mid217_v_v_fu_587_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        add_ln3_1_reg_960 <= add_ln3_1_fu_477_p2;
-        bound_reg_975[34 : 1] <= bound_fu_511_p2[34 : 1];
-        mul_ln3_2_reg_965 <= mul_ln3_2_fu_482_p2;
-        mul_ln3_4_reg_970 <= mul_ln3_4_fu_487_p2;
-        mul_reg_954 <= mul_fu_463_p2;
+        add_ln3_1_reg_959 <= add_ln3_1_fu_483_p2;
+        bound_reg_969[34 : 1] <= bound_fu_513_p2[34 : 1];
+        mul7_reg_953 <= mul7_fu_467_p2;
+        mul_ln3_2_reg_964 <= mul_ln3_2_fu_488_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        global_id_base_x_reg_895 <= global_id_base_x_fu_430_p2;
-        global_id_base_y_reg_889 <= global_id_base_y_fu_406_p2;
-        global_id_base_z_reg_883 <= global_id_base_z_fu_388_p2;
-        mul_ln3_3_reg_906 <= mul_ln3_3_fu_442_p2;
-        mul_ln3_reg_901 <= mul_ln3_fu_436_p2;
+        global_id_base_x_reg_883 <= global_id_base_x_fu_440_p2;
+        global_id_base_y_reg_877 <= global_id_base_y_fu_416_p2;
+        global_id_base_z_reg_871 <= global_id_base_z_fu_398_p2;
+        mul_ln3_reg_889 <= mul_ln3_fu_446_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln27_fu_551_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
-        gmem_addr_reg_1019 <= sext_ln3_fu_676_p1;
-        icmp_ln27_1_reg_1002 <= icmp_ln27_1_fu_566_p2;
-        tmp8_reg_1014 <= tmp8_fu_633_p2;
-        tz_mid1_reg_1008 <= tz_mid1_fu_609_p2;
+    if (((icmp_ln28_fu_553_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
+        gmem_addr_reg_1013 <= sext_ln3_fu_678_p1;
+        icmp_ln28_1_reg_996 <= icmp_ln28_1_fu_568_p2;
+        tmp7_reg_1008 <= tmp7_fu_635_p2;
+        tz_mid1_reg_1002 <= tz_mid1_fu_611_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state39)) begin
-        mul16_reg_1030 <= mul16_fu_707_p2;
+        mul14_reg_1024 <= mul14_fu_709_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state74)) begin
-        mul8_mid2_reg_1045 <= mul8_mid2_fu_733_p2;
-        sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1050 <= sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_741_p2;
+        mul6_mid2_reg_1039 <= mul6_mid2_fu_735_p2;
+        sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1044 <= sext_ln3_1_mid2_v_v_v_v_v_v_v_fu_743_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state73)) begin
-        mul8_mid2_v_reg_1035 <= mul8_mid2_v_fu_721_p3;
-        sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1040 <= sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_727_p3;
+        mul6_mid2_v_reg_1029 <= mul6_mid2_v_fu_723_p3;
+        sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_reg_1034 <= sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_729_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state75)) begin
-        sext_ln3_1_mid2_v_reg_1055 <= {{sext_ln3_1_mid2_v_v_v_fu_757_p2[63:2]}};
+        sext_ln3_1_mid2_v_reg_1049 <= {{sext_ln3_1_mid2_v_v_v_fu_759_p2[63:2]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state38)) begin
-        sub_ln3_reg_994 <= sub_ln3_fu_546_p2;
-        udiv_ln3_reg_989 <= grp_fu_533_p2;
+        sub_ln3_reg_988 <= sub_ln3_fu_548_p2;
+        udiv_ln3_reg_983 <= grp_fu_535_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state78)) begin
-        tmp_7_reg_1060 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out[95:64]}};
-        tmp_8_reg_1065 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out[127:96]}};
-        tmp_9_reg_1070 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out[159:128]}};
-        tmp_s_reg_1075 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out[191:160]}};
+        tmp_7_reg_1054 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out[95:64]}};
+        tmp_8_reg_1059 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out[127:96]}};
+        tmp_9_reg_1064 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out[159:128]}};
+        tmp_s_reg_1069 <= {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out[191:160]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        tz_reg_983 <= tz_fu_528_p2;
+        tz_reg_977 <= tz_fu_530_p2;
     end
 end
 
@@ -1273,7 +1245,7 @@ assign ap_ST_fsm_state74_blk = 1'b0;
 assign ap_ST_fsm_state75_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_done == 1'b0)) begin
+    if ((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_done == 1'b0)) begin
         ap_ST_fsm_state76_blk = 1'b1;
     end else begin
         ap_ST_fsm_state76_blk = 1'b0;
@@ -1359,7 +1331,7 @@ assign ap_ST_fsm_state8_blk = 1'b0;
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if (((icmp_ln27_fu_551_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
+    if (((icmp_ln28_fu_553_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -1375,7 +1347,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln27_fu_551_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
+    if (((icmp_ln28_fu_553_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -1384,7 +1356,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75))) begin
-        gmem_ARVALID = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_ARVALID;
+        gmem_ARVALID = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_ARVALID;
     end else begin
         gmem_ARVALID = 1'b0;
     end
@@ -1408,7 +1380,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75))) begin
-        gmem_RREADY = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_m_axi_gmem_RREADY;
+        gmem_RREADY = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_m_axi_gmem_RREADY;
     end else begin
         gmem_RREADY = 1'b0;
     end
@@ -1416,17 +1388,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state83)) begin
-        gmem_WDATA = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_value_out;
+        gmem_WDATA = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_value_out;
     end else if ((1'b1 == ap_CS_fsm_state82)) begin
-        gmem_WDATA = tmp_s_reg_1075;
+        gmem_WDATA = tmp_s_reg_1069;
     end else if ((1'b1 == ap_CS_fsm_state81)) begin
-        gmem_WDATA = tmp_9_reg_1070;
+        gmem_WDATA = tmp_9_reg_1064;
     end else if ((1'b1 == ap_CS_fsm_state80)) begin
-        gmem_WDATA = tmp_8_reg_1065;
+        gmem_WDATA = tmp_8_reg_1059;
     end else if ((1'b1 == ap_CS_fsm_state79)) begin
-        gmem_WDATA = tmp_7_reg_1060;
+        gmem_WDATA = tmp_7_reg_1054;
     end else if ((1'b1 == ap_CS_fsm_state78)) begin
-        gmem_WDATA = {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_shiftreg_out[63:32]}};
+        gmem_WDATA = {{grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_shiftreg_out[63:32]}};
     end else begin
         gmem_WDATA = 'bx;
     end
@@ -1466,17 +1438,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        grp_fu_533_ap_start = 1'b1;
+        grp_fu_535_ap_start = 1'b1;
     end else begin
-        grp_fu_533_ap_start = 1'b0;
+        grp_fu_535_ap_start = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln27_fu_551_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
-        grp_fu_614_ap_start = 1'b1;
+    if (((icmp_ln28_fu_553_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_616_ap_start = 1'b1;
     end else begin
-        grp_fu_614_ap_start = 1'b0;
+        grp_fu_616_ap_start = 1'b0;
     end
 end
 
@@ -1598,7 +1570,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state38;
         end
         ap_ST_fsm_state38 : begin
-            if (((icmp_ln27_fu_551_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
+            if (((icmp_ln28_fu_553_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state38))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state39;
@@ -1716,7 +1688,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state76;
         end
         ap_ST_fsm_state76 : begin
-            if (((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state76))) begin
+            if (((grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state76))) begin
                 ap_NS_fsm = ap_ST_fsm_state77;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state76;
@@ -1796,13 +1768,13 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln27_1_fu_686_p2 = (lid_1_mid2_fu_572_p3 + 3'd1);
+assign add_ln28_1_fu_688_p2 = (lid_1_mid2_fu_574_p3 + 3'd1);
 
-assign add_ln27_2_fu_580_p2 = (lid_2_fu_190 + 2'd1);
+assign add_ln28_2_fu_582_p2 = (lid_2_fu_194 + 2'd1);
 
-assign add_ln27_fu_557_p2 = (indvar_flatten18_fu_194 + 4'd1);
+assign add_ln28_fu_559_p2 = (indvar_flatten18_fu_198 + 4'd1);
 
-assign add_ln3_1_fu_477_p2 = (mul_ln3_1_fu_471_p2 + global_id_base_x_reg_895);
+assign add_ln3_1_fu_483_p2 = (mul_ln3_1_fu_477_p2 + global_id_base_x_reg_883);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -1842,102 +1814,102 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign bound_fu_511_p2 = (p_shl3_fu_491_p3 - p_shl26_fu_507_p1);
+assign bound_fu_513_p2 = (p_shl3_fu_493_p3 - p_shl26_fu_509_p1);
 
-assign empty_34_fu_394_p2 = group_id_y << 32'd2;
+assign empty_35_fu_404_p2 = group_id_y << 32'd2;
 
-assign empty_35_fu_412_p2 = group_id_x << 32'd3;
+assign empty_36_fu_422_p2 = group_id_x << 32'd3;
 
-assign empty_36_fu_418_p2 = group_id_x << 32'd1;
+assign empty_37_fu_428_p2 = group_id_x << 32'd1;
 
-assign empty_37_fu_424_p2 = (empty_35_fu_412_p2 - empty_36_fu_418_p2);
+assign empty_38_fu_434_p2 = (empty_36_fu_422_p2 - empty_37_fu_428_p2);
 
-assign empty_38_fu_520_p1 = lid_2_fu_190[0:0];
+assign empty_39_fu_522_p1 = lid_2_fu_194[0:0];
 
-assign empty_40_fu_601_p1 = add_ln27_2_fu_580_p2[0:0];
+assign empty_41_fu_603_p1 = add_ln28_2_fu_582_p2[0:0];
 
-assign empty_41_fu_623_p0 = lid_1_cast_fu_619_p1;
+assign empty_42_fu_625_p0 = lid_1_cast_fu_621_p1;
 
-assign empty_42_fu_643_p2 = (tmp11_fu_638_p2 + p_mid217_fu_596_p2);
+assign empty_43_fu_645_p2 = (tmp10_fu_640_p2 + p_mid217_fu_598_p2);
 
-assign empty_43_fu_661_p2 = (p_cast19_fu_657_p1 + O);
+assign empty_44_fu_663_p2 = (p_cast18_fu_659_p1 + O);
 
-assign empty_fu_382_p2 = group_id_z << 32'd1;
+assign empty_fu_392_p2 = group_id_z << 32'd1;
 
-assign global_id_base_x_fu_430_p2 = (empty_37_fu_424_p2 + global_offset_x);
+assign global_id_base_x_fu_440_p2 = (empty_38_fu_434_p2 + global_offset_x);
 
-assign global_id_base_y_fu_406_p2 = (tmp1_fu_400_p2 + empty_34_fu_394_p2);
+assign global_id_base_y_fu_416_p2 = (tmp1_fu_410_p2 + empty_35_fu_404_p2);
 
-assign global_id_base_z_fu_388_p2 = (empty_fu_382_p2 + global_offset_z);
+assign global_id_base_z_fu_398_p2 = (empty_fu_392_p2 + global_offset_z);
 
-assign grp_fu_533_p0 = ($signed(lid_2_cast12_cast_fu_524_p1) + $signed(global_id_base_z_reg_883));
+assign grp_fu_535_p0 = ($signed(lid_2_cast11_cast_fu_526_p1) + $signed(global_id_base_z_reg_871));
 
-assign grp_fu_614_p0 = ($signed(lid_2_cast12_cast_mid1_fu_605_p1) + $signed(global_id_base_z_reg_883));
+assign grp_fu_616_p0 = ($signed(lid_2_cast11_cast_mid1_fu_607_p1) + $signed(global_id_base_z_reg_871));
 
-assign grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364_ap_start_reg;
+assign grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start = grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374_ap_start_reg;
 
-assign icmp_ln27_1_fu_566_p2 = ((lid_1_fu_186 == 3'd5) ? 1'b1 : 1'b0);
+assign icmp_ln28_1_fu_568_p2 = ((lid_1_fu_190 == 3'd5) ? 1'b1 : 1'b0);
 
-assign icmp_ln27_fu_551_p2 = ((indvar_flatten18_fu_194 == 4'd10) ? 1'b1 : 1'b0);
+assign icmp_ln28_fu_553_p2 = ((indvar_flatten18_fu_198 == 4'd10) ? 1'b1 : 1'b0);
 
-assign lid_1_cast_fu_619_p1 = lid_1_mid2_fu_572_p3;
+assign lid_1_cast_fu_621_p1 = lid_1_mid2_fu_574_p3;
 
-assign lid_1_mid2_fu_572_p3 = ((icmp_ln27_1_fu_566_p2[0:0] == 1'b1) ? 3'd0 : lid_1_fu_186);
+assign lid_1_mid2_fu_574_p3 = ((icmp_ln28_1_fu_568_p2[0:0] == 1'b1) ? 3'd0 : lid_1_fu_190);
 
-assign lid_2_cast12_cast_fu_524_p1 = empty_38_fu_520_p1;
+assign lid_2_cast11_cast_fu_526_p1 = empty_39_fu_522_p1;
 
-assign lid_2_cast12_cast_mid1_fu_605_p1 = empty_40_fu_601_p1;
+assign lid_2_cast11_cast_mid1_fu_607_p1 = empty_41_fu_603_p1;
 
-assign mul8_mid2_v_fu_721_p3 = ((icmp_ln27_1_reg_1002[0:0] == 1'b1) ? grp_fu_614_p2 : udiv_ln3_reg_989);
+assign mul6_mid2_v_fu_723_p3 = ((icmp_ln28_1_reg_996[0:0] == 1'b1) ? grp_fu_616_p2 : udiv_ln3_reg_983);
 
-assign mul_ln3_1_fu_471_p0 = (mul_ln3_reg_901 + global_id_base_y_reg_889);
+assign mul_ln3_1_fu_477_p0 = (mul_ln3_reg_889 + global_id_base_y_reg_877);
 
-assign mul_ln3_fu_436_p0 = (empty_fu_382_p2 + global_offset_z);
+assign mul_ln3_fu_446_p0 = (empty_fu_392_p2 + global_offset_z);
 
-assign p_cast19_fu_657_p1 = tmp_6_fu_649_p3;
+assign p_cast18_fu_659_p1 = tmp_6_fu_651_p3;
 
-assign p_mid217_fu_596_p0 = p_mid217_fu_596_p00;
+assign p_mid217_fu_598_p0 = p_mid217_fu_598_p00;
 
-assign p_mid217_fu_596_p00 = p_mid217_v_v_fu_585_p3;
+assign p_mid217_fu_598_p00 = p_mid217_v_v_fu_587_p3;
 
-assign p_mid217_v_v_fu_585_p3 = ((icmp_ln27_1_fu_566_p2[0:0] == 1'b1) ? add_ln27_2_fu_580_p2 : lid_2_fu_190);
+assign p_mid217_v_v_fu_587_p3 = ((icmp_ln28_1_fu_568_p2[0:0] == 1'b1) ? add_ln28_2_fu_582_p2 : lid_2_fu_194);
 
-assign p_shl26_fu_507_p1 = tmp_5_fu_499_p3;
+assign p_shl26_fu_509_p1 = tmp_5_fu_501_p3;
 
-assign p_shl3_fu_491_p3 = {{mul_ln3_4_fu_487_p2}, {3'd0}};
+assign p_shl3_fu_493_p3 = {{lim}, {3'd0}};
 
-assign sext_ln3_1_mid2_v_v_v_fu_757_p2 = (sext_ln3_1_mid2_v_v_v_v_fu_753_p1 + K);
+assign sext_ln3_1_mid2_v_v_v_fu_759_p2 = (sext_ln3_1_mid2_v_v_v_v_fu_755_p1 + K);
 
-assign sext_ln3_1_mid2_v_v_v_v_fu_753_p1 = sext_ln3_1_mid2_v_v_v_v_v_fu_746_p3;
+assign sext_ln3_1_mid2_v_v_v_v_fu_755_p1 = sext_ln3_1_mid2_v_v_v_v_v_fu_748_p3;
 
-assign sext_ln3_1_mid2_v_v_v_v_v_fu_746_p3 = {{sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1050}, {2'd0}};
+assign sext_ln3_1_mid2_v_v_v_v_v_fu_748_p3 = {{sext_ln3_1_mid2_v_v_v_v_v_v_v_reg_1044}, {2'd0}};
 
-assign sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_727_p3 = ((icmp_ln27_1_reg_1002[0:0] == 1'b1) ? sub_ln3_1_fu_716_p2 : sub_ln3_reg_994);
+assign sext_ln3_1_mid2_v_v_v_v_v_v_v_v_v_fu_729_p3 = ((icmp_ln28_1_reg_996[0:0] == 1'b1) ? sub_ln3_1_fu_718_p2 : sub_ln3_reg_988);
 
-assign sext_ln3_fu_676_p1 = $signed(trunc_ln3_fu_666_p4);
+assign sext_ln3_fu_678_p1 = $signed(trunc_ln3_fu_668_p4);
 
-assign sub_ln3_1_fu_716_p2 = (tz_mid1_reg_1008 - mul_ln3_6_fu_711_p2);
+assign sub_ln3_1_fu_718_p2 = (tz_mid1_reg_1002 - mul_ln3_4_fu_713_p2);
 
-assign sub_ln3_fu_546_p2 = (tz_reg_983 - mul_ln3_5_fu_541_p2);
+assign sub_ln3_fu_548_p2 = (tz_reg_977 - mul_ln3_3_fu_543_p2);
 
-assign tmp11_fu_638_p2 = (empty_41_fu_623_p2 + add_ln3_1_reg_960);
+assign tmp10_fu_640_p2 = (empty_42_fu_625_p2 + add_ln3_1_reg_959);
 
-assign tmp1_fu_400_p2 = (group_id_y + global_offset_y);
+assign tmp1_fu_410_p2 = (group_id_y + global_offset_y);
 
-assign tmp8_fu_633_p0 = (lid_1_cast_fu_619_p1 + global_id_base_y_reg_889);
+assign tmp7_fu_635_p0 = (lid_1_cast_fu_621_p1 + global_id_base_y_reg_877);
 
-assign tmp_5_fu_499_p3 = {{mul_ln3_4_fu_487_p2}, {1'd0}};
+assign tmp_5_fu_501_p3 = {{lim}, {1'd0}};
 
-assign tmp_6_fu_649_p3 = {{empty_42_fu_643_p2}, {2'd0}};
+assign tmp_6_fu_651_p3 = {{empty_43_fu_645_p2}, {2'd0}};
 
-assign trunc_ln3_fu_666_p4 = {{empty_43_fu_661_p2[63:2]}};
+assign trunc_ln3_fu_668_p4 = {{empty_44_fu_663_p2[63:2]}};
 
-assign tz_fu_528_p2 = ($signed(lid_2_cast12_cast_fu_524_p1) + $signed(global_id_base_z_reg_883));
+assign tz_fu_530_p2 = ($signed(lid_2_cast11_cast_fu_526_p1) + $signed(global_id_base_z_reg_871));
 
-assign tz_mid1_fu_609_p2 = ($signed(lid_2_cast12_cast_mid1_fu_605_p1) + $signed(global_id_base_z_reg_883));
+assign tz_mid1_fu_611_p2 = ($signed(lid_2_cast11_cast_mid1_fu_607_p1) + $signed(global_id_base_z_reg_871));
 
 always @ (posedge ap_clk) begin
-    bound_reg_975[0] <= 1'b0;
+    bound_reg_969[0] <= 1'b0;
 end
 
 endmodule //mul_mec_matrix

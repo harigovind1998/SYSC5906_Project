@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L'" level="0">
-<item name = "Date">Wed Dec  8 16:05:31 2021
+<item name = "Date">Tue Dec 14 19:07:38 2021
 </item>
 <item name = "Version">2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)</item>
 <item name = "Project">mul_mec_matrix</item>
@@ -83,16 +83,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln22_1_fu_372_p2">+, 0, 0, 32, 32, 32</column>
-<column name="add_ln22_2_fu_390_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln22_fu_367_p2">+, 0, 0, 32, 32, 32</column>
-<column name="add_ln23_fu_302_p2">+, 0, 0, 70, 63, 63</column>
-<column name="add_ln27_1_fu_320_p2">+, 0, 0, 10, 3, 1</column>
-<column name="add_ln27_fu_250_p2">+, 0, 0, 42, 35, 1</column>
+<column name="add_ln23_1_fu_372_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln23_2_fu_390_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln23_fu_367_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln24_fu_302_p2">+, 0, 0, 70, 63, 63</column>
+<column name="add_ln28_1_fu_320_p2">+, 0, 0, 10, 3, 1</column>
+<column name="add_ln28_fu_250_p2">+, 0, 0, 42, 35, 1</column>
 <column name="j_1_fu_279_p2">+, 0, 0, 39, 32, 1</column>
 <column name="tmp2_fu_352_p2">+, 0, 0, 32, 32, 32</column>
 <column name="tmp4_fu_342_p0">+, 0, 0, 39, 32, 32</column>
-<column name="tmp9_fu_347_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp8_fu_347_p2">+, 0, 0, 32, 32, 32</column>
 <column name="value_1_fu_462_p2">+, 0, 0, 39, 32, 32</column>
 <column name="ap_block_pp0_stage1_01001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state38_io">and, 0, 0, 2, 1, 1</column>
@@ -100,14 +100,14 @@
 <column name="ap_block_state46_pp0_stage1_iter22">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_629">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_631">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln20_fu_259_p2">icmp, 0, 0, 20, 32, 32</column>
-<column name="icmp_ln27_fu_244_p2">icmp, 0, 0, 20, 35, 35</column>
+<column name="icmp_ln21_fu_259_p2">icmp, 0, 0, 20, 32, 32</column>
+<column name="icmp_ln28_fu_244_p2">icmp, 0, 0, 20, 35, 35</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage1_11001">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln27_1_fu_452_p3">select, 0, 0, 32, 1, 1</column>
-<column name="select_ln27_2_fu_326_p3">select, 0, 0, 3, 1, 3</column>
-<column name="select_ln27_3_fu_440_p3">select, 0, 0, 170, 1, 192</column>
-<column name="select_ln27_fu_265_p3">select, 0, 0, 32, 1, 1</column>
+<column name="select_ln28_1_fu_452_p3">select, 0, 0, 32, 1, 1</column>
+<column name="select_ln28_2_fu_326_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln28_3_fu_440_p3">select, 0, 0, 170, 1, 192</column>
+<column name="select_ln28_fu_265_p3">select, 0, 0, 32, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -182,21 +182,21 @@
 <column name="gmem_addr_1_reg_572">64, 0, 64, 0</column>
 <column name="gmem_addr_reg_583">64, 0, 64, 0</column>
 <column name="i_reg_589">32, 0, 32, 0</column>
-<column name="icmp_ln20_reg_558">1, 0, 1, 0</column>
-<column name="icmp_ln27_reg_554">1, 0, 1, 0</column>
+<column name="icmp_ln21_reg_558">1, 0, 1, 0</column>
+<column name="icmp_ln28_reg_554">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_110">35, 0, 35, 0</column>
 <column name="j_fu_98">32, 0, 32, 0</column>
 <column name="k_reg_599">32, 0, 32, 0</column>
 <column name="phi_ln3_fu_106">3, 0, 3, 0</column>
-<column name="select_ln27_reg_565">32, 0, 32, 0</column>
+<column name="select_ln28_reg_565">32, 0, 32, 0</column>
 <column name="sext_ln3_1_mid2_cast_reg_549">63, 0, 63, 0</column>
 <column name="shiftreg_fu_102">192, 0, 192, 0</column>
 <column name="tmp2_reg_578">32, 0, 32, 0</column>
 <column name="value_fu_94">32, 0, 32, 0</column>
 <column name="value_load_1_reg_594">32, 0, 32, 0</column>
 <column name="gmem_addr_1_reg_572">64, 32, 64, 0</column>
-<column name="icmp_ln20_reg_558">64, 32, 1, 0</column>
-<column name="icmp_ln27_reg_554">64, 32, 1, 0</column>
+<column name="icmp_ln21_reg_558">64, 32, 1, 0</column>
+<column name="icmp_ln28_reg_554">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -258,13 +258,13 @@
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
 <column name="bound">in, 35, ap_none, bound, scalar</column>
-<column name="mul_ln3_4">in, 32, ap_none, mul_ln3_4, scalar</column>
-<column name="mul">in, 32, ap_none, mul, scalar</column>
-<column name="mul8_mid2">in, 32, ap_none, mul8_mid2, scalar</column>
+<column name="lim">in, 32, ap_none, lim, scalar</column>
+<column name="mul7">in, 32, ap_none, mul7, scalar</column>
+<column name="mul6_mid2">in, 32, ap_none, mul6_mid2, scalar</column>
 <column name="hi">in, 32, ap_none, hi, scalar</column>
 <column name="global_id_base_x">in, 32, ap_none, global_id_base_x, scalar</column>
 <column name="wi">in, 32, ap_none, wi, scalar</column>
-<column name="mul16">in, 32, ap_none, mul16, scalar</column>
+<column name="mul14">in, 32, ap_none, mul14, scalar</column>
 <column name="I">in, 64, ap_none, I, scalar</column>
 <column name="sext_ln3_1_mid2">in, 62, ap_none, sext_ln3_1_mid2, scalar</column>
 <column name="shiftreg_out">out, 192, ap_vld, shiftreg_out, pointer</column>

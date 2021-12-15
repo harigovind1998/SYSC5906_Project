@@ -218,6 +218,19 @@
           "usage": "data",
           "direction": "in"
         }]
+    },
+    "lim": {
+      "index": "12",
+      "direction": "in",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "lim",
+          "usage": "data",
+          "direction": "in"
+        }]
     }
   },
   "HlsSolution": {
@@ -316,7 +329,6 @@
       "addrWidth": "8",
       "portPrefix": "s_axi_control_",
       "paramPrefix": "C_S_AXI_CONTROL_",
-      "offsetMasterName": "m_axi_gmem",
       "ports": [
         "s_axi_control_ARADDR",
         "s_axi_control_ARREADY",
@@ -792,6 +804,20 @@
               "access": "W",
               "description": "Bit 31 to 0 of s"
             }]
+        },
+        {
+          "offset": "0xac",
+          "name": "lim",
+          "access": "W",
+          "description": "Data signal of lim",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "lim",
+              "access": "W",
+              "description": "Bit 31 to 0 of lim"
+            }]
         }
       ],
       "constraints": [
@@ -878,6 +904,13 @@
           "register_option": "0",
           "offset": "164",
           "argName": "s"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "172",
+          "argName": "lim"
         }
       ]
     },
@@ -917,7 +950,6 @@
       "addrWidth": "64",
       "portPrefix": "m_axi_gmem_",
       "paramPrefix": "C_M_AXI_GMEM_",
-      "offsetSlaveName": "s_axi_control",
       "preferredUsageValue": "MEMORY",
       "busParams": {
         "NUM_READ_OUTSTANDING": "16",
@@ -1294,7 +1326,7 @@
       "ModuleName": "mul_mec_matrix",
       "Instances": [{
           "ModuleName": "mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L",
-          "InstanceName": "grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_364"
+          "InstanceName": "grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374"
         }]
     },
     "Info": {
@@ -1378,13 +1410,13 @@
           "BRAM_18K": "4",
           "AVAIL_BRAM": "624",
           "UTIL_BRAM": "~0",
-          "DSP": "48",
+          "DSP": "42",
           "AVAIL_DSP": "1728",
           "UTIL_DSP": "2",
-          "FF": "8565",
+          "FF": "8539",
           "AVAIL_FF": "460800",
           "UTIL_FF": "1",
-          "LUT": "8618",
+          "LUT": "8642",
           "AVAIL_LUT": "230400",
           "UTIL_LUT": "3",
           "URAM": "0",
@@ -1397,7 +1429,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-12-08 16:10:55 -0500",
+    "Time": "2021-12-14 19:07:40 -0500",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1.1"
   }
