@@ -3631,3 +3631,11 @@ con
 
 09:14:46 INFO  : Launch script is exported to file 'C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_sdk_projects\MEC_HLS_Impl_1_1_system\_ide\scripts\debugger_mec_hls_impl_1_1-default.tcl'
 12:51:13 INFO  : Disconnected from the channel tcfchan#3.
+13:16:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_sdk_projects\temp_xsdb_launch_script.tcl
+13:16:29 INFO  : Platform repository initialization has completed.
+13:16:30 INFO  : XSCT server has started successfully.
+13:16:30 INFO  : Registering command handlers for Vitis TCF services
+13:16:32 INFO  : Successfully done setting XSCT server connection channel  
+13:16:32 INFO  : plnx-install-location is set to ''
+13:16:32 INFO  : Successfully done query RDI_DATADIR 
+13:16:32 INFO  : Successfully done setting workspace for the tool. 
