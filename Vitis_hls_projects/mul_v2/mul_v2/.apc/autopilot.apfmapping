@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mul_v2.cl" path="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_v2\mul_v2\mul_v2.cl"/>
+  </source>
+  <testbench>
+    <originFiles name="mul_test.c" path="C:\University\Masters\Year_1\SYSC5906\SYSC5906_Project\Vitis_hls_projects\mul_v2\mul_v2\mul_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

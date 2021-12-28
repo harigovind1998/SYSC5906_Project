@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'mul_mec_matrix'
 ================================================================
 + General Information: 
-    * Date:           Tue Dec 14 19:07:39 2021
+    * Date:           Wed Dec 15 12:28:04 2021
     * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
     * Project:        mul_mec_matrix
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,9 +19,9 @@
     |                        Modules                       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |         |           |           |     |
     |                        & Loops                       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
     +------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
-    |+ mul_mec_matrix                                      |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  4 (~0%)|  42 (2%)|  8539 (1%)|  8642 (3%)|    -|
-    | + grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_374  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|  9 (~0%)|  5454 (1%)|  4501 (1%)|    -|
-    |  o XCL_WG_DIM_X_L                                    |      II|   7.30|        -|       -|        47|        2|     -|       yes|        -|        -|          -|          -|    -|
+    |+ mul_mec_matrix                                      |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  5 (~0%)|  36 (2%)|  8148 (1%)|  8227 (3%)|    -|
+    | + grp_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_fu_358  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  1 (~0%)|  7 (~0%)|  5313 (1%)|  4390 (1%)|    -|
+    |  o XCL_WG_DIM_X_L                                    |       -|   7.30|        -|       -|        46|        1|     -|       yes|        -|        -|          -|          -|    -|
     | o XCL_WG_DIM_Z_XCL_WG_DIM_Y                          |       -|   7.30|        -|       -|         -|        -|     -|        no|        -|        -|          -|          -|    -|
     +------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
 
@@ -66,7 +66,6 @@
 | wi       | in        | unsigned int const  |
 | hi       | in        | unsigned int const  |
 | ci       | in        | unsigned int const  |
-| K        | inout     | int*                |
 | wk       | in        | unsigned int const  |
 | nk       | in        | unsigned int const  |
 | O        | inout     | int*                |
@@ -74,7 +73,6 @@
 | ho       | in        | unsigned int const  |
 | co       | in        | unsigned int const  |
 | s        | in        | unsigned int const  |
-| lim      | in        | unsigned int const  |
 +----------+-----------+---------------------+
 
 * SW-to-HW Mapping
@@ -87,19 +85,15 @@
 | wi       | s_axi_control wi  | register  |          | offset=0x4c, range=32 |
 | hi       | s_axi_control hi  | register  |          | offset=0x54, range=32 |
 | ci       | s_axi_control ci  | register  |          | offset=0x5c, range=32 |
-| K        | m_axi_gmem        | interface |          |                       |
-| K        | s_axi_control K_1 | register  | offset   | offset=0x64, range=32 |
-| K        | s_axi_control K_2 | register  | offset   | offset=0x68, range=32 |
-| wk       | s_axi_control wk  | register  |          | offset=0x70, range=32 |
-| nk       | s_axi_control nk  | register  |          | offset=0x78, range=32 |
+| wk       | s_axi_control wk  | register  |          | offset=0x64, range=32 |
+| nk       | s_axi_control nk  | register  |          | offset=0x6c, range=32 |
 | O        | m_axi_gmem        | interface |          |                       |
-| O        | s_axi_control O_1 | register  | offset   | offset=0x80, range=32 |
-| O        | s_axi_control O_2 | register  | offset   | offset=0x84, range=32 |
-| wo       | s_axi_control wo  | register  |          | offset=0x8c, range=32 |
-| ho       | s_axi_control ho  | register  |          | offset=0x94, range=32 |
-| co       | s_axi_control co  | register  |          | offset=0x9c, range=32 |
-| s        | s_axi_control s   | register  |          | offset=0xa4, range=32 |
-| lim      | s_axi_control lim | register  |          | offset=0xac, range=32 |
+| O        | s_axi_control O_1 | register  | offset   | offset=0x74, range=32 |
+| O        | s_axi_control O_2 | register  | offset   | offset=0x78, range=32 |
+| wo       | s_axi_control wo  | register  |          | offset=0x80, range=32 |
+| ho       | s_axi_control ho  | register  |          | offset=0x88, range=32 |
+| co       | s_axi_control co  | register  |          | offset=0x90, range=32 |
+| s        | s_axi_control s   | register  |          | offset=0x98, range=32 |
 +----------+-------------------+-----------+----------+-----------------------+
 
 
@@ -107,18 +101,10 @@
 == M_AXI Burst Information
 ================================================================
 * Burst Summary
-+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| HW Interface | Message                                                                                                                                                                                                                 | Location                              |
-+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| m_axi_gmem   | Multiple burst writes of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | mul_mec_matrix/mul_mec_matrix.cl:3:30 |
-+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+| HW Interface | Message                                                                                                                                                                                                                 | Location                               |
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+| m_axi_gmem   | Multiple burst writes of length 6 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | mul_mec_matrix/mul_mec_matrix.cl:31:30 |
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 
-* Bursts and Widening Missed
-+--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
-| HW Interface | Problem                                                                                | Resolution | Location                              |
-+--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
-| m_axi_gmem   | Could not burst due to multiple potential reads to the same bundle in the same region. | 214-224    | mul_mec_matrix/mul_mec_matrix.cl:21:2 |
-+--------------+----------------------------------------------------------------------------------------+------------+---------------------------------------+
-
-    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 

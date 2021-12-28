@@ -122,7 +122,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 3
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu7ev-ffvc1156-2-e
   set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
@@ -133,9 +137,11 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.cache/wt [current_project]
   set_property parent.project_path C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.xpr [current_project]
   set_property ip_repo_paths {
-  C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/ip
-  C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/solution1/impl/ip
-  C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/solution1/impl/ip
+  c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/ip
+  c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_v2/mul_v2/solution1/impl
+  c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/solution1/impl/ip
+  X:/temp/mul_v5/solution1/impl/ip
+  c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/creat_mec_matrix/creat_mec_matrix/solution1/impl/ip
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.cache/ip [current_project]

@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../MEC_Create_rtl_impl.srcs/sources_1/new/norm2mec_matrix.sv" \
+"../../../../MEC_Create_rtl_impl.srcs/sim_1/new/norm2mec_matrix_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

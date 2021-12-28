@@ -95,27 +95,53 @@ volatile int *create_hb     = (volatile int*)0xA0000070;
 volatile int *create_s      = (volatile int*)0xA0000078;
 volatile int *create_k      = (volatile int*)0xA0000080;
 
+
+
 volatile char *mul_control = (volatile char*)0xA0020000;
 
-volatile int *mul_wg_x   = (volatile int*)0xA0020010;
-volatile int *mul_wg_y   = (volatile int*)0xA0020018;
-volatile int *mul_wg_z   = (volatile int*)0xA0020020;
-volatile int *mul_o_x    = (volatile int*)0xA0020028;
-volatile int *mul_o_y    = (volatile int*)0xA0020030;
-volatile int *mul_o_z    = (volatile int*)0xA0020038;
+//volatile int *mul_wg_x   = (volatile int*)0xA0020010;
+//volatile int *mul_wg_y   = (volatile int*)0xA0020018;
+//volatile int *mul_wg_z   = (volatile int*)0xA0020020;
+//volatile int *mul_o_x    = (volatile int*)0xA0020028;
+//volatile int *mul_o_y    = (volatile int*)0xA0020030;
+//volatile int *mul_o_z    = (volatile int*)0xA0020038;
 
-volatile int *mul_I      = (volatile int*)0xA0020040;
-volatile int *mul_wi     = (volatile int*)0xA002004C;
-volatile int *mul_hi     = (volatile int*)0xA0020054;
-volatile int *mul_ci     = (volatile int*)0xA002005C;
-volatile int *mul_K      = (volatile int*)0xA0020064;
-volatile int *mul_wk     = (volatile int*)0xA0020070;
-volatile int *mul_nk     = (volatile int*)0xA0020078;
-volatile int *mul_O      = (volatile int*)0xA0020084;
-volatile int *mul_wo     = (volatile int*)0xA002008C;
-volatile int *mul_ho     = (volatile int*)0xA0020094;
-volatile int *mul_co     = (volatile int*)0xA002009C;
-volatile int *mul_s      = (volatile int*)0xA00200A4;
+//volatile int *mul_I      = (volatile int*)0xA0020040;
+//volatile int *mul_wi     = (volatile int*)0xA002004C;
+//volatile int *mul_hi     = (volatile int*)0xA0020054;
+//volatile int *mul_ci     = (volatile int*)0xA002005C;
+//volatile int *mul_K      = (volatile int*)0xA0020064;
+//volatile int *mul_wk     = (volatile int*)0xA0020070;
+//volatile int *mul_nk     = (volatile int*)0xA0020078;
+//volatile int *mul_O      = (volatile int*)0xA0020084;
+//volatile int *mul_wo     = (volatile int*)0xA002008C;
+//volatile int *mul_ho     = (volatile int*)0xA0020094;
+//volatile int *mul_co     = (volatile int*)0xA002009C;
+//volatile int *mul_s      = (volatile int*)0xA00200A4;
+
+//volatile int *mul_I      = (volatile int*)0xA0020040;
+//volatile int *mul_wi     = (volatile int*)0xA002004C;
+//volatile int *mul_hi     = (volatile int*)0xA0020054;
+//volatile int *mul_ci     = (volatile int*)0xA002005C;
+//volatile int *mul_wk     = (volatile int*)0xA0020064;
+//volatile int *mul_nk     = (volatile int*)0xA002006c;
+//volatile int *mul_O      = (volatile int*)0xA0020074;
+//volatile int *mul_wo     = (volatile int*)0xA0020080;
+//volatile int *mul_ho     = (volatile int*)0xA0020088;
+//volatile int *mul_co     = (volatile int*)0xA0020090;
+//volatile int *mul_s      = (volatile int*)0xA0020098;
+
+volatile int *mul_I      = (volatile int*)0xA0020010;
+volatile int *mul_wi     = (volatile int*)0xA002001C;
+volatile int *mul_hi     = (volatile int*)0xA0020024;
+volatile int *mul_ci     = (volatile int*)0xA002002C;
+volatile int *mul_wk     = (volatile int*)0xA0020034;
+volatile int *mul_nk     = (volatile int*)0xA002003c;
+volatile int *mul_O      = (volatile int*)0xA0020044;
+volatile int *mul_wo     = (volatile int*)0xA0020050;
+volatile int *mul_ho     = (volatile int*)0xA0020058;
+volatile int *mul_co     = (volatile int*)0xA0020060;
+volatile int *mul_s      = (volatile int*)0xA0020068;
 
 
 int c[60] =
@@ -138,93 +164,97 @@ int kernel[36] =
 	4, 2, 1,
 	4, 2, 1,
 	4, 3, 2,
+
 	2, 3, 3,
 	4, 4, 3,
 	1, 4, 2,
+
 	4, 3, 2,
 	2, 3, 2,
 	2, 3, 2,
+
 	3, 2 ,4,
 	2, 4, 1,
 	3, 2, 4
 };
 
-int* extend_matrix(int* input, int iw, int ih, int ic, int in, int padding)
+void extend_matrix(int iw, int ih, int ic, int in, int ow, int oh, int padding)
 {
-	int ow = iw+2*padding;
-	int oh = ih+2*padding;
+
 	int oc = ic*in;
 
+	// Set extend matrix FPGA parameters
 	*extend_p= padding;
+    *extend_wa = iw;
+	*extend_ha = ih;
+	*extend_wb = ow;
+	*extend_hb = oh;
+
     *extend_B = (int*)malloc(sizeof(int)*ow*oh*oc);
 
+    // Assign default values of 0
     int *bSet_ptr = *extend_B;
     for(int a = 0; a<(ow*oh*oc); a++)
     {
     	bSet_ptr[a] = 0;
     }
 
-    *extend_wa = iw;
-	*extend_ha = ih;
-	*extend_wb = ow;
-	*extend_hb = oh;
-
-	Xil_DCacheFlush();
-
+	// Assign input matrix
     *extend_A = (unsigned int)c;
 
+    // Set work group start numbers and offsets
     *extend_wg_y = 0;
     *extend_wg_z = 0;
     *extend_wg_x = 0;
-
     *extend_o_x = 0;
     *extend_o_y = 0;
     *extend_o_z = 0;
 
-    XTime tStart, tEnd;
-    XTime_GetTime(&tStart);
+	Xil_DCacheFlush();
+
+    XTime extend_tStart, extend_tEnd;
+    XTime_GetTime(&extend_tStart);
     *extend_control = *extend_control | 1;  /* start */
 
     /* waiting for hardware to report "done" */
     while (! ((*extend_control) & 2));
-    XTime_GetTime(&tEnd);
-    print("DONE!\n\r");
+    XTime_GetTime(&extend_tEnd);
 
-    printf("Output took %.2f us.\n", 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
+    printf("Extend matrix took %.2f us.\n", 1.0 * (extend_tEnd - extend_tStart) / (COUNTS_PER_SECOND/1000000));
 
     Xil_DCacheInvalidate();
 
     int *ptr;
     ptr = *extend_B;
-	printf("Extend matrix start: \n");
+	printf("Printing extend matrix: \n");
 	for(int i = 0; i<(ow*oh*oc); i++)
     {
         printf("%d\n", ptr[i]);
     }
-	printf("Extend matrix end: \n");
+    printf("\n\n\n\n\n\n");
 }
 
-int* creat(int* input, int iw, int ih, int ic, int in, int s, int k)
+void create(int iw, int ih, int ic, int in, int s, int k)
 {
-	int ow = ih*k;
-	int oh = ( iw-k )/s+1;
-	int oc = ic*in;
+	int create_ow = ih*k;
+	int create_oh = ( iw-k )/s+1;
+	int create_oc = ic*in;
 
     *create_A = *extend_B;
 	*create_wa = iw;
 	*create_ha = ih;
 
-    *create_B = (int*)malloc(sizeof(int)*ow*oh*oc);
+    *create_B = (int*)malloc(sizeof(int)*create_ow*create_oh*create_oc);
 
     int *bSet_ptr = *create_B;
     *bSet_ptr = *create_B;
-    for(int a = 0; a<(ow*oh*oc); a++)
+    for(int a = 0; a<(create_ow*create_oh*create_oc); a++)
     {
     	bSet_ptr[a] = 0;
     }
 
-	*create_wb = ow;
-	*create_hb = oh;
+	*create_wb = create_ow;
+	*create_hb = create_oh;
 	*create_s = s;
 	*create_k = k;
 
@@ -253,14 +283,14 @@ int* creat(int* input, int iw, int ih, int ic, int in, int s, int k)
     int *ptr;
     ptr = *create_B;
 	printf("Create matrix start:\n");
-	for(int i = 0; i<(ow*oh*oc); i++)
+	for(int i = 0; i<(create_ow*create_oh*create_oc); i++)
     {
         printf("%d\n", ptr[i]);
     }
 	printf("Create matrix end :\n");
 }
 
-int* mul(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh, int fn, int ow, int oh, int stride)
+int* mul(int iw, int ih, int ic, int in, int fw, int fh, int fn, int ow, int oh, int stride)
 {
 	int oc = fn;
 	int on = in;
@@ -270,30 +300,30 @@ int* mul(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh
 	*mul_wi = iw;
 	*mul_hi = ih;
 	*mul_ci = ic;
-	*mul_K = (unsigned int)kernel;
+//	*mul_K = (unsigned int)kernel;
 	*mul_wk = fw;
-	*mul_nk = fh;
+	*mul_nk = fn;
 	*mul_O = (int*) malloc(sizeof(int)*ow*oh*oc*on);
 
 	int *bSet_ptr = *mul_O;
     for(int a = 0; a<(ow*oh*oc*on); a++)
     {
-    	bSet_ptr[a] = 1;
+    	bSet_ptr[a] = 0;
     }
 	*mul_wo = ow;
 	*mul_ho = oh;
 	*mul_co = oc;
 	*mul_s = stride;
 
-//	Xil_DCacheFlush();
+	Xil_DCacheFlush();
 
-	*mul_wg_y = 0;
-    *mul_wg_z = 0;
-    *mul_wg_x = 0;
-
-    *mul_o_x = 0;
-    *mul_o_y = 0;
-    *mul_o_z = 0;
+//	*mul_wg_y = 0;
+//    *mul_wg_z = 0;
+//    *mul_wg_x = 0;
+//
+//    *mul_o_x = 0;
+//    *mul_o_y = 0;
+//    *mul_o_z = 0;
 
     XTime tStart, tEnd;
     XTime_GetTime(&tStart);
@@ -306,7 +336,7 @@ int* mul(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh
 
     printf("Output took %.2f us.\n", 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
 
-//    Xil_DCacheInvalidate();
+    Xil_DCacheInvalidate();
 
     int *ptr;
     ptr = *mul_O;
@@ -316,53 +346,56 @@ int* mul(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh
         printf("%d\n", ptr[i]);
     }
 	printf("Mul matrix end: \n");
+	return 0;
 }
 
-int* conv(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh, int fn, int stride, int padding)
+//  Extend input image, create MEC followed by MEC multiply
+void conv(int iw, int ih, int ic, int in, int fw, int fh, int fn, int stride, int padding)
 {
+	int extend_ow, extend_oh;
+	extend_ow = iw;
+	extend_oh = ih;
 
+	// If padding needs to be applied, call extend matrix and update extend matrix output image sizes
 	if(padding!=0)
 	{
-        input = extend_matrix(input, iw, ih, ic, in, padding);
-        printf("Finished calling extend_matrix in conv \n");
-        iw = iw+2*padding;
-        ih = ih+2*padding;
+        extend_ow = iw+2*padding;
+        extend_oh = ih+2*padding;
+        extend_matrix(iw, ih, ic, in, extend_ow, extend_oh, padding);
     }
 
-	int* tmp_mec = creat(*extend_B, iw, ih, ic, in, stride, fw);
+	// Create the MEC matrix
+	create(extend_ow, extend_oh, ic, in, stride, fw);
 
-	int ow = ( iw-fw )/stride+1;
-	int oh = ( ih-fh )/stride+1;
+	int mul_ow = ( extend_ow-fw )/stride+1;
+	int mul_oh = ( extend_oh-fh )/stride+1;
 
-	return mul(*tmp_mec, ih*fw, ow, ic, in, filter, fw, fh, fn, ow, oh, stride);
+	// Perform convolution multiplication
+	mul(extend_oh*fw, mul_ow, ic, in, fw, fh, fn, mul_ow, mul_oh, stride);
 }
 
 int main()
 {
     init_platform();
 
-    printf("Hello World\n\r");
+    printf("Platform Initialization complete\n\r");
 
+    // Set cache attributes
     Xil_SetTlbAttributes(extend_control, NORM_NONCACHE);
 	Xil_SetTlbAttributes(create_control, NORM_NONCACHE);
 	Xil_SetTlbAttributes(mul_control, NORM_NONCACHE);
 
 	Xil_DCacheFlush();
 
-    XTime tStart, tEnd;
-    XTime_GetTime(&tStart);
+    XTime prgrm_tStart, prgrm_tEnd;
+    XTime_GetTime(&prgrm_tStart);
 
-    int* o_all = conv(c, 6, 5, 2,1, kernel, 3, 3, 2, 1,1);
+    conv(6, 5, 2, 1, 3, 3, 2, 1,1);
 
-	XTime_GetTime(&tEnd);
-    print("Convolution DONE!\n\r");
+	XTime_GetTime(&prgrm_tEnd);
+    print("MEC complete DONE!\n\r");
 
-    printf("Output took %.2f us.\n", 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
-
-	for(int i = 0; i<50; i++)
-	{
-		printf("%d\n",  o_all[i]);
-	}
+    printf("Output took %.2f us.\n", 1.0 * (prgrm_tEnd - prgrm_tStart) / (COUNTS_PER_SECOND/1000000));
 
 	Xil_DCacheInvalidate();
     cleanup_platform();

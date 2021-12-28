@@ -42,7 +42,6 @@ port (
     wi                    :out  STD_LOGIC_VECTOR(31 downto 0);
     hi                    :out  STD_LOGIC_VECTOR(31 downto 0);
     ci                    :out  STD_LOGIC_VECTOR(31 downto 0);
-    K                     :out  STD_LOGIC_VECTOR(63 downto 0);
     wk                    :out  STD_LOGIC_VECTOR(31 downto 0);
     nk                    :out  STD_LOGIC_VECTOR(31 downto 0);
     O                     :out  STD_LOGIC_VECTOR(63 downto 0);
@@ -50,7 +49,6 @@ port (
     ho                    :out  STD_LOGIC_VECTOR(31 downto 0);
     co                    :out  STD_LOGIC_VECTOR(31 downto 0);
     s                     :out  STD_LOGIC_VECTOR(31 downto 0);
-    lim                   :out  STD_LOGIC_VECTOR(31 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -109,37 +107,29 @@ end entity mul_mec_matrix_control_s_axi;
 -- 0x5c : Data signal of ci
 --        bit 31~0 - ci[31:0] (Read/Write)
 -- 0x60 : reserved
--- 0x64 : Data signal of K
---        bit 31~0 - K[31:0] (Read/Write)
--- 0x68 : Data signal of K
---        bit 31~0 - K[63:32] (Read/Write)
--- 0x6c : reserved
--- 0x70 : Data signal of wk
+-- 0x64 : Data signal of wk
 --        bit 31~0 - wk[31:0] (Read/Write)
--- 0x74 : reserved
--- 0x78 : Data signal of nk
+-- 0x68 : reserved
+-- 0x6c : Data signal of nk
 --        bit 31~0 - nk[31:0] (Read/Write)
--- 0x7c : reserved
--- 0x80 : Data signal of O
+-- 0x70 : reserved
+-- 0x74 : Data signal of O
 --        bit 31~0 - O[31:0] (Read/Write)
--- 0x84 : Data signal of O
+-- 0x78 : Data signal of O
 --        bit 31~0 - O[63:32] (Read/Write)
--- 0x88 : reserved
--- 0x8c : Data signal of wo
+-- 0x7c : reserved
+-- 0x80 : Data signal of wo
 --        bit 31~0 - wo[31:0] (Read/Write)
--- 0x90 : reserved
--- 0x94 : Data signal of ho
+-- 0x84 : reserved
+-- 0x88 : Data signal of ho
 --        bit 31~0 - ho[31:0] (Read/Write)
--- 0x98 : reserved
--- 0x9c : Data signal of co
+-- 0x8c : reserved
+-- 0x90 : Data signal of co
 --        bit 31~0 - co[31:0] (Read/Write)
--- 0xa0 : reserved
--- 0xa4 : Data signal of s
+-- 0x94 : reserved
+-- 0x98 : Data signal of s
 --        bit 31~0 - s[31:0] (Read/Write)
--- 0xa8 : reserved
--- 0xac : Data signal of lim
---        bit 31~0 - lim[31:0] (Read/Write)
--- 0xb0 : reserved
+-- 0x9c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of mul_mec_matrix_control_s_axi is
@@ -172,26 +162,21 @@ architecture behave of mul_mec_matrix_control_s_axi is
     constant ADDR_HI_CTRL                : INTEGER := 16#58#;
     constant ADDR_CI_DATA_0              : INTEGER := 16#5c#;
     constant ADDR_CI_CTRL                : INTEGER := 16#60#;
-    constant ADDR_K_DATA_0               : INTEGER := 16#64#;
-    constant ADDR_K_DATA_1               : INTEGER := 16#68#;
-    constant ADDR_K_CTRL                 : INTEGER := 16#6c#;
-    constant ADDR_WK_DATA_0              : INTEGER := 16#70#;
-    constant ADDR_WK_CTRL                : INTEGER := 16#74#;
-    constant ADDR_NK_DATA_0              : INTEGER := 16#78#;
-    constant ADDR_NK_CTRL                : INTEGER := 16#7c#;
-    constant ADDR_O_DATA_0               : INTEGER := 16#80#;
-    constant ADDR_O_DATA_1               : INTEGER := 16#84#;
-    constant ADDR_O_CTRL                 : INTEGER := 16#88#;
-    constant ADDR_WO_DATA_0              : INTEGER := 16#8c#;
-    constant ADDR_WO_CTRL                : INTEGER := 16#90#;
-    constant ADDR_HO_DATA_0              : INTEGER := 16#94#;
-    constant ADDR_HO_CTRL                : INTEGER := 16#98#;
-    constant ADDR_CO_DATA_0              : INTEGER := 16#9c#;
-    constant ADDR_CO_CTRL                : INTEGER := 16#a0#;
-    constant ADDR_S_DATA_0               : INTEGER := 16#a4#;
-    constant ADDR_S_CTRL                 : INTEGER := 16#a8#;
-    constant ADDR_LIM_DATA_0             : INTEGER := 16#ac#;
-    constant ADDR_LIM_CTRL               : INTEGER := 16#b0#;
+    constant ADDR_WK_DATA_0              : INTEGER := 16#64#;
+    constant ADDR_WK_CTRL                : INTEGER := 16#68#;
+    constant ADDR_NK_DATA_0              : INTEGER := 16#6c#;
+    constant ADDR_NK_CTRL                : INTEGER := 16#70#;
+    constant ADDR_O_DATA_0               : INTEGER := 16#74#;
+    constant ADDR_O_DATA_1               : INTEGER := 16#78#;
+    constant ADDR_O_CTRL                 : INTEGER := 16#7c#;
+    constant ADDR_WO_DATA_0              : INTEGER := 16#80#;
+    constant ADDR_WO_CTRL                : INTEGER := 16#84#;
+    constant ADDR_HO_DATA_0              : INTEGER := 16#88#;
+    constant ADDR_HO_CTRL                : INTEGER := 16#8c#;
+    constant ADDR_CO_DATA_0              : INTEGER := 16#90#;
+    constant ADDR_CO_CTRL                : INTEGER := 16#94#;
+    constant ADDR_S_DATA_0               : INTEGER := 16#98#;
+    constant ADDR_S_CTRL                 : INTEGER := 16#9c#;
     constant ADDR_BITS         : INTEGER := 8;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -229,7 +214,6 @@ architecture behave of mul_mec_matrix_control_s_axi is
     signal int_wi              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_hi              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_ci              : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_K               : UNSIGNED(63 downto 0) := (others => '0');
     signal int_wk              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_nk              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_O               : UNSIGNED(63 downto 0) := (others => '0');
@@ -237,7 +221,6 @@ architecture behave of mul_mec_matrix_control_s_axi is
     signal int_ho              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_co              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_s               : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_lim             : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -387,10 +370,6 @@ begin
                         rdata_data <= RESIZE(int_hi(31 downto 0), 32);
                     when ADDR_CI_DATA_0 =>
                         rdata_data <= RESIZE(int_ci(31 downto 0), 32);
-                    when ADDR_K_DATA_0 =>
-                        rdata_data <= RESIZE(int_K(31 downto 0), 32);
-                    when ADDR_K_DATA_1 =>
-                        rdata_data <= RESIZE(int_K(63 downto 32), 32);
                     when ADDR_WK_DATA_0 =>
                         rdata_data <= RESIZE(int_wk(31 downto 0), 32);
                     when ADDR_NK_DATA_0 =>
@@ -407,8 +386,6 @@ begin
                         rdata_data <= RESIZE(int_co(31 downto 0), 32);
                     when ADDR_S_DATA_0 =>
                         rdata_data <= RESIZE(int_s(31 downto 0), 32);
-                    when ADDR_LIM_DATA_0 =>
-                        rdata_data <= RESIZE(int_lim(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -433,7 +410,6 @@ begin
     wi                   <= STD_LOGIC_VECTOR(int_wi);
     hi                   <= STD_LOGIC_VECTOR(int_hi);
     ci                   <= STD_LOGIC_VECTOR(int_ci);
-    K                    <= STD_LOGIC_VECTOR(int_K);
     wk                   <= STD_LOGIC_VECTOR(int_wk);
     nk                   <= STD_LOGIC_VECTOR(int_nk);
     O                    <= STD_LOGIC_VECTOR(int_O);
@@ -441,7 +417,6 @@ begin
     ho                   <= STD_LOGIC_VECTOR(int_ho);
     co                   <= STD_LOGIC_VECTOR(int_co);
     s                    <= STD_LOGIC_VECTOR(int_s);
-    lim                  <= STD_LOGIC_VECTOR(int_lim);
 
     process (ACLK)
     begin
@@ -723,28 +698,6 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_K_DATA_0) then
-                    int_K(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_K(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_K_DATA_1) then
-                    int_K(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_K(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_WK_DATA_0) then
                     int_wk(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_wk(31 downto 0));
                 end if;
@@ -824,17 +777,6 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_S_DATA_0) then
                     int_s(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_s(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_LIM_DATA_0) then
-                    int_lim(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_lim(31 downto 0));
                 end if;
             end if;
         end if;

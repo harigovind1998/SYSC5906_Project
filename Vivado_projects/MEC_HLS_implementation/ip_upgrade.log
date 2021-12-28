@@ -1,16 +1,139 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
-| Date         : Sun Dec 12 20:07:50 2021
+| Date         : Fri Dec 17 02:23:45 2021
 | Host         : DESKTOP-J45FL4K running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xczu7ev-ffvc1156-2-e
 --------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'design_1_extend_matrix_0_0'
+Upgrade Log for IP 'design_1_mul_v2_0_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of design_1_extend_matrix_0_0 (xilinx.com:hls:extend_matrix:1.0) from (Rev. 2112081602) to (Rev. 2112122007)
+SUCCESS in the upgrade of design_1_mul_v2_0_0 (xilinx.com:hls:mul_v2:1.0) from (Rev. 2112170044) to (Rev. 2112170223)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Fri Dec 17 00:44:29 2021
+| Host         : DESKTOP-J45FL4K running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu7ev-ffvc1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mul_v2_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_mul_v2_0_0 (xilinx.com:hls:mul_v2:1.0) from (Rev. 2112162328) to (Rev. 2112170044)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_mul_v2_0_0'.
+
+
+-Upgrade has removed interface 'ap_ctrl'
+
+-Upgrade has added interface 'interrupt' (xilinx.com:signal:interrupt:1.0)
+
+-Upgrade has added interface 'm_axi_gmem' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_mul_v2_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'ap_done'
+
+-Upgrade has removed port 'ap_idle'
+
+-Upgrade has removed port 'ap_ready'
+
+-Upgrade has removed port 'ap_start'
+
+-Upgrade has added port 'interrupt'
+
+-Upgrade has added port 'm_axi_gmem_ARADDR'
+
+-Upgrade has added port 'm_axi_gmem_ARBURST'
+
+-Upgrade has added port 'm_axi_gmem_ARCACHE'
+
+-Upgrade has added port 'm_axi_gmem_ARLEN'
+
+-Upgrade has added port 'm_axi_gmem_ARLOCK'
+
+-Upgrade has added port 'm_axi_gmem_ARPROT'
+
+-Upgrade has added port 'm_axi_gmem_ARQOS'
+
+-Upgrade has added port 'm_axi_gmem_ARREADY'
+
+-Upgrade has added port 'm_axi_gmem_ARREGION'
+
+-Upgrade has added port 'm_axi_gmem_ARSIZE'
+
+-Upgrade has added port 'm_axi_gmem_ARVALID'
+
+-Upgrade has added port 'm_axi_gmem_AWADDR'
+
+-Upgrade has added port 'm_axi_gmem_AWBURST'
+
+-Upgrade has added port 'm_axi_gmem_AWCACHE'
+
+-Upgrade has added port 'm_axi_gmem_AWLEN'
+
+-Upgrade has added port 'm_axi_gmem_AWLOCK'
+
+-Upgrade has added port 'm_axi_gmem_AWPROT'
+
+-Upgrade has added port 'm_axi_gmem_AWQOS'
+
+-Upgrade has added port 'm_axi_gmem_AWREADY'
+
+-Upgrade has added port 'm_axi_gmem_AWREGION'
+
+-Upgrade has added port 'm_axi_gmem_AWSIZE'
+
+-Upgrade has added port 'm_axi_gmem_AWVALID'
+
+-Upgrade has added port 'm_axi_gmem_BREADY'
+
+-Upgrade has added port 'm_axi_gmem_BRESP'
+
+-Upgrade has added port 'm_axi_gmem_BVALID'
+
+-Upgrade has added port 'm_axi_gmem_RDATA'
+
+-Upgrade has added port 'm_axi_gmem_RLAST'
+
+-Upgrade has added port 'm_axi_gmem_RREADY'
+
+-Upgrade has added port 'm_axi_gmem_RRESP'
+
+-Upgrade has added port 'm_axi_gmem_RVALID'
+
+-Upgrade has added port 'm_axi_gmem_WDATA'
+
+-Upgrade has added port 'm_axi_gmem_WLAST'
+
+-Upgrade has added port 'm_axi_gmem_WREADY'
+
+-Upgrade has added port 'm_axi_gmem_WSTRB'
+
+-Upgrade has added port 'm_axi_gmem_WVALID'
+
 

@@ -7,12 +7,11 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export format="sysgen" output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/mul_mec_matrix.zip" rtl="verilog" vivado_clock="10"/>
+        <config_export format="sysgen" output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Generated_ip/mul_mec_matrix.zip" rtl="verilog" vivado_clock="10"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="Zynq UltraScale+ ZCU106 Evaluation Platform (xczu7ev-ffvc1156-2-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
-            <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -41,7 +40,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Generated_ip/mul_mec_matrix.zip" rtl="verilog" rtlButton="true" rtlCombo="verilog">
         <Format formatName="ip_catalog" description="" vendor="" library="" ipname="mul_mec_matrix" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
@@ -70,7 +69,7 @@
         <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" period="10"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
 </solution>
 

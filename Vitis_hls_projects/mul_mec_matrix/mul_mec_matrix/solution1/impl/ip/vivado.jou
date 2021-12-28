@@ -2,8 +2,8 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Wed Dec  8 16:10:57 2021
-# Process ID: 55804
+# Start of session at: Wed Dec 15 12:23:07 2021
+# Process ID: 39204
 # Current directory: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/mul_mec_matrix/mul_mec_matrix/solution1/impl/ip/vivado.log

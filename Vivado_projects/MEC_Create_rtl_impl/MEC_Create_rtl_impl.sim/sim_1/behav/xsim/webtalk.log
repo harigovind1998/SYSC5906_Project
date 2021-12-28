@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Fri Dec 17 13:08:08 2021
+# Process ID: 3460
+# Current directory: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_Create_rtl_impl/MEC_Create_rtl_impl.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_Create_rtl_impl/MEC_Create_rtl_impl.sim/sim_1/behav/xsim/xsim.dir/norm2mec_matrix_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_Create_rtl_impl/MEC_Create_rtl_impl.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_Create_rtl_impl/MEC_Create_rtl_impl.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_Create_rtl_impl/MEC_Create_rtl_impl.sim/sim_1/behav/xsim/xsim.dir/norm2mec_matrix_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec 17 13:08:08 2021...

@@ -232,7 +232,7 @@ output wire m_axi_gmem_RREADY;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
-(* SDX_KERNEL_SIM_INST = "" *)
+(* SDX_KERNEL_SIM_INST = "inst" *)
   extend_matrix #(
     .C_S_AXI_CONTROL_ADDR_WIDTH(7),
     .C_S_AXI_CONTROL_DATA_WIDTH(32),

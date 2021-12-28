@@ -13,31 +13,31 @@ set C_modelName {mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ bound int 35 regular  }
-	{ lim int 32 regular  }
-	{ mul7 int 32 regular  }
-	{ mul6_mid2 int 32 regular  }
+	{ mul_ln31_4 int 32 regular  }
+	{ mul int 32 regular  }
+	{ mul8_mid2 int 32 regular  }
 	{ hi int 32 regular  }
 	{ global_id_base_x int 32 regular  }
 	{ wi int 32 regular  }
-	{ mul14 int 32 regular  }
+	{ mul16 int 32 regular  }
 	{ I int 64 regular  }
 	{ gmem int 32 regular {axi_master 0}  }
-	{ sext_ln3_1_mid2 int 62 regular  }
+	{ mul_ln31_6_mid2 int 6 regular  }
 	{ shiftreg_out int 192 regular {pointer 1}  }
 	{ value_out int 32 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "bound", "interface" : "wire", "bitwidth" : 35, "direction" : "READONLY"} , 
- 	{ "Name" : "lim", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "mul7", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "mul6_mid2", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "mul_ln31_4", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "mul", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "mul8_mid2", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "hi", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "global_id_base_x", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "wi", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "mul14", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "mul16", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "I", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
- 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "I","offset": { "type": "dynamic","port_name": "I","bundle": "control"},"direction": "READONLY"},{"cName": "K","offset": { "type": "dynamic","port_name": "K","bundle": "control"},"direction": "READONLY"},{"cName": "O","offset": { "type": "dynamic","port_name": "O","bundle": "control"},"direction": "WRITEONLY"}]}]} , 
- 	{ "Name" : "sext_ln3_1_mid2", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "I","offset": { "type": "dynamic","port_name": "I","bundle": "control"},"direction": "READONLY"},{"cName": "O","offset": { "type": "dynamic","port_name": "O","bundle": "control"},"direction": "WRITEONLY"}]}]} , 
+ 	{ "Name" : "mul_ln31_6_mid2", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
  	{ "Name" : "shiftreg_out", "interface" : "wire", "bitwidth" : 192, "direction" : "WRITEONLY"} , 
  	{ "Name" : "value_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -95,15 +95,15 @@ set portList {
 	{ m_axi_gmem_BID sc_in sc_lv 1 signal 9 } 
 	{ m_axi_gmem_BUSER sc_in sc_lv 1 signal 9 } 
 	{ bound sc_in sc_lv 35 signal 0 } 
-	{ lim sc_in sc_lv 32 signal 1 } 
-	{ mul7 sc_in sc_lv 32 signal 2 } 
-	{ mul6_mid2 sc_in sc_lv 32 signal 3 } 
+	{ mul_ln31_4 sc_in sc_lv 32 signal 1 } 
+	{ mul sc_in sc_lv 32 signal 2 } 
+	{ mul8_mid2 sc_in sc_lv 32 signal 3 } 
 	{ hi sc_in sc_lv 32 signal 4 } 
 	{ global_id_base_x sc_in sc_lv 32 signal 5 } 
 	{ wi sc_in sc_lv 32 signal 6 } 
-	{ mul14 sc_in sc_lv 32 signal 7 } 
+	{ mul16 sc_in sc_lv 32 signal 7 } 
 	{ I sc_in sc_lv 64 signal 8 } 
-	{ sext_ln3_1_mid2 sc_in sc_lv 62 signal 10 } 
+	{ mul_ln31_6_mid2 sc_in sc_lv 6 signal 10 } 
 	{ shiftreg_out sc_out sc_lv 192 signal 11 } 
 	{ shiftreg_out_ap_vld sc_out sc_logic 1 outvld 11 } 
 	{ value_out sc_out sc_lv 32 signal 12 } 
@@ -162,22 +162,22 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }} , 
  	{ "name": "bound", "direction": "in", "datatype": "sc_lv", "bitwidth":35, "type": "signal", "bundle":{"name": "bound", "role": "default" }} , 
- 	{ "name": "lim", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "lim", "role": "default" }} , 
- 	{ "name": "mul7", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul7", "role": "default" }} , 
- 	{ "name": "mul6_mid2", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul6_mid2", "role": "default" }} , 
+ 	{ "name": "mul_ln31_4", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul_ln31_4", "role": "default" }} , 
+ 	{ "name": "mul", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul", "role": "default" }} , 
+ 	{ "name": "mul8_mid2", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul8_mid2", "role": "default" }} , 
  	{ "name": "hi", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "hi", "role": "default" }} , 
  	{ "name": "global_id_base_x", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "global_id_base_x", "role": "default" }} , 
  	{ "name": "wi", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "wi", "role": "default" }} , 
- 	{ "name": "mul14", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul14", "role": "default" }} , 
+ 	{ "name": "mul16", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul16", "role": "default" }} , 
  	{ "name": "I", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "I", "role": "default" }} , 
- 	{ "name": "sext_ln3_1_mid2", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln3_1_mid2", "role": "default" }} , 
+ 	{ "name": "mul_ln31_6_mid2", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "mul_ln31_6_mid2", "role": "default" }} , 
  	{ "name": "shiftreg_out", "direction": "out", "datatype": "sc_lv", "bitwidth":192, "type": "signal", "bundle":{"name": "shiftreg_out", "role": "default" }} , 
  	{ "name": "shiftreg_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "shiftreg_out", "role": "ap_vld" }} , 
  	{ "name": "value_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "value_out", "role": "default" }} , 
  	{ "name": "value_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "value_out", "role": "ap_vld" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7"],
 		"CDFG" : "mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -192,47 +192,50 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "bound", "Type" : "None", "Direction" : "I"},
-			{"Name" : "lim", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul6_mid2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul_ln31_4", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul8_mid2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "hi", "Type" : "None", "Direction" : "I"},
 			{"Name" : "global_id_base_x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "wi", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mul14", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul16", "Type" : "None", "Direction" : "I"},
 			{"Name" : "I", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln3_1_mid2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul_ln31_6_mid2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "shiftreg_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "value_out", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "value_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "mul_mec_matrix_K", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "XCL_WG_DIM_X_L", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter23", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter22", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32ns_32_36_1_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.urem_32ns_32ns_32_36_1_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter46", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter46", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mec_matrix_K_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.udiv_32ns_32ns_32_36_1_U1", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.urem_32ns_32ns_32_36_1_U2", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U3", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U4", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5s_32s_32_1_1_U5", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L {
 		bound {Type I LastRead 0 FirstWrite -1}
-		lim {Type I LastRead 0 FirstWrite -1}
-		mul7 {Type I LastRead 0 FirstWrite -1}
-		mul6_mid2 {Type I LastRead 0 FirstWrite -1}
+		mul_ln31_4 {Type I LastRead 0 FirstWrite -1}
+		mul {Type I LastRead 0 FirstWrite -1}
+		mul8_mid2 {Type I LastRead 0 FirstWrite -1}
 		hi {Type I LastRead 0 FirstWrite -1}
 		global_id_base_x {Type I LastRead 0 FirstWrite -1}
 		wi {Type I LastRead 0 FirstWrite -1}
-		mul14 {Type I LastRead 0 FirstWrite -1}
+		mul16 {Type I LastRead 0 FirstWrite -1}
 		I {Type I LastRead 0 FirstWrite -1}
 		gmem {Type I LastRead 45 FirstWrite -1}
-		sext_ln3_1_mid2 {Type I LastRead 0 FirstWrite -1}
-		shiftreg_out {Type O LastRead -1 FirstWrite 45}
-		value_out {Type O LastRead -1 FirstWrite 45}}}
+		mul_ln31_6_mid2 {Type I LastRead 0 FirstWrite -1}
+		shiftreg_out {Type O LastRead -1 FirstWrite 46}
+		value_out {Type O LastRead -1 FirstWrite 46}
+		mul_mec_matrix_K {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -247,16 +250,16 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	bound { ap_none {  { bound in_data 0 35 } } }
-	lim { ap_none {  { lim in_data 0 32 } } }
-	mul7 { ap_none {  { mul7 in_data 0 32 } } }
-	mul6_mid2 { ap_none {  { mul6_mid2 in_data 0 32 } } }
+	mul_ln31_4 { ap_none {  { mul_ln31_4 in_data 0 32 } } }
+	mul { ap_none {  { mul in_data 0 32 } } }
+	mul8_mid2 { ap_none {  { mul8_mid2 in_data 0 32 } } }
 	hi { ap_none {  { hi in_data 0 32 } } }
 	global_id_base_x { ap_none {  { global_id_base_x in_data 0 32 } } }
 	wi { ap_none {  { wi in_data 0 32 } } }
-	mul14 { ap_none {  { mul14 in_data 0 32 } } }
+	mul16 { ap_none {  { mul16 in_data 0 32 } } }
 	I { ap_none {  { I in_data 0 64 } } }
 	gmem { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN LEN 1 32 }  { m_axi_gmem_AWSIZE SIZE 1 3 }  { m_axi_gmem_AWBURST BURST 1 2 }  { m_axi_gmem_AWLOCK LOCK 1 2 }  { m_axi_gmem_AWCACHE CACHE 1 4 }  { m_axi_gmem_AWPROT PROT 1 3 }  { m_axi_gmem_AWQOS QOS 1 4 }  { m_axi_gmem_AWREGION REGION 1 4 }  { m_axi_gmem_AWUSER USER 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA DATA 1 32 }  { m_axi_gmem_WSTRB STRB 1 4 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER USER 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN LEN 1 32 }  { m_axi_gmem_ARSIZE SIZE 1 3 }  { m_axi_gmem_ARBURST BURST 1 2 }  { m_axi_gmem_ARLOCK LOCK 1 2 }  { m_axi_gmem_ARCACHE CACHE 1 4 }  { m_axi_gmem_ARPROT PROT 1 3 }  { m_axi_gmem_ARQOS QOS 1 4 }  { m_axi_gmem_ARREGION REGION 1 4 }  { m_axi_gmem_ARUSER USER 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA DATA 0 32 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RUSER USER 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER USER 0 1 } } }
-	sext_ln3_1_mid2 { ap_none {  { sext_ln3_1_mid2 in_data 0 62 } } }
+	mul_ln31_6_mid2 { ap_none {  { mul_ln31_6_mid2 in_data 0 6 } } }
 	shiftreg_out { ap_vld {  { shiftreg_out out_data 1 192 }  { shiftreg_out_ap_vld out_vld 1 1 } } }
 	value_out { ap_vld {  { value_out out_data 1 32 }  { value_out_ap_vld out_vld 1 1 } } }
 }

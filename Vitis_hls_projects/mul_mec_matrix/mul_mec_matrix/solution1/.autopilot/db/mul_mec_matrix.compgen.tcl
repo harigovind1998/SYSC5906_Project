@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set name mul_mec_matrix_udiv_32ns_32s_32_36_seq_1
+set name mul_mec_matrix_udiv_32ns_32ns_32_36_seq_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {udiv} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
 }
@@ -15,6 +15,71 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 set name mul_mec_matrix_mul_3ns_32s_32_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set name mul_mec_matrix_mul_6s_6s_6_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set id 39
+set name mul_mec_matrix_mac_mulsub_6s_6s_6ns_6_4_1
+set corename simcore_mac
+set op mac
+set stage_num 4
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 6
+set in0_signed 1
+set in1_width 6
+set in1_signed 1
+set in2_width 6
+set in2_signed 0
+set ce_width 1
+set ce_signed 0
+set out_width 6
+set arg_lists {i0 {6 1 +} i1 {6 1 +} m {6 1 -} i2 {6 0 +} p {6 0 +} c_reg {1} rnd {0} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sub} IMPL {dsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set op mac
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
 }
 
 
@@ -107,77 +172,61 @@ ci {
 	offset 92
 	offset_end 99
 }
-K { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 100
-	offset_end 111
-}
 wk { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 112
-	offset_end 119
+	offset 100
+	offset_end 107
 }
 nk { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 120
-	offset_end 127
+	offset 108
+	offset_end 115
 }
 O { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 128
-	offset_end 139
+	offset 116
+	offset_end 127
 }
 wo { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 140
-	offset_end 147
+	offset 128
+	offset_end 135
 }
 ho { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 148
-	offset_end 155
+	offset 136
+	offset_end 143
 }
 co { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 156
-	offset_end 163
+	offset 144
+	offset_end 151
 }
 s { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 164
-	offset_end 171
-}
-lim { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 172
-	offset_end 179
+	offset 152
+	offset_end 159
 }
 ap_start {
 	mailbox_input_ctrl 0
@@ -198,7 +247,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 40 \
+			id 46 \
 			corename mul_mec_matrix_control_axilite \
 			name mul_mec_matrix_control_s_axi \
 			ports {$port_control} \
@@ -220,7 +269,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 41 \
+    id 47 \
     corename {m_axi} \
     op interface \
     delay_budget 7.3 \ 

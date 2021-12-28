@@ -7,14 +7,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 ||
 # IP: bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==design_1_zynq_ultra_ps_e_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_extend_matrix_0_0 || ORIG_REF_NAME==design_1_extend_matrix_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_creat_mec_matrix_0_0/design_1_creat_mec_matrix_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_creat_mec_matrix_0_0 || ORIG_REF_NAME==design_1_creat_mec_matrix_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_mul_mec_matrix_0_0/design_1_mul_mec_matrix_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_mul_mec_matrix_0_0 || ORIG_REF_NAME==design_1_mul_mec_matrix_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
@@ -28,6 +22,138 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 # IP: bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_smc_0 || ORIG_REF_NAME==design_1_axi_smc_0} -quiet] -quiet
 
+# Block Designs: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/bd_afc3.bd
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/bd_afc3_one_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_arsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_rsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_awsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_wsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_bsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_s00mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_s00tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_s00sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_sarn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_srn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/bd_afc3_sawn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/bd_afc3_swn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/bd_afc3_sbn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/bd_afc3_s01mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/bd_afc3_s01tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/bd_afc3_s01sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/bd_afc3_s01a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/bd_afc3_sarn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/bd_afc3_srn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/bd_afc3_sawn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_swn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/bd_afc3_sbn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_s02mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_s02tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_s02sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_s02a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_sarn_2.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_srn_2.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/bd_afc3_sawn_2.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_32/bd_afc3_swn_2.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/bd_afc3_sbn_2.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/bd_afc3_m00s2a_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/bd_afc3_m00arn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/bd_afc3_m00rn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m00awn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m00wn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m00bn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m00e_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/design_1/ip/design_1_extend_matrix_0_0/design_1_extend_matrix_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_extend_matrix_0_0 || ORIG_REF_NAME==design_1_extend_matrix_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_mul_v2_0_0/design_1_mul_v2_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_mul_v2_0_0 || ORIG_REF_NAME==design_1_mul_v2_0_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
 
@@ -39,5 +165,102 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 
 # IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==design_1_zynq_ultra_ps_e_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_creat_mec_matrix_0_0/constraints/creat_mec_matrix_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==design_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==design_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc
+# DONT_TOUCH constraint suppressed by parent sub-design file.
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc
+# DONT_TOUCH constraint suppressed by parent sub-design file.
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_arsw_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_rsw_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_awsw_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_wsw_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_bsw_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_sarn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_srn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/bd_afc3_sawn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/bd_afc3_swn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/bd_afc3_sbn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/bd_afc3_s01a2s_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/bd_afc3_sarn_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/bd_afc3_srn_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/bd_afc3_sawn_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_swn_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/bd_afc3_sbn_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_s02a2s_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_sarn_2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_srn_2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/bd_afc3_sawn_2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_32/bd_afc3_swn_2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/bd_afc3_sbn_2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/bd_afc3_m00s2a_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/bd_afc3_m00arn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/bd_afc3_m00rn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m00awn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m00wn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m00bn_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_extend_matrix_0_0/constraints/extend_matrix_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_mul_v2_0_0/constraints/mul_v2_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_ds_1 || ORIG_REF_NAME==design_1_auto_ds_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc
+
+# XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc
 
 # XDC: c:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vivado_projects/MEC_HLS_implementation/MEC_HLS_implementation.gen/sources_1/bd/design_1/design_1_ooc.xdc

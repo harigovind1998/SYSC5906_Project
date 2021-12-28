@@ -107,8 +107,6 @@ void XMul_mec_matrix_Set_hi(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_hi(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_Set_ci(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_ci(XMul_mec_matrix *InstancePtr);
-void XMul_mec_matrix_Set_K(XMul_mec_matrix *InstancePtr, u64 Data);
-u64 XMul_mec_matrix_Get_K(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_Set_wk(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_wk(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_Set_nk(XMul_mec_matrix *InstancePtr, u32 Data);
@@ -123,8 +121,6 @@ void XMul_mec_matrix_Set_co(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_co(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_Set_s(XMul_mec_matrix *InstancePtr, u32 Data);
 u32 XMul_mec_matrix_Get_s(XMul_mec_matrix *InstancePtr);
-void XMul_mec_matrix_Set_lim(XMul_mec_matrix *InstancePtr, u32 Data);
-u32 XMul_mec_matrix_Get_lim(XMul_mec_matrix *InstancePtr);
 
 void XMul_mec_matrix_InterruptGlobalEnable(XMul_mec_matrix *InstancePtr);
 void XMul_mec_matrix_InterruptGlobalDisable(XMul_mec_matrix *InstancePtr);

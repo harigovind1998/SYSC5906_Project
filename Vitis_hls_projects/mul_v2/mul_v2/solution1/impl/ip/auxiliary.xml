@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="mul_v2" xd:componentRef="mul_v2" xd:initiationInterval="78" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(Inp)" xd:originalName="Inp" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="Inp" xd:originalName="Inp" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:arg xd:name="wi" xd:originalName="wi" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="hi" xd:originalName="hi" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x24" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ci" xd:originalName="ci" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x2C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="wk" xd:originalName="wk" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x34" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="nk" xd:originalName="nk" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x3C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(O)" xd:originalName="O" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="O" xd:originalName="O" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x44" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:arg xd:name="wo" xd:originalName="wo" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x50" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ho" xd:originalName="ho" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x58" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="co" xd:originalName="co" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x60" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="s" xd:originalName="s" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x68" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="77" xd:worst-case="77" xd:average-case="77"/>
+  <xd:resourceEstimates xd:LUT="3845" xd:FF="3257" xd:BRAM="0" xd:DSP="14"/>
+</xd:acceleratorMap>

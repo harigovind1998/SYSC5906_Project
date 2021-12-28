@@ -2,8 +2,8 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Sun Dec 12 20:07:06 2021
-# Process ID: 24540
+# Start of session at: Mon Dec 27 20:59:56 2021
+# Process ID: 19548
 # Current directory: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/impl/ip/vivado.log
@@ -13,4 +13,4 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/dev_tools/xilinx/Vivado/2021.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 12 20:07:11 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 27 21:00:01 2021...

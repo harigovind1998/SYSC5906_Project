@@ -245,25 +245,6 @@ u32 XMul_mec_matrix_Get_ci(XMul_mec_matrix *InstancePtr) {
     return Data;
 }
 
-void XMul_mec_matrix_Set_K(XMul_mec_matrix *InstancePtr, u64 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XMul_mec_matrix_WriteReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_K_DATA, (u32)(Data));
-    XMul_mec_matrix_WriteReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_K_DATA + 4, (u32)(Data >> 32));
-}
-
-u64 XMul_mec_matrix_Get_K(XMul_mec_matrix *InstancePtr) {
-    u64 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XMul_mec_matrix_ReadReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_K_DATA);
-    Data += (u64)XMul_mec_matrix_ReadReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_K_DATA + 4) << 32;
-    return Data;
-}
-
 void XMul_mec_matrix_Set_wk(XMul_mec_matrix *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -382,23 +363,6 @@ u32 XMul_mec_matrix_Get_s(XMul_mec_matrix *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XMul_mec_matrix_ReadReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_S_DATA);
-    return Data;
-}
-
-void XMul_mec_matrix_Set_lim(XMul_mec_matrix *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XMul_mec_matrix_WriteReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_LIM_DATA, Data);
-}
-
-u32 XMul_mec_matrix_Get_lim(XMul_mec_matrix *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XMul_mec_matrix_ReadReg(InstancePtr->Control_BaseAddress, XMUL_MEC_MATRIX_CONTROL_ADDR_LIM_DATA);
     return Data;
 }
 

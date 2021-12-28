@@ -1,114 +1,92 @@
-19:27:30 **** Incremental Build of configuration Debug for project MEC_HLS_Impl_1_1 ****
+09:13:55 **** Incremental Build of configuration Debug for project MEC_HLS_Impl_1_1 ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v8 gcc compiler'
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'extend_matrix':
-../src/helloworld.c:159:15: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
-  159 |     *extend_B = (int*)malloc(sizeof(int)*ow*oh*oc);
+../src/helloworld.c:193:15: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  193 |     *extend_B = (int*)malloc(sizeof(int)*ow*oh*oc);
       |               ^
-../src/helloworld.c:161:21: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  161 |     int *bSet_ptr = *extend_B;
+../src/helloworld.c:196:21: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  196 |     int *bSet_ptr = *extend_B;
       |                     ^
-../src/helloworld.c:174:17: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  174 |     *extend_A = (unsigned int)c;
+../src/helloworld.c:203:17: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  203 |     *extend_A = (unsigned int)c;
       |                 ^
-../src/helloworld.c:198:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  198 |     ptr = *extend_B;
+../src/helloworld.c:228:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  228 |     ptr = *extend_B;
       |         ^
-../src/helloworld.c: In function 'creat':
-../src/helloworld.c:217:15: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
-  217 |     *create_B = (int*)malloc(sizeof(int)*ow*oh*oc);
+../src/helloworld.c: In function 'create':
+../src/helloworld.c:247:15: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  247 |     *create_B = (int*)malloc(sizeof(int)*create_ow*create_oh*create_oc);
       |               ^
-../src/helloworld.c:219:21: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  219 |     int *bSet_ptr = *create_B;
+../src/helloworld.c:249:21: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  249 |     int *bSet_ptr = *create_B;
       |                     ^
-../src/helloworld.c:254:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  254 |     ptr = *create_B;
+../src/helloworld.c:284:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  284 |     ptr = *create_B;
       |         ^
 ../src/helloworld.c: In function 'mul':
-../src/helloworld.c:273:11: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  273 |  *mul_K = (unsigned int)kernel;
-      |           ^
-../src/helloworld.c:276:9: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
-  276 |  *mul_O = (int*) malloc(sizeof(int)*ow*oh*oc*on);
+../src/helloworld.c:306:9: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  306 |  *mul_O = (int*) malloc(sizeof(int)*ow*oh*oc*on);
       |         ^
-../src/helloworld.c:278:18: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  278 |  int *bSet_ptr = *mul_O;
+../src/helloworld.c:308:18: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  308 |  int *bSet_ptr = *mul_O;
       |                  ^
-../src/helloworld.c:312:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  312 |     ptr = *mul_O;
+../src/helloworld.c:342:9: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  342 |     ptr = *mul_O;
       |         ^
-../src/helloworld.c: In function 'conv':
-../src/helloworld.c:332:23: warning: passing argument 1 of 'creat' makes pointer from integer without a cast [-Wint-conversion]
-  332 |  int* tmp_mec = creat(*extend_B, iw, ih, ic, in, stride, fw);
-      |                       ^~~~~~~~~
-      |                       |
-      |                       int
-../src/helloworld.c:207:17: note: expected 'int *' but argument is of type 'int'
-  207 | int* creat(int* input, int iw, int ih, int ic, int in, int s, int k)
-      |            ~~~~~^~~~~
-../src/helloworld.c:337:13: warning: passing argument 1 of 'mul' makes pointer from integer without a cast [-Wint-conversion]
-  337 |  return mul(*tmp_mec, ih*fw, ow, ic, in, filter, fw, fh, fn, ow, oh, stride);
-      |             ^~~~~~~~
-      |             |
-      |             int
-../src/helloworld.c:263:15: note: expected 'int *' but argument is of type 'int'
-  263 | int* mul(int* input, int iw, int ih, int ic, int in, int* filter, int fw, int fh, int fn, int ow, int oh, int stride)
-      |          ~~~~~^~~~~
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:346:26: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
-  346 |     Xil_SetTlbAttributes(extend_control, NORM_NONCACHE);
+../src/helloworld.c:384:26: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
+  384 |     Xil_SetTlbAttributes(extend_control, NORM_NONCACHE);
       |                          ^~~~~~~~~~~~~~
       |                          |
       |                          volatile char *
 In file included from ../src/helloworld.c:53:
-C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
+C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
    85 | void Xil_SetTlbAttributes(UINTPTR Addr, u64 attrib);
       |                           ~~~~~~~~^~~~
-../src/helloworld.c:347:23: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
-  347 |  Xil_SetTlbAttributes(create_control, NORM_NONCACHE);
+../src/helloworld.c:385:23: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
+  385 |  Xil_SetTlbAttributes(create_control, NORM_NONCACHE);
       |                       ^~~~~~~~~~~~~~
       |                       |
       |                       volatile char *
 In file included from ../src/helloworld.c:53:
-C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
+C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
    85 | void Xil_SetTlbAttributes(UINTPTR Addr, u64 attrib);
       |                           ~~~~~~~~^~~~
-../src/helloworld.c:348:23: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
-  348 |  Xil_SetTlbAttributes(mul_control, NORM_NONCACHE);
+../src/helloworld.c:386:23: warning: passing argument 1 of 'Xil_SetTlbAttributes' makes integer from pointer without a cast [-Wint-conversion]
+  386 |  Xil_SetTlbAttributes(mul_control, NORM_NONCACHE);
       |                       ^~~~~~~~~~~
       |                       |
       |                       volatile char *
 In file included from ../src/helloworld.c:53:
-C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
+C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include/xil_mmu.h:85:35: note: expected 'UINTPTR' {aka 'long unsigned int'} but argument is of type 'volatile char *'
    85 | void Xil_SetTlbAttributes(UINTPTR Addr, u64 attrib);
       |                           ~~~~~~~~^~~~
-../src/helloworld.c: In function 'extend_matrix':
-../src/helloworld.c:205:1: warning: control reaches end of non-void function [-Wreturn-type]
-  205 | }
-      | ^
-../src/helloworld.c: In function 'creat':
-../src/helloworld.c:261:1: warning: control reaches end of non-void function [-Wreturn-type]
-  261 | }
-      | ^
-../src/helloworld.c: In function 'mul':
-../src/helloworld.c:319:1: warning: control reaches end of non-void function [-Wreturn-type]
-  319 | }
-      | ^
 'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/helloworld2.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld2.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld2.d" -MT"src/helloworld2.o" -o "src/helloworld2.o" "../src/helloworld2.c"
+'Finished building: ../src/helloworld2.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
 ' '
 'Building target: MEC_HLS_Impl_1_1.elf'
 'Invoking: ARM v8 gcc linker'
-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_1/export/MEC_HSL_impl_V1_1/sw/MEC_HSL_impl_V1_1/standalone_psu_cortexa53_0/bsplib/lib -o "MEC_HLS_Impl_1_1.elf"  ./src/helloworld.o ./src/helloworld2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_sdk_projects/MEC_HSL_impl_V1_9/export/MEC_HSL_impl_V1_9/sw/MEC_HSL_impl_V1_9/standalone_domain/bsplib/lib -o "MEC_HLS_Impl_1_1.elf"  ./src/helloworld.o ./src/helloworld2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: MEC_HLS_Impl_1_1.elf'
 ' '
 'Invoking: ARM v8 Print Size'
 aarch64-none-elf-size MEC_HLS_Impl_1_1.elf  |tee "MEC_HLS_Impl_1_1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 113815	   5320	34607405	34726540	211e28c	MEC_HLS_Impl_1_1.elf
+ 113511	   5264	34607445	34726220	211e14c	MEC_HLS_Impl_1_1.elf
 'Finished building: MEC_HLS_Impl_1_1.elf.size'
 ' '
 
-19:27:31 Build Finished (took 491ms)
+09:13:56 Build Finished (took 1s.91ms)
 

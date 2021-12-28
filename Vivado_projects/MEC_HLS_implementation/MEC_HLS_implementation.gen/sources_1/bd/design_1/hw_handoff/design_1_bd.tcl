@@ -171,13 +171,13 @@ proc create_root_design { parentCell } {
   # Create instance: extend_matrix_0, and set properties
   set extend_matrix_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:extend_matrix:1.0 extend_matrix_0 ]
 
-  # Create instance: mul_mec_matrix_0, and set properties
-  set mul_mec_matrix_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:mul_mec_matrix:1.0 mul_mec_matrix_0 ]
+  # Create instance: mul_v2_0, and set properties
+  set mul_v2_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:mul_v2:1.0 mul_v2_0 ]
 
   # Create instance: ps8_0_axi_periph, and set properties
   set ps8_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps8_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {3} \
+   CONFIG.NUM_MI {4} \
    CONFIG.NUM_SI {2} \
  ] $ps8_0_axi_periph
 
@@ -861,16 +861,16 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
   connect_bd_intf_net -intf_net creat_mec_matrix_0_m_axi_gmem [get_bd_intf_pins axi_smc/S01_AXI] [get_bd_intf_pins creat_mec_matrix_0/m_axi_gmem]
   connect_bd_intf_net -intf_net extend_matrix_0_m_axi_gmem [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins extend_matrix_0/m_axi_gmem]
-  connect_bd_intf_net -intf_net mul_mec_matrix_0_m_axi_gmem [get_bd_intf_pins axi_smc/S02_AXI] [get_bd_intf_pins mul_mec_matrix_0/m_axi_gmem]
+  connect_bd_intf_net -intf_net mul_v2_0_m_axi_gmem [get_bd_intf_pins axi_smc/S02_AXI] [get_bd_intf_pins mul_v2_0/m_axi_gmem]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M00_AXI [get_bd_intf_pins creat_mec_matrix_0/s_axi_control] [get_bd_intf_pins ps8_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M01_AXI [get_bd_intf_pins extend_matrix_0/s_axi_control] [get_bd_intf_pins ps8_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net ps8_0_axi_periph_M02_AXI [get_bd_intf_pins mul_mec_matrix_0/s_axi_control] [get_bd_intf_pins ps8_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net ps8_0_axi_periph_M02_AXI [get_bd_intf_pins mul_v2_0/s_axi_control] [get_bd_intf_pins ps8_0_axi_periph/M02_AXI]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_FPD [get_bd_intf_pins ps8_0_axi_periph/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM1_FPD [get_bd_intf_pins ps8_0_axi_periph/S01_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
 
   # Create port connections
-  connect_bd_net -net rst_ps8_0_99M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins creat_mec_matrix_0/ap_rst_n] [get_bd_pins extend_matrix_0/ap_rst_n] [get_bd_pins mul_mec_matrix_0/ap_rst_n] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins ps8_0_axi_periph/S01_ARESETN] [get_bd_pins rst_ps8_0_99M/peripheral_aresetn]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_smc/aclk] [get_bd_pins creat_mec_matrix_0/ap_clk] [get_bd_pins extend_matrix_0/ap_clk] [get_bd_pins mul_mec_matrix_0/ap_clk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins ps8_0_axi_periph/S01_ACLK] [get_bd_pins rst_ps8_0_99M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+  connect_bd_net -net rst_ps8_0_99M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins creat_mec_matrix_0/ap_rst_n] [get_bd_pins extend_matrix_0/ap_rst_n] [get_bd_pins mul_v2_0/ap_rst_n] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/M03_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins ps8_0_axi_periph/S01_ARESETN] [get_bd_pins rst_ps8_0_99M/peripheral_aresetn]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_smc/aclk] [get_bd_pins creat_mec_matrix_0/ap_clk] [get_bd_pins extend_matrix_0/ap_clk] [get_bd_pins mul_v2_0/ap_clk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/M03_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins ps8_0_axi_periph/S01_ACLK] [get_bd_pins rst_ps8_0_99M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins rst_ps8_0_99M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments
@@ -882,13 +882,12 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces extend_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
   assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces extend_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] -force
   assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces extend_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI] -force
-  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces mul_mec_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH] -force
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces mul_mec_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
-  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces mul_mec_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] -force
-  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces mul_mec_matrix_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI] -force
+  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces mul_v2_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH] -force
+  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces mul_v2_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
+  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces mul_v2_0/Data_m_axi_gmem] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI] -force
   assign_bd_address -offset 0xA0000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs creat_mec_matrix_0/s_axi_control/Reg] -force
   assign_bd_address -offset 0xA0010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs extend_matrix_0/s_axi_control/Reg] -force
-  assign_bd_address -offset 0xA0020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs mul_mec_matrix_0/s_axi_control/Reg] -force
+  assign_bd_address -offset 0xA0020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs mul_v2_0/s_axi_control/Reg] -force
 
 
   # Restore current instance

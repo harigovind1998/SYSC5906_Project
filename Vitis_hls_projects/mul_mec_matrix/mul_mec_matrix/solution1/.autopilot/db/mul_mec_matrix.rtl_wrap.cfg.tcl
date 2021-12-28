@@ -94,14 +94,6 @@ set portVolatileCtl "0"
 set portArrayOptCtl ""
 lappend portList [list "ci" $portInterfaceCtl $portDataCtl $portPointerCtl $portArrayDimCtl $portConstCtl $portVolatileCtl $portArrayOptCtl]
 set portInterfaceCtl "wire"
-set portDataCtl "unsigned long long"
-set portPointerCtl "0"
-set portArrayDimCtl [list 0]
-set portConstCtl "0"
-set portVolatileCtl "0"
-set portArrayOptCtl ""
-lappend portList [list "K" $portInterfaceCtl $portDataCtl $portPointerCtl $portArrayDimCtl $portConstCtl $portVolatileCtl $portArrayOptCtl]
-set portInterfaceCtl "wire"
 set portDataCtl "unsigned int"
 set portPointerCtl "0"
 set portArrayDimCtl [list 0]
@@ -157,14 +149,6 @@ set portConstCtl "0"
 set portVolatileCtl "0"
 set portArrayOptCtl ""
 lappend portList [list "s" $portInterfaceCtl $portDataCtl $portPointerCtl $portArrayDimCtl $portConstCtl $portVolatileCtl $portArrayOptCtl]
-set portInterfaceCtl "wire"
-set portDataCtl "unsigned int"
-set portPointerCtl "0"
-set portArrayDimCtl [list 0]
-set portConstCtl "0"
-set portVolatileCtl "0"
-set portArrayOptCtl ""
-lappend portList [list "lim" $portInterfaceCtl $portDataCtl $portPointerCtl $portArrayDimCtl $portConstCtl $portVolatileCtl $portArrayOptCtl]
 set globalAPint ""
 set returnAPInt ""
 set hasCPPAPInt 0

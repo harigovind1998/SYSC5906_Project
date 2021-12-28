@@ -48,37 +48,29 @@
 // 0x5c : Data signal of ci
 //        bit 31~0 - ci[31:0] (Read/Write)
 // 0x60 : reserved
-// 0x64 : Data signal of K
-//        bit 31~0 - K[31:0] (Read/Write)
-// 0x68 : Data signal of K
-//        bit 31~0 - K[63:32] (Read/Write)
-// 0x6c : reserved
-// 0x70 : Data signal of wk
+// 0x64 : Data signal of wk
 //        bit 31~0 - wk[31:0] (Read/Write)
-// 0x74 : reserved
-// 0x78 : Data signal of nk
+// 0x68 : reserved
+// 0x6c : Data signal of nk
 //        bit 31~0 - nk[31:0] (Read/Write)
-// 0x7c : reserved
-// 0x80 : Data signal of O
+// 0x70 : reserved
+// 0x74 : Data signal of O
 //        bit 31~0 - O[31:0] (Read/Write)
-// 0x84 : Data signal of O
+// 0x78 : Data signal of O
 //        bit 31~0 - O[63:32] (Read/Write)
-// 0x88 : reserved
-// 0x8c : Data signal of wo
+// 0x7c : reserved
+// 0x80 : Data signal of wo
 //        bit 31~0 - wo[31:0] (Read/Write)
-// 0x90 : reserved
-// 0x94 : Data signal of ho
+// 0x84 : reserved
+// 0x88 : Data signal of ho
 //        bit 31~0 - ho[31:0] (Read/Write)
-// 0x98 : reserved
-// 0x9c : Data signal of co
+// 0x8c : reserved
+// 0x90 : Data signal of co
 //        bit 31~0 - co[31:0] (Read/Write)
-// 0xa0 : reserved
-// 0xa4 : Data signal of s
+// 0x94 : reserved
+// 0x98 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
-// 0xa8 : reserved
-// 0xac : Data signal of lim
-//        bit 31~0 - lim[31:0] (Read/Write)
-// 0xb0 : reserved
+// 0x9c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL              0x00
@@ -105,21 +97,17 @@
 #define CONTROL_BITS_HI_DATA              32
 #define CONTROL_ADDR_CI_DATA              0x5c
 #define CONTROL_BITS_CI_DATA              32
-#define CONTROL_ADDR_K_DATA               0x64
-#define CONTROL_BITS_K_DATA               64
-#define CONTROL_ADDR_WK_DATA              0x70
+#define CONTROL_ADDR_WK_DATA              0x64
 #define CONTROL_BITS_WK_DATA              32
-#define CONTROL_ADDR_NK_DATA              0x78
+#define CONTROL_ADDR_NK_DATA              0x6c
 #define CONTROL_BITS_NK_DATA              32
-#define CONTROL_ADDR_O_DATA               0x80
+#define CONTROL_ADDR_O_DATA               0x74
 #define CONTROL_BITS_O_DATA               64
-#define CONTROL_ADDR_WO_DATA              0x8c
+#define CONTROL_ADDR_WO_DATA              0x80
 #define CONTROL_BITS_WO_DATA              32
-#define CONTROL_ADDR_HO_DATA              0x94
+#define CONTROL_ADDR_HO_DATA              0x88
 #define CONTROL_BITS_HO_DATA              32
-#define CONTROL_ADDR_CO_DATA              0x9c
+#define CONTROL_ADDR_CO_DATA              0x90
 #define CONTROL_BITS_CO_DATA              32
-#define CONTROL_ADDR_S_DATA               0xa4
+#define CONTROL_ADDR_S_DATA               0x98
 #define CONTROL_BITS_S_DATA               32
-#define CONTROL_ADDR_LIM_DATA             0xac
-#define CONTROL_BITS_LIM_DATA             32

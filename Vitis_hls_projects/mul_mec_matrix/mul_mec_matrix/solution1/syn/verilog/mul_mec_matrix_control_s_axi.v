@@ -39,7 +39,6 @@ module mul_mec_matrix_control_s_axi
     output wire [31:0]                   wi,
     output wire [31:0]                   hi,
     output wire [31:0]                   ci,
-    output wire [63:0]                   K,
     output wire [31:0]                   wk,
     output wire [31:0]                   nk,
     output wire [63:0]                   O,
@@ -47,7 +46,6 @@ module mul_mec_matrix_control_s_axi
     output wire [31:0]                   ho,
     output wire [31:0]                   co,
     output wire [31:0]                   s,
-    output wire [31:0]                   lim,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -104,37 +102,29 @@ module mul_mec_matrix_control_s_axi
 // 0x5c : Data signal of ci
 //        bit 31~0 - ci[31:0] (Read/Write)
 // 0x60 : reserved
-// 0x64 : Data signal of K
-//        bit 31~0 - K[31:0] (Read/Write)
-// 0x68 : Data signal of K
-//        bit 31~0 - K[63:32] (Read/Write)
-// 0x6c : reserved
-// 0x70 : Data signal of wk
+// 0x64 : Data signal of wk
 //        bit 31~0 - wk[31:0] (Read/Write)
-// 0x74 : reserved
-// 0x78 : Data signal of nk
+// 0x68 : reserved
+// 0x6c : Data signal of nk
 //        bit 31~0 - nk[31:0] (Read/Write)
-// 0x7c : reserved
-// 0x80 : Data signal of O
+// 0x70 : reserved
+// 0x74 : Data signal of O
 //        bit 31~0 - O[31:0] (Read/Write)
-// 0x84 : Data signal of O
+// 0x78 : Data signal of O
 //        bit 31~0 - O[63:32] (Read/Write)
-// 0x88 : reserved
-// 0x8c : Data signal of wo
+// 0x7c : reserved
+// 0x80 : Data signal of wo
 //        bit 31~0 - wo[31:0] (Read/Write)
-// 0x90 : reserved
-// 0x94 : Data signal of ho
+// 0x84 : reserved
+// 0x88 : Data signal of ho
 //        bit 31~0 - ho[31:0] (Read/Write)
-// 0x98 : reserved
-// 0x9c : Data signal of co
+// 0x8c : reserved
+// 0x90 : Data signal of co
 //        bit 31~0 - co[31:0] (Read/Write)
-// 0xa0 : reserved
-// 0xa4 : Data signal of s
+// 0x94 : reserved
+// 0x98 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
-// 0xa8 : reserved
-// 0xac : Data signal of lim
-//        bit 31~0 - lim[31:0] (Read/Write)
-// 0xb0 : reserved
+// 0x9c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -164,26 +154,21 @@ localparam
     ADDR_HI_CTRL                = 8'h58,
     ADDR_CI_DATA_0              = 8'h5c,
     ADDR_CI_CTRL                = 8'h60,
-    ADDR_K_DATA_0               = 8'h64,
-    ADDR_K_DATA_1               = 8'h68,
-    ADDR_K_CTRL                 = 8'h6c,
-    ADDR_WK_DATA_0              = 8'h70,
-    ADDR_WK_CTRL                = 8'h74,
-    ADDR_NK_DATA_0              = 8'h78,
-    ADDR_NK_CTRL                = 8'h7c,
-    ADDR_O_DATA_0               = 8'h80,
-    ADDR_O_DATA_1               = 8'h84,
-    ADDR_O_CTRL                 = 8'h88,
-    ADDR_WO_DATA_0              = 8'h8c,
-    ADDR_WO_CTRL                = 8'h90,
-    ADDR_HO_DATA_0              = 8'h94,
-    ADDR_HO_CTRL                = 8'h98,
-    ADDR_CO_DATA_0              = 8'h9c,
-    ADDR_CO_CTRL                = 8'ha0,
-    ADDR_S_DATA_0               = 8'ha4,
-    ADDR_S_CTRL                 = 8'ha8,
-    ADDR_LIM_DATA_0             = 8'hac,
-    ADDR_LIM_CTRL               = 8'hb0,
+    ADDR_WK_DATA_0              = 8'h64,
+    ADDR_WK_CTRL                = 8'h68,
+    ADDR_NK_DATA_0              = 8'h6c,
+    ADDR_NK_CTRL                = 8'h70,
+    ADDR_O_DATA_0               = 8'h74,
+    ADDR_O_DATA_1               = 8'h78,
+    ADDR_O_CTRL                 = 8'h7c,
+    ADDR_WO_DATA_0              = 8'h80,
+    ADDR_WO_CTRL                = 8'h84,
+    ADDR_HO_DATA_0              = 8'h88,
+    ADDR_HO_CTRL                = 8'h8c,
+    ADDR_CO_DATA_0              = 8'h90,
+    ADDR_CO_CTRL                = 8'h94,
+    ADDR_S_DATA_0               = 8'h98,
+    ADDR_S_CTRL                 = 8'h9c,
     WRIDLE                      = 2'd0,
     WRDATA                      = 2'd1,
     WRRESP                      = 2'd2,
@@ -229,7 +214,6 @@ localparam
     reg  [31:0]                   int_wi = 'b0;
     reg  [31:0]                   int_hi = 'b0;
     reg  [31:0]                   int_ci = 'b0;
-    reg  [63:0]                   int_K = 'b0;
     reg  [31:0]                   int_wk = 'b0;
     reg  [31:0]                   int_nk = 'b0;
     reg  [63:0]                   int_O = 'b0;
@@ -237,7 +221,6 @@ localparam
     reg  [31:0]                   int_ho = 'b0;
     reg  [31:0]                   int_co = 'b0;
     reg  [31:0]                   int_s = 'b0;
-    reg  [31:0]                   int_lim = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -379,12 +362,6 @@ always @(posedge ACLK) begin
                 ADDR_CI_DATA_0: begin
                     rdata <= int_ci[31:0];
                 end
-                ADDR_K_DATA_0: begin
-                    rdata <= int_K[31:0];
-                end
-                ADDR_K_DATA_1: begin
-                    rdata <= int_K[63:32];
-                end
                 ADDR_WK_DATA_0: begin
                     rdata <= int_wk[31:0];
                 end
@@ -409,9 +386,6 @@ always @(posedge ACLK) begin
                 ADDR_S_DATA_0: begin
                     rdata <= int_s[31:0];
                 end
-                ADDR_LIM_DATA_0: begin
-                    rdata <= int_lim[31:0];
-                end
             endcase
         end
     end
@@ -434,7 +408,6 @@ assign I                 = int_I;
 assign wi                = int_wi;
 assign hi                = int_hi;
 assign ci                = int_ci;
-assign K                 = int_K;
 assign wk                = int_wk;
 assign nk                = int_nk;
 assign O                 = int_O;
@@ -442,7 +415,6 @@ assign wo                = int_wo;
 assign ho                = int_ho;
 assign co                = int_co;
 assign s                 = int_s;
-assign lim               = int_lim;
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -673,26 +645,6 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_K[31:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_K[31:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_K_DATA_0)
-            int_K[31:0] <= (WDATA[31:0] & wmask) | (int_K[31:0] & ~wmask);
-    end
-end
-
-// int_K[63:32]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_K[63:32] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_K_DATA_1)
-            int_K[63:32] <= (WDATA[31:0] & wmask) | (int_K[63:32] & ~wmask);
-    end
-end
-
 // int_wk[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -770,16 +722,6 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_S_DATA_0)
             int_s[31:0] <= (WDATA[31:0] & wmask) | (int_s[31:0] & ~wmask);
-    end
-end
-
-// int_lim[31:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_lim[31:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_LIM_DATA_0)
-            int_lim[31:0] <= (WDATA[31:0] & wmask) | (int_lim[31:0] & ~wmask);
     end
 end
 

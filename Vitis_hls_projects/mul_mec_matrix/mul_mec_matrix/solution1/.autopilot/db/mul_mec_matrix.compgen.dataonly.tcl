@@ -82,77 +82,61 @@ ci {
 	offset 92
 	offset_end 99
 }
-K { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 100
-	offset_end 111
-}
 wk { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 112
-	offset_end 119
+	offset 100
+	offset_end 107
 }
 nk { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 120
-	offset_end 127
+	offset 108
+	offset_end 115
 }
 O { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 128
-	offset_end 139
+	offset 116
+	offset_end 127
 }
 wo { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 140
-	offset_end 147
+	offset 128
+	offset_end 135
 }
 ho { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 148
-	offset_end 155
+	offset 136
+	offset_end 143
 }
 co { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 156
-	offset_end 163
+	offset 144
+	offset_end 151
 }
 s { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 164
-	offset_end 171
-}
-lim { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 172
-	offset_end 179
+	offset 152
+	offset_end 159
 }
 ap_start {
 	mailbox_input_ctrl 0

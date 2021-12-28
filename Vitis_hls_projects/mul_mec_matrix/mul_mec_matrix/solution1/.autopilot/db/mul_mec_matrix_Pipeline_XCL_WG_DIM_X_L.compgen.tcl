@@ -18,6 +18,94 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+set name mul_mec_matrix_mul_5s_32s_32_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+# Memory (RAM/ROM)  definition:
+set ID 10
+set hasByteEnable 0
+set MemName mul_mec_matrix_mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L_mul_mec_matrix_K
+set CoreName ap_simcore_mem
+set PortList { 1 }
+set DataWd 32
+set AddrRange 36
+set AddrWd 6
+set impl_style auto
+set TrueReset 0
+set IsROM 1
+set ROMData { "00000000000000000000000000000100" "00000000000000000000000000000010" "00000000000000000000000000000001" "00000000000000000000000000000100" "00000000000000000000000000000010" "00000000000000000000000000000001" "00000000000000000000000000000100" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000010" "00000000000000000000000000000011" "00000000000000000000000000000011" "00000000000000000000000000000100" "00000000000000000000000000000100" "00000000000000000000000000000011" "00000000000000000000000000000001" "00000000000000000000000000000100" "00000000000000000000000000000010" "00000000000000000000000000000100" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000010" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000010" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000100" "00000000000000000000000000000010" "00000000000000000000000000000100" "00000000000000000000000000000001" "00000000000000000000000000000011" "00000000000000000000000000000010" "00000000000000000000000000000100" }
+set HasInitializer 1
+set Initializer $ROMData
+set NumOfStage 2
+set DelayBudget 1.237
+set ClkPeriod 10
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
+    eval "ap_gen_simcore_mem { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem  \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    port_num 1 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+} else {
+    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $MemName BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set CoreName ROM
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem  \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    port_num 1 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+  } else {
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
+  }
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -28,7 +116,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 11 \
     name bound \
     type other \
     dir I \
@@ -43,45 +131,15 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
-    name lim \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_lim \
-    op interface \
-    ports { lim { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 11 \
-    name mul7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_mul7 \
-    op interface \
-    ports { mul7 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
     id 12 \
-    name mul6_mid2 \
+    name mul_ln31_4 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul6_mid2 \
+    corename dc_mul_ln31_4 \
     op interface \
-    ports { mul6_mid2 { I 32 vector } } \
+    ports { mul_ln31_4 { I 32 vector } } \
 } "
 }
 
@@ -89,6 +147,36 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 13 \
+    name mul \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_mul \
+    op interface \
+    ports { mul { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 14 \
+    name mul8_mid2 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_mul8_mid2 \
+    op interface \
+    ports { mul8_mid2 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 15 \
     name hi \
     type other \
     dir I \
@@ -103,7 +191,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 14 \
+    id 16 \
     name global_id_base_x \
     type other \
     dir I \
@@ -118,7 +206,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 15 \
+    id 17 \
     name wi \
     type other \
     dir I \
@@ -133,22 +221,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
-    name mul14 \
+    id 18 \
+    name mul16 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul14 \
+    corename dc_mul16 \
     op interface \
-    ports { mul14 { I 32 vector } } \
+    ports { mul16 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 19 \
     name I \
     type other \
     dir I \
@@ -163,7 +251,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 20 \
     name gmem \
     type other \
     dir I \
@@ -178,22 +266,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
-    name sext_ln3_1_mid2 \
+    id 21 \
+    name mul_ln31_6_mid2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln3_1_mid2 \
+    corename dc_mul_ln31_6_mid2 \
     op interface \
-    ports { sext_ln3_1_mid2 { I 62 vector } } \
+    ports { mul_ln31_6_mid2 { I 6 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 22 \
     name shiftreg_out \
     type other \
     dir O \
@@ -208,7 +296,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 21 \
+    id 23 \
     name value_out \
     type other \
     dir O \

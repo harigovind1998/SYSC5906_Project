@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mul_mec_matrix_Pipeline_XCL_WG_DIM_X_L'" level="0">
-<item name = "Date">Tue Dec 14 19:07:36 2021
+<item name = "Date">Wed Dec 15 12:28:01 2021
 </item>
 <item name = "Version">2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)</item>
 <item name = "Project">mul_mec_matrix</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- XCL_WG_DIM_X_L">?, ?, 47, 2, 1, ?, yes</column>
+<column name="- XCL_WG_DIM_X_L">?, ?, 46, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>

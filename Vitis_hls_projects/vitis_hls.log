@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'G:/dev_tools/xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Hari' on host 'desktop-j45fl4k' (Windows NT_amd64 version 6.2) on Sun Dec 12 20:07:02 -0500 2021
+INFO: [HLS 200-10] For user 'Hari' on host 'desktop-j45fl4k' (Windows NT_amd64 version 6.2) on Mon Dec 27 20:59:51 -0500 2021
 INFO: [HLS 200-10] In directory 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects'
 Sourcing Tcl script 'C:/University/Masters/Year_1/SYSC5906/SYSC5906_Project/Vitis_hls_projects/extend_matrix/extend_matrix_soln/export.tcl'
 INFO: [HLS 200-1510] Running: open_project extend_matrix 
@@ -32,6 +32,6 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/dev_tools/xilinx/Vivado/2021.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 12 20:07:11 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 27 21:00:01 2021...
 INFO: [HLS 200-802] Generated output file extend_matrix/extend_matrix_soln/extend_matrix.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.133 seconds; current allocated memory: 240.750 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.865 seconds; current allocated memory: 240.780 MB.

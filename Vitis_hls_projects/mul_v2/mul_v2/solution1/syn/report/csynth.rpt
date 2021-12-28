@@ -1,0 +1,101 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mul_v2'
+================================================================
++ General Information: 
+    * Date:           Fri Dec 17 09:39:09 2021
+    * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
+    * Project:        mul_v2
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+----------+------------+-----------+-----+
+    |                    Modules                   |  Issue |       | Latency | Latency | Iteration|         | Trip |          |          |          |            |           |     |
+    |                    & Loops                   |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |     FF     |    LUT    | URAM|
+    +----------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+----------+------------+-----------+-----+
+    |+ mul_v2                                      |  Timing|  -0.00|       77|  770.000|         -|       78|     -|        no|  68 (10%)|  14 (~0%)|  3257 (~0%)|  3845 (1%)|    -|
+    | o mul_v2_label0_mul_v2_label1_mul_v2_label2  |       -|   7.30|       75|  750.000|        17|        1|    60|       yes|         -|         -|           -|          -|    -|
+    +----------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+----------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+----------+
+| Interface  | Data Width | Address Width | Register |
+|            | (SW->HW)   |               |          |
++------------+------------+---------------+----------+
+| m_axi_gmem | 32 -> 32   | 64            | 0        |
++------------+------------+---------------+----------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| Inp      | out       | int*                |
+| wi       | in        | unsigned int const  |
+| hi       | in        | unsigned int const  |
+| ci       | in        | unsigned int const  |
+| wk       | in        | unsigned int const  |
+| nk       | in        | unsigned int const  |
+| O        | out       | int*                |
+| wo       | in        | unsigned int const  |
+| ho       | in        | unsigned int const  |
+| co       | in        | unsigned int const  |
+| s        | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+---------------------+-----------+----------+-----------------------+
+| Argument | HW Name             | HW Type   | HW Usage | HW Info               |
++----------+---------------------+-----------+----------+-----------------------+
+| Inp      | m_axi_gmem          | interface |          |                       |
+| Inp      | s_axi_control Inp_1 | register  | offset   | offset=0x10, range=32 |
+| Inp      | s_axi_control Inp_2 | register  | offset   | offset=0x14, range=32 |
+| wi       | s_axi_control wi    | register  |          | offset=0x1c, range=32 |
+| hi       | s_axi_control hi    | register  |          | offset=0x24, range=32 |
+| ci       | s_axi_control ci    | register  |          | offset=0x2c, range=32 |
+| wk       | s_axi_control wk    | register  |          | offset=0x34, range=32 |
+| nk       | s_axi_control nk    | register  |          | offset=0x3c, range=32 |
+| O        | m_axi_gmem          | interface |          |                       |
+| O        | s_axi_control O_1   | register  | offset   | offset=0x44, range=32 |
+| O        | s_axi_control O_2   | register  | offset   | offset=0x48, range=32 |
+| wo       | s_axi_control wo    | register  |          | offset=0x50, range=32 |
+| ho       | s_axi_control ho    | register  |          | offset=0x58, range=32 |
+| co       | s_axi_control co    | register  |          | offset=0x60, range=32 |
+| s        | s_axi_control s     | register  |          | offset=0x68, range=32 |
++----------+---------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+
