@@ -1,6 +1,7 @@
 # FPGA MEC Implementation
 
 # File structure
+<pre>
 project
 |
 |
@@ -50,3 +51,4 @@ project
     |___MEC_HLS_Extend (Trial Vivado project, only contains the extend kernel)
     |
     |___MEC_HLS_implementation (Final product containing all three kernels)
+</pre>
